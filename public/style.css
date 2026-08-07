@@ -1532,6 +1532,19 @@ img {
     text-align: justify;
 }
 
+.article-body .article-subhead {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 1.8rem 0 0.6rem;
+    line-height: 1.4;
+}
+
+.article-body .article-subhead:first-child {
+    margin-top: 0;
+}
+
 .article-ingredients {
     padding: 1.2rem 2.2rem 0.5rem;
 }

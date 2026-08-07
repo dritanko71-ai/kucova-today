@@ -7,6 +7,23 @@ const seedArticles = [
         category: 'Humbje Peshe',
         title: 'Humbja e shëndetshme e peshës: 7 hapa që vërtet funksionojnë',
         excerpt: 'Pa dieta ekstreme dhe pa uri. Zbulo si të humbësh peshë në mënyrë të qëndrueshme me ndryshime të vogla të përditshme.',
+        body: [
+            'Humbja e peshës nuk duhet të jetë një mundim. Kur e ndërton në zakone të vogla e të qëndrueshme, rezultatet vijnë pa sakrifikuar shëndetin apo dëshirat. Këtu janë shtatë hapat që funksionojnë vërtet.',
+            '### 1. Vendos objektiva realistë',
+            'Në vend që të synosh 10 kilogramë në muaj, syno 0.5–1 kg në javë. Objektivat e arsyeshme mbajnë motivimin lart dhe e mbrojnë organizmin nga lodhja dhe mangësitë ushqyese.',
+            '### 2. Fillo me mëngjes të pasur me proteina',
+            'Një mëngjes me vezë, tërshërë ose kos grek të ngop deri në drekë dhe parandalon ngrënien e tepërt. Proteinat në mëngjes reduktojnë dëshirat për ushqime të ëmbla gjatë ditës.',
+            '### 3. Pi ujë përpara ngrënies',
+            'Një gotë ujë 30 minuta para çdo vakti të ngop dhe zvogëlon sasinë e ushqimit që konsumon. Dehidratimi ngatërrohet shpesh me urinë, prandaj mbaj një shishe uji pranë.',
+            '### 4. Shto fibra në çdo vakt',
+            'Perimet, frutat, bishtajoret dhe drithërat e plota ngopin për shumë orë. Fibrat stabilizojnë sheqerin në gjak dhe përmirësojnë tretjen, duke të ndihmuar të hash më pak pa uri.',
+            '### 5. Lëviz çdo ditë, edhe pak',
+            'Ecja 30 minuta, shkallët në vend të ashensorit dhe një stërvitje e shkurtër në shtëpi mjaftojnë. Konsistenca është më e rëndësishme se intensiteti.',
+            '### 6. Fle të paktën 7–8 orë',
+            'Gjumi i pamjaftueshëm rrit hormonin e urisë (grelin) dhe ul hormonin e ngopjes (leptin). Pa gjumë të mirë, humbja e peshës bëhet dukshëm më e vështirë.',
+            '### 7. Jini i durueshëm me veten',
+            'Ditët e dobëta janë normale. Një vakt më i rëndë nuk e shkatërron progresin — e shkatërron vetëm heqja dorë. Kthehu te zakonet e mira në vaktin tjetër dhe vazhdo.'
+        ],
         seed: 'humbjepeshe-7hapa',
         date: 'Sot',
         time: '07:30'
@@ -105,6 +122,19 @@ const seedArticles = [
         category: 'Humbje Peshe',
         title: 'Deficiti kalorik: si ta llogaritësh pa u bërë obsesiv',
         excerpt: 'Baza e humbjes së peshës është më e thjeshtë seç mendon. Një udhëzues praktik për të krijuar deficit pa anashkaluar ushqimin.',
+        body: [
+            'Deficiti kalorik është ndryshimi midis energjisë që konsumon dhe asaj që djeg. Kur konsumon më pak seç djeg, trupi merr energjinë që i mungon nga rezervat e yndyrës. Ky është parimi i vetëm shkencor pas çdo diete.',
+            '### Çfarë është deficiti kalorik',
+            'Çdo person ka një nivel ditor kalorish që e mban peshën të qëndrueshme. Konsumimi i rreth 300–500 kalorive më pak në ditë krijon një deficit të sigurt që sjell humbje të ngadaltë por të qëndrueshme prej 0.5–1 kg në javë.',
+            '### Si ta llogaritësh pa u bërë obsesiv',
+            'Nuk ke nevojë për llogari të përpikta me gram. Mjafton të shënosh përafërsisht ushqimin kryesor, të zvogëlosh porcionet dhe të zëvendësosh pijet e ëmbla me ujë. Ky nivel i lehtë vëmendjeje mjafton për shumicën e njerëzve.',
+            '### Zgjedh ushqime që ngopin',
+            'Vëllimi është çelësi. Perimet, frutat, supat dhe proteinat e dobëta japin shumë ushqim me pak kalori. Kështu ndihesh i ngopur pa kaluar kufirin ditor.',
+            '### Gabimet që duhen shmangur',
+            'Deficitet shumë të thella bëjnë më shumë dëm se dobí: ulin metabolizmin, rrisin urinë dhe shkaktojnë humbje muskulore. Po ashtu, shmang shpërblimin e tepërt gjatë fundjavës, që shpesh anulon të gjithë javën.',
+            '### Kur do të shohësh rezultate',
+            'Durimi është i nevojshëm. Pesha luhatet natyrisht nga uji, kripa dhe hormpet, prandaj mat progresin në intervale javore, jo ditore, dhe vër re si të rrinë rrobat në vend të peshores.'
+        ],
         seed: 'deficiti-kalorik',
         date: 'Dje',
         time: '16:40'
@@ -115,6 +145,17 @@ const seedArticles = [
         category: 'Humbje Peshe',
         title: 'Pse peshorja mashtron: yndyra kundrejt muskujve',
         excerpt: 'Pesha në peshore nuk tregon gjithçka. Zbulo pse muskujt peshojnë më shumë se yndyra dhe si ta ndjekësh progresin real.',
+        body: [
+            'Numri që sheh në peshore mund të të mashtrojë. Një kilogram muskul zë shumë më pak vend se një kilogram yndyrë, ndaj edhe kur rrobat të vijnë më lirshëm, pesha mund të mos ndryshojë fare.',
+            '### Muskujt vs yndyra',
+            'Muskujt janë më të dendur se yndyra, prandaj peshojnë më shumë për të njëjtin vëllim. Dy persona me të njëjtën peshë mund të kenë pamje shumë të ndryshme nëse njëri ka më shumë muskuj dhe tjetri më shumë yndyrë.',
+            '### Si të matësh progresin real',
+            'Përdor matje të perimetrit (beli, ijët), vëzhgo si të vijnë rrobat dhe bëj fotografi periodike. Këto shenja tregojnë ndryshimet e përbërjes trupore që peshorja nuk i kap.',
+            '### Luhatjet e ujit janë normale',
+            'Uji, kripa, karbohidratet dhe cikli hormonal e lëvizin peshën me disa qindra gramë nga dita në ditë. Peshohu në të njëjtën kohë, të njëjtën ditë të javës dhe me të njëjtat kushte.',
+            '### Kur duhet të shqetësohesh',
+            'Shiko tendencën, jo ditët. Nëse pesha mesatare javore zbret ngadalë, je në rrugë të mbarë. Fokusohu te forca, energjia dhe mënyra si të rrinë rrobat — ato tregojnë shëndetin real.'
+        ],
         seed: 'peshorja-mashtron',
         date: 'Dje',
         time: '14:10'
@@ -125,6 +166,19 @@ const seedArticles = [
         category: 'Humbje Peshe',
         title: '5 gabime që pengojnë humbjen e peshës',
         excerpt: 'Edhe me dietë dhe sport, pesha mund të ngecë. Identifiko gabimet e zakonshme që po e sabotojnë progresin tënd.',
+        body: [
+            'Po bën gjithçka "drejt" por peshorja nuk lëviz? Shpesh fajin e kanë disa gabime të fshehta që i bëjmë të gjithë pa e kuptuar. Ja pesë prej tyre dhe si t\'i korrigjosh.',
+            '### 1. Porcionet më të mëdha seç mendon',
+            'Një grusht arra, një lugë vaj më shumë ose një copë djathë ekstra — shtohen lehtë në fund të ditës. Përdor enë më të vogla dhe mas me sy vetëm proteinat kryesore.',
+            '### 2. Pijet e ëmbla dhe kafeja me shtesa',
+            'Lëngjet me sheqer, pijet energjike dhe kafeja me qumësht e sheqer mund të shtojnë qindra kalori që trupi nuk i "ndjen". Zëvendësoji me ujë, çaj pa sheqer ose kafe të zezë.',
+            '### 3. Shpërblimi pas stërvitjes',
+            'Një orë stërvitje djeg rreth 300 kalori, por një snack "pas sportit" shpesh kalon 500. Konsumo një vakt të vogël me proteina dhe fibra, jo ushqime të përpunuara.',
+            '### 4. Gjumi i pakët',
+            'Kur fle pak, rritet grelina (hormoni i urisë) dhe ulet leptina (hormoni i ngopjes). Njerëzit e privuar nga gjumi hanë mesatarisht disa qindra kalori më shumë në ditë.',
+            '### 5. Mungesa e konsistencës',
+            'Dieta perfekte për 4 ditë dhe pushimi për 3 nuk funksionon. Prefero të hash mirë 6 nga 7 ditë në vend të një periudhe strikte e më pas një pushimi të gjatë.'
+        ],
         seed: 'gabimet-pesha',
         date: 'Dje',
         time: '11:55'

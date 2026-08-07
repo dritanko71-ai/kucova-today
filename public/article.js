@@ -62,7 +62,15 @@ function renderArticle(a) {
             </div>
         ` : ''}
         <div class="article-body">
-            ${body.map(p => `<p>${p}</p>`).join('')}
+            ${body.map(p => {
+                if (p.startsWith('### ')) {
+                    return `<h3 class="article-subhead">${p.slice(4)}</h3>`;
+                }
+                if (p.startsWith('## ')) {
+                    return `<h2 class="article-subhead">${p.slice(3)}</h2>`;
+                }
+                return `<p>${p}</p>`;
+            }).join('')}
         </div>
         <div class="article-nav">
             <a class="article-back" href="index.html">&larr; Kthehu te lajmet</a>
