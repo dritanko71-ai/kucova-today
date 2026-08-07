@@ -8,13 +8,25 @@ const parser = new Parser({
     }
 });
 
-// ===== Lajme reale në shqip nga RSS-të shqiptare =====
-// Artikujt ndahen në: lokale (Shqipëria) dhe ndërkombëtare (Bota).
+// ===== Lajme reale në shqip nga RSS-të shqiptare dhe të rajonit =====
+// Artikujt ndahen në: lokale (Shqipëria & rajoni shqiptar) dhe ndërkombëtare (Bota).
+// Të drejtat e autorit respektohen: shfaqet vetëm titull + përmbledhje e shkurtër + link
+// tek burimi origjinal (agregim RSS, "fair use"). Nuk kopjohet artikulli i plotë.
 const ALBANIAN_FEEDS = [
     { url: 'https://abcnews.al/feed/', source: 'ABC News' },
     { url: 'https://www.albeu.com/feed', source: 'Albeu' },
     { url: 'https://euronews.al/feed/', source: 'Euronews Albania' },
-    { url: 'https://sot.com.al/rss', source: 'Sot' }
+    { url: 'https://sot.com.al/rss', source: 'Sot' },
+    { url: 'https://www.balkanweb.com/feed/', source: 'BalkanWeb' },
+    { url: 'https://www.panorama.com.al/feed/', source: 'Panorama' },
+    { url: 'https://shekulli.com.al/feed/', source: 'Shekulli' },
+    { url: 'https://www.rtsh.al/feed/', source: 'RTSH' },
+    { url: 'https://faktoje.al/feed/', source: 'Faktoje' },
+    { url: 'https://telegrafi.com/feed/', source: 'Telegrafi' },
+    { url: 'https://gazetaexpress.com/feed/', source: 'Gazeta Express' },
+    { url: 'https://lajmpress.com/feed/', source: 'Lajmpress' },
+    { url: 'https://ilirianews.al/feed/', source: 'Iliria News' },
+    { url: 'https://alsat.mk/feed/', source: 'Alsat M' }
 ];
 
 const ALBANIAN_TERMS = [
@@ -24,7 +36,11 @@ const ALBANIAN_TERMS = [
     'policia', 'kuvendi', 'bashkia', 'shkodër', 'gjirokastër', 'korçë', 'kukës',
     'dibër', 'lezhë', 'kryeministr', 'qeveri', 'president', 'deputet', 'ministër',
     'kavajë', 'pogradec', 'sarandë', 'gjykata', 'prokuror', 'parlament', 'votim',
-    'zgjedhje', 'rama', 'meta', 'begaj', 'bardhi', 'kumbaro', 'shqip'
+    'zgjedhje', 'rama', 'meta', 'begaj', 'bardhi', 'kumbaro', 'shqip',
+    'pejë', 'peja', 'prizren', 'gjakovë', 'gjakova', 'gilan', 'mitrovicë', 'fetai',
+    'shkup', 'shkupi', 'maqedon', 'struga', 'tetovë', 'tetova', 'ohri', 'ohrid',
+    'podgoricë', 'podgorica', 'mal i zi', 'mali i zi', 'tuz', 'ulqin', 'tivar',
+    'kurti', 'thaqi', 'hoti', 'haradinaj', 'davila', 'qeverisë', 'tërmet', 'përmbytje'
 ];
 
 const EN_WORDS = ['the', 'and', 'for', 'with', 'from', 'that', 'this', 'have', 'their',
