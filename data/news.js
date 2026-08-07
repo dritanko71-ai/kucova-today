@@ -1,22 +1,3 @@
-// ===== Video shembull (burim publik) =====
-const SAMPLE_VIDEOS = [
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4'
-];
-
-const VIDEO_POSTERS = [
-    'https://picsum.photos/seed/video-poster-1/1280/720',
-    'https://picsum.photos/seed/video-poster-2/1280/720',
-    'https://picsum.photos/seed/video-poster-3/1280/720',
-    'https://picsum.photos/seed/video-poster-4/1280/720'
-];
-
 // ===== Artikujt fillestarë =====
 const seedArticles = [
     {
@@ -28,9 +9,7 @@ const seedArticles = [
         excerpt: 'Pa dieta ekstreme dhe pa uri. Zbulo si të humbësh peshë në mënyrë të qëndrueshme me ndryshime të vogla të përditshme.',
         seed: 'humbjepeshe-7hapa',
         date: 'Sot',
-        time: '07:30',
-        video: SAMPLE_VIDEOS[0],
-        videoPoster: VIDEO_POSTERS[0]
+        time: '07:30'
     },
     {
         id: 2,
@@ -40,9 +19,7 @@ const seedArticles = [
         title: 'Ushqimet me proteina që duhet të kesh në frigorifer',
         seed: 'ushqim-proteina',
         date: 'Sot',
-        time: '08:15',
-        video: SAMPLE_VIDEOS[4],
-        videoPoster: VIDEO_POSTERS[1]
+        time: '08:15'
     },
     {
         id: 3,
@@ -62,11 +39,17 @@ const seedArticles = [
             '1 lugë lëng limoni',
             'kripë dhe piper'
         ],
+        steps: [
+            'Shpëlajeni quinoan me ujë të ftohtë dhe zieni në 2 filxhanë ujë me pak kripë për rreth 15 minuta, derisa të thithet lëngu.',
+            'Lëreni quinoan të ftohet në temperaturë dhome.',
+            'Prisni domatet, kastravecin, qepën dhe specin në copa të vogla.',
+            'Përzieni perimet me quinoan e ftohur dhe djathin feta të thërrmuar.',
+            'Përgatisni salcën duke përzier vajin e ullirit, lëngun e limonit, kripën dhe piperin.',
+            'Hidheni salcën mbi sallatën, përzieni butësisht dhe shërbejeni të freskët.'
+        ],
         seed: 'receta-quinoa',
         date: 'Sot',
-        time: '09:00',
-        video: SAMPLE_VIDEOS[5],
-        videoPoster: VIDEO_POSTERS[2]
+        time: '09:00'
     },
     {
         id: 4,
@@ -86,9 +69,7 @@ const seedArticles = [
         excerpt: 'Uji është jetik për trupin, por sa është shuma e duhur ditore? Zbulo shenjat që tregojnë se duhet të pish më shumë.',
         seed: 'hidratimi-uje',
         date: 'Sot',
-        time: '09:05',
-        video: SAMPLE_VIDEOS[2],
-        videoPoster: VIDEO_POSTERS[3]
+        time: '09:05'
     },
     {
         id: 6,
@@ -98,9 +79,7 @@ const seedArticles = [
         excerpt: 'Një vrapim 20-minutësh në mëngjes përmirëson qarkullimin, rrit energjinë dhe ndihmon në djegien e kalorive.',
         seed: 'vrapim-mengjes',
         date: 'Sot',
-        time: '08:40',
-        video: SAMPLE_VIDEOS[3],
-        videoPoster: VIDEO_POSTERS[0]
+        time: '08:40'
     },
     {
         id: 7,
@@ -110,9 +89,7 @@ const seedArticles = [
         excerpt: 'Ushqimi i natës ndikon në cilësinë e gjumit. Mëso cilat ushqime të zgjedhësh për një gjumë të thellë dhe rikthyes.',
         seed: 'darka-e-lehte',
         date: 'Dje',
-        time: '18:15',
-        video: SAMPLE_VIDEOS[6],
-        videoPoster: VIDEO_POSTERS[1]
+        time: '18:15'
     },
     {
         id: 8,
@@ -132,9 +109,7 @@ const seedArticles = [
         excerpt: 'Pesha në peshore nuk tregon gjithçka. Zbulo pse muskujt peshojnë më shumë se yndyra dhe si ta ndjekësh progresin real.',
         seed: 'peshorja-mashtron',
         date: 'Dje',
-        time: '14:10',
-        video: SAMPLE_VIDEOS[1],
-        videoPoster: VIDEO_POSTERS[2]
+        time: '14:10'
     },
     {
         id: 10,
@@ -164,9 +139,7 @@ const seedArticles = [
         excerpt: 'Nga avokado te boronicat, zbulo ushqimet e pasura me antioksidantë që mbështesin shëndetin dhe energjinë.',
         seed: 'superushqime',
         date: 'Dje',
-        time: '13:30',
-        video: SAMPLE_VIDEOS[7],
-        videoPoster: VIDEO_POSTERS[3]
+        time: '13:30'
     },
     {
         id: 13,
@@ -194,6 +167,14 @@ const seedArticles = [
             '100ml qumësht kokosi',
             'kripë dhe piper'
         ],
+        steps: [
+            'Qëroni kungullin, hiqni farat dhe priteni në kubikë të vegjël.',
+            'Prisni qepën dhe hudhrën, dhe grisni xhenxhefilin.',
+            'Ngrohni vajin e ullirit në një tenxhere të madhe dhe skuqni qepën, hudhrën dhe xhenxhefilin për 2-3 minuta.',
+            'Shtoni kungullin dhe lëngun e perimeve, mbulojeni dhe lëreni të ziejë për 20 minuta.',
+            'Bluani supën me blender derisa të bëhet krem.',
+            'Shtoni qumështin e kokosit, kripën dhe piperin, përzieni dhe shërbejeni të ngrohtë.'
+        ],
         excerpt: 'Një supë e ngrohtë, e lehtë dhe e plotë me vitamina. Perfekte për ditët e ftohta, gati në vetëm 30 minuta.',
         seed: 'receta-supe-kungull',
         date: 'Dje',
@@ -215,12 +196,18 @@ const seedArticles = [
             '1 lugë ekstrakt vanilje',
             '3 lugë gjalpë kokosi'
         ],
+        steps: [
+            'Ngrohni furrën në 180°C dhe lyeni një tavë të vogël me gjalpë kokosi.',
+            'Shtypni bananet me pirun derisa të bëhen pure.',
+            'Përzieni vezët, mjaltin, vaniljen dhe gjalpin e kokosit të shkrirë me purenë e bananes.',
+            'Shtoni tërshërën, kanellën dhe pluhurin e pjekjes dhe përzieni derisa masa të jetë homogjene.',
+            'Hidheni masën në tavë dhe piqeni për 25-30 minuta derisa të marrë ngjyrë të artë.',
+            'Lëreni të ftohet pak përpara se ta prisni dhe shërbeni.'
+        ],
         excerpt: 'Ëmbëlsirë e shëndetshme që plotëson dëshirën për diçka të ëmbël pa faj. Vetëm tre përbërës dhe gati në 10 minuta.',
         seed: 'receta-torte-tersthere',
         date: 'Dje',
-        time: '09:50',
-        video: SAMPLE_VIDEOS[0],
-        videoPoster: VIDEO_POSTERS[0]
+        time: '09:50'
     },
     {
         id: 16,
@@ -238,6 +225,14 @@ const seedArticles = [
             '½ lugë çaji piper i zi',
             '2 speca të ëmbël'
         ],
+        steps: [
+            'Ngrohni furrën në 200°C dhe përgatisni një tavë duke e lyer lehtë me vaj ulliri.',
+            'Vendosni gjokset e pulës në tavë dhe prisni limonin në feta mbi të.',
+            'Shtypni hudhrën dhe shpërndajeni së bashku me rozmarinën mbi pulë.',
+            'Shtoni specat e prerë në shirita rreth pulës, hidheni vajin e ullirit dhe rregulloni me kripë dhe piper.',
+            'Piqeni për 25-30 minuta derisa pula të marrë ngjyrë të artë dhe të jetë e gatuar plotësisht.',
+            'Lëreni të pushojë 5 minuta përpara se ta servirni me specat dhe salcën e formuar në tavë.'
+        ],
         excerpt: 'Një pjatë kryesore e shëndetshme me proteina të larta, aromatike dhe e thjeshtë për t\'u përgatitur.',
         seed: 'receta-pula',
         date: 'Dje',
@@ -251,9 +246,7 @@ const seedArticles = [
         excerpt: 'Nuk ke nevojë për palestër. Një rutinë e thjeshtë me ushtrime me peshë trupore që mund ta bësh kudo.',
         seed: 'ushtrime-ne-shtepi',
         date: 'Dje',
-        time: '15:05',
-        video: SAMPLE_VIDEOS[5],
-        videoPoster: VIDEO_POSTERS[1]
+        time: '15:05'
     },
     {
         id: 18,
@@ -293,9 +286,7 @@ const seedArticles = [
         excerpt: 'Stresi kronik saboton shëndetin dhe peshën. Mëso teknika praktike për t\'u qetësuar dhe rikthyer fokusin.',
         seed: 'stresi-teknika',
         date: 'Dje',
-        time: '20:30',
-        video: SAMPLE_VIDEOS[3],
-        videoPoster: VIDEO_POSTERS[2]
+        time: '20:30'
     },
     {
         id: 22,
@@ -392,7 +383,7 @@ const categories = ['Humbje Peshe', 'Ushqim i Shëndetshëm', 'Receta', 'Ushtrim
 const foods = ['avokado', 'boronicat', 'kungulli', 'spinaci', 'thjerrëzat', 'quinoa', 'kale', 'salmoni'];
 const dishes = ['sallatë perimesh', 'supë krem', 'tavë perimesh', 'petulla tërshëre', 'smoothie jeshil', 'tuna në gril'];
 
-// ===== Detaje për çdo pjatë: përbërës + foto tematike =====
+// ===== Detaje për çdo pjatë: përbërës + hapat + foto tematike =====
 const RECIPE_DETAILS = {
     'sallatë perimesh': {
         image: 'https://loremflickr.com/640/400/vegetable,salad',
@@ -400,6 +391,13 @@ const RECIPE_DETAILS = {
             '2 domate', '1 kastravec', '½ qepë e kuqe', '1 spec i ëmbël',
             '100g ullinj të zinj', '100g djathë feta', '2 lugë vaj ulliri',
             '1 lugë uthull balsamike', 'kripë dhe piper'
+        ],
+        steps: [
+            'Lani dhe prisni të gjitha perimet në copa të vogla.',
+            'Vendosni perimet në një tas të madh së bashku me ullinjtë.',
+            'Shtoni djathin feta të thërrmuar mbi perime.',
+            'Përgatisni salcën duke përzier vajin e ullirit, uthullën, kripën dhe piperin.',
+            'Hidheni salcën mbi sallatën dhe përzieni butësisht përpara se ta shërbeni.'
         ]
     },
     'supë krem': {
@@ -408,6 +406,13 @@ const RECIPE_DETAILS = {
             '2 kunguj të vegjël', '1 qepë', '2 thelpinj hudhër',
             '1 patate', '1 litër lëng perimesh', '3 lugë vaj ulliri',
             'kripë dhe piper', 'fara kungulli për garniturë'
+        ],
+        steps: [
+            'Qëroni dhe prisni kungujt, qepën dhe pataten në kubikë.',
+            'Skuqni qepën dhe hudhrën në vaj ulliri për 2-3 minuta.',
+            'Shtoni kungujt, pataten dhe lëngun e perimeve dhe zieni për 20 minuta.',
+            'Bluani gjithçka me blender derisa të bëhet krem.',
+            'Rregulloni me kripë dhe piper dhe shërbeni me fara kungulli sipër.'
         ]
     },
     'tavë perimesh': {
@@ -416,6 +421,14 @@ const RECIPE_DETAILS = {
             '2 kunguj', '2 patate', '1 patllixhan', '2 domate',
             '1 spec i kuq', '2 thelpinj hudhër', '3 lugë vaj ulliri',
             'trumzë, rozmarinë, kripë dhe piper'
+        ],
+        steps: [
+            'Ngrohni furrën në 200°C dhe lyejeni një tavë me vaj ulliri.',
+            'Prisni të gjitha perimet në feta të trasha.',
+            'Vendosni perimet në tavë dhe shpërndani hudhrën e shtypur sipër.',
+            'Hidhni vajin e ullirit dhe rregulloni me trumzë, rozmarinë, kripë dhe piper.',
+            'Përzieni me duar që gjithçka të mbulohet me erëza.',
+            'Piqeni për 30-35 minuta derisa perimet të zbuten dhe të marrin ngjyrë të artë.'
         ]
     },
     'petulla tërshëre': {
@@ -424,6 +437,14 @@ const RECIPE_DETAILS = {
             '2 banane të pjekura', '150g tërshërë', '2 vezë',
             '1 lugë mjaltë', '1 lugë çaji kanellë', '1 lugë çaji pluhur pjekjeje',
             'fruta të freskëta për sipër'
+        ],
+        steps: [
+            'Shtypni bananet me pirun derisa të bëhen pure.',
+            'Përzieni purenë e bananes me vezët, mjaltin dhe kanellën.',
+            'Shtoni tërshërën dhe pluhurin e pjekjes dhe përzieni derisa të bëhet një masë e dendur.',
+            'Ngrohni një tigan të veshur anti-ngjitës dhe hidheni masën në formë petullash të vogla.',
+            'Piqni 2-3 minuta për secilën anë derisa të marrin ngjyrë të artë.',
+            'Shërbeni me fruta të freskëta sipër dhe pak mjaltë.'
         ]
     },
     'smoothie jeshil': {
@@ -432,6 +453,13 @@ const RECIPE_DETAILS = {
             '1 banane', '1 grusht spinaq', '½ avokado',
             '1 kivi', '250ml qumësht bajamesh', '1 lugë çaji fara chia',
             '1 lugë mjaltë', 'akull sipas dëshirës'
+        ],
+        steps: [
+            'Lani spinaqin dhe qëroni bananen, avokadon dhe kivin.',
+            'Vendosni të gjithë përbërësit në blender.',
+            'Shtoni qumështin e bajamesh dhe mjaltin.',
+            'Bluani për 60-90 sekonda derisa masa të jetë e lëmuar.',
+            'Hidheni në gotë, shtoni farat chia dhe akull, dhe shërbejeni menjëherë.'
         ]
     },
     'tuna në gril': {
@@ -440,6 +468,13 @@ const RECIPE_DETAILS = {
             '2 bife tuna të freskët', '2 lugë vaj ulliri',
             '1 limon', '2 thelpinj hudhër', '1 lugë rozmarinë',
             'kripë dhe piper', 'sallatë jeshile për shoqërim'
+        ],
+        steps: [
+            'Marinoni bifet e tunës me vaj ulliri, lëng limoni, hudhër të shtypur, rozmarinë, kripë dhe piper për 15 minuta.',
+            'Ngrohni mirë grilën ose një tigan grill.',
+            'Piqni tunën 2-3 minuta për secilën anë sipas shijes (nuk duhet të piqet shumë).',
+            'Lëreni të pushojë 2 minuta përpara se ta prisni.',
+            'Shërbeni me sallatë jeshile dhe feta limoni.'
         ]
     }
 };
@@ -473,7 +508,6 @@ function generateArticle(articles) {
         habit: pick(habits),
         focus: pick(focuses)
     };
-    const hasVideo = Math.random() < 0.4;
     const isRecipe = t.cat === 'receta';
     const recipe = isRecipe ? (RECIPE_DETAILS[p.dish] || null) : null;
     return {
@@ -486,8 +520,7 @@ function generateArticle(articles) {
         date: 'Sot',
         time: nowTime(),
         live: true,
-        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients } : {}),
-        ...(hasVideo ? { video: pick(SAMPLE_VIDEOS), videoPoster: pick(VIDEO_POSTERS) } : {})
+        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients, steps: recipe.steps } : {})
     };
 }
 
@@ -529,8 +562,8 @@ function generateLatestArticle(articles) {
         date: 'Sot',
         time: nowTime(),
         live: true,
-        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients } : {})
+        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients, steps: recipe.steps } : {})
     };
 }
 
-module.exports = { seedArticles, SAMPLE_VIDEOS, VIDEO_POSTERS, generateArticle, generateLatestArticle };
+module.exports = { seedArticles, generateArticle, generateLatestArticle };

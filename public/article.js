@@ -15,19 +15,12 @@ const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
 
 // ===== Zgjerimi i tekstit =====
 function expandBody(article) {
-    const cat = article.category || 'Artikull';
     const pars = [];
-
     if (article.excerpt) {
         pars.push(article.excerpt);
     } else {
         pars.push(`${article.title}. Një këshillë praktike e ndjekur nga ekspertët e të ushqyerit dhe jetës së shëndetshme.`);
     }
-
-    pars.push(`Sipas nutricionistëve, ndryshimet e vogla dhe të qëndrueshme në dietën e përditshme sjellin rezultatet më të mira afatgjatë. Rekomandohet që çdo ndryshim i rëndësishëm në ushqim apo aktivitet fizik të shoqërohet me konsultën e një profesionisti të shëndetit.`);
-
-    pars.push(`Në kuadër të temës së ${cat.toLowerCase()}, lexuesit e JetoBukur kërkojnë informacion të saktë dhe të përditësuar. Ky artikull do të pasurohet me detaje të reja sapo ato të vërtetohen nga burime të besueshme.`);
-
     return pars;
 }
 
@@ -38,17 +31,6 @@ function renderArticle(a) {
 
     const img = a.image || `https://picsum.photos/seed/${a.seed}/1280/720`;
     const body = expandBody(a);
-
-    let media = '';
-    if (a.video) {
-        media = `
-            <div class="article-video">
-                <video controls playsinline poster="${a.videoPoster || img}">
-                    <source src="${a.video}" type="video/mp4">
-                </video>
-            </div>
-        `;
-    }
 
     content.innerHTML = `
         <header class="article-header">
@@ -61,13 +43,20 @@ function renderArticle(a) {
         <figure class="article-figure">
             <img src="${img}" alt="${a.title}">
         </figure>
-        ${media}
         ${a.ingredients ? `
             <div class="article-ingredients">
                 <h2>Përbërësit</h2>
                 <ul>
                     ${a.ingredients.map(i => `<li>${i}</li>`).join('')}
                 </ul>
+            </div>
+        ` : ''}
+        ${a.steps ? `
+            <div class="article-steps">
+                <h2>Mënyra e përgatitjes</h2>
+                <ol>
+                    ${a.steps.map(s => `<li>${s}</li>`).join('')}
+                </ol>
             </div>
         ` : ''}
         <div class="article-body">
