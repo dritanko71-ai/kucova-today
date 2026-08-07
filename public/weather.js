@@ -1,5 +1,5 @@
 // ===== Moti real i Shqipërisë (Open-Meteo, falas, pa API key) =====
-// Përfshin qytetet kryesore + Kuçovën. Azhornon çdo 10 minuta.
+// Përfshin qytetet kryesore + Kuçovën. Qytetet ndërrohen automatikisht. Azhornon çdo 10 minuta.
 const CITIES = [
     { name: 'Kuçova', lat: 40.8039, lon: 19.9167 },
     { name: 'Tirana', lat: 41.3275, lon: 19.8187 },
@@ -14,6 +14,7 @@ const CITIES = [
 ];
 
 const WEATHER_INTERVAL_MS = 10 * 60 * 1000;
+const CITY_ROTATE_MS = 4000;
 
 const WEATHER_CODES = {
     0: { text: 'i Kthjellët', icon: '&#9728;&#65039;' },
@@ -42,27 +43,9 @@ function formatWeather(code, temp) {
     return `${w.icon} ${t}&deg;C`;
 }
 
-// ===== Strip i motit për qytetet =====
-function ensureWeatherStrip() {
-    if (document.getElementById('weather-strip')) return;
-    const header = document.querySelector('.site-header');
-    if (!header) return;
-    const strip = document.createElement('div');
-    strip.className = 'weather-strip';
-    strip.id = 'weather-strip';
-    strip.innerHTML = `
-        <div class="weather-strip-label">Moti sot</div>
-        <div class="weather-strip-cities">
-            ${CITIES.map(() => '<div class="weather-city">-</div>').join('')}
-        </div>
-    `;
-    header.after(strip);
-}
+let weatherCache = [];
 
-async function updateWeather() {
-    const els = document.querySelectorAll('.utility-weather');
-    const strip = document.getElementById('weather-strip');
-
+async function fetchWeather() {
     try {
         const lat = CITIES.map(c => c.lat).join(',');
         const lon = CITIES.map(c => c.lon).join(',');
@@ -72,29 +55,33 @@ async function updateWeather() {
         );
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
-
-        CITIES.forEach((city, i) => {
-            const d = data[i];
-            if (!d || !d.current) return;
-            const html = formatWeather(d.current.weather_code, d.current.temperature_2m);
-
-            if (city.name === 'Kuçova') {
-                els.forEach(el => el.innerHTML = `<strong>${city.name}</strong>: ${html}`);
-            }
-
-            const card = strip && strip.querySelectorAll('.weather-city')[i];
-            if (card) {
-                card.innerHTML = `
-                    <span class="weather-city-name">${city.name}</span>
-                    <span class="weather-city-cond">${html}</span>
-                `;
-            }
-        });
+        weatherCache = data.map((d, i) => d && d.current
+            ? formatWeather(d.current.weather_code, d.current.temperature_2m)
+            : null);
     } catch (e) {
         console.warn('Moti nuk u azhornua:', e.message);
     }
 }
 
-ensureWeatherStrip();
+function showWeather() {
+    const els = document.querySelectorAll('.utility-weather');
+    if (!els.length || !weatherCache.length) return;
+    const now = Math.floor(Date.now() / CITY_ROTATE_MS);
+    const i = now % CITIES.length;
+    const html = weatherCache[i] || '-';
+    els.forEach(el => {
+        el.innerHTML = `<strong>${CITIES[i].name}</strong>: ${html}`;
+        el.classList.remove('fade');
+        void el.offsetWidth;
+        el.classList.add('fade');
+    });
+}
+
+async function updateWeather() {
+    await fetchWeather();
+    showWeather();
+}
+
 updateWeather();
 setInterval(updateWeather, WEATHER_INTERVAL_MS);
+setInterval(showWeather, CITY_ROTATE_MS);
