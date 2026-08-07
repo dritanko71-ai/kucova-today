@@ -16,8 +16,16 @@ const seedArticles = [
         pos: 'hero-side',
         cat: 'ushqim',
         category: 'Ushqim i Shëndetshëm',
-        title: 'Ushqimet me proteina që duhet të kesh në frigorifer',
-        seed: 'ushqim-proteina',
+        title: 'Perimet e freskëta që duhet të kesh gjithmonë në frigorifer',
+        image: 'https://loremflickr.com/640/400/fresh,vegetables',
+        excerpt: 'Mbajtja e perimeve në frigorifer i mban ato të freskëta, krokante dhe plot vitamina shumë më gjatë. Zbulo cilat perime përfitojnë më shumë nga i ftohti dhe pse duhet t\'i ruash gjithmonë aty.',
+        body: [
+            'Frigoriferi ngadalëson procesin e kalbëzimit. Temperaturat e ulëta ngadalësojnë enzimat dhe mikroorganizmat që prishin perimet, duke u mbajtur ato të freskëta deri në dy javë më gjatë se temperatura e dhomës.',
+            'Perimet me gjethe, si spinaqi, maruleja, lakra dhe zarzavatet, humbasin ujin shpejt. Të ruajtura në frigorifer mbeten krokante dhe ruajnë më shumë vitaminë C dhe folate, që prishen lehtë nga nxehtësia dhe ajri.',
+            'Bishtajoret dhe perimet e tjera të freskëta, si brokoli, karfolli, karotat dhe specat, përfitojnë gjithashtu. Ftohtësia ruan ngjyrën, aromën dhe vetitë antioksiduese të tyre, duke i mbajtur ushqyese për ditë të tëra.',
+            'Përveç freskisë, mbajtja e perimeve në frigorifer ndihmon në reduktimin e mbetjeve ushqimore. Perimet që qëndrojnë më gjatë nënkuptojnë më pak shpenzime dhe një dietë më të pasur me fibra, vitamina dhe minerale thelbësore për trupin.'
+        ],
+        seed: 'perimet-frigorifer',
         date: 'Sot',
         time: '08:15'
     },

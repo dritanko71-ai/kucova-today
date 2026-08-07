@@ -16,7 +16,9 @@ const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
 // ===== Zgjerimi i tekstit =====
 function expandBody(article) {
     const pars = [];
-    if (article.excerpt) {
+    if (article.body && article.body.length) {
+        pars.push(...article.body);
+    } else if (article.excerpt) {
         pars.push(article.excerpt);
     } else {
         pars.push(`${article.title}. Një këshillë praktike e ndjekur nga ekspertët e të ushqyerit dhe jetës së shëndetshme.`);
