@@ -794,11 +794,14 @@ img {
 }
 
 .news-meta {
-    color: var(--muted);
-    font-size: 0.78rem;
+    color: var(--ink);
+    font-size: 0.85rem;
+    font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    opacity: 0.95;
+    text-shadow: 0 0 12px color-mix(in srgb, var(--gold) 25%, transparent);
 }
 
 .news-meta::before {
@@ -808,6 +811,7 @@ img {
     border-radius: 50%;
     background: var(--gold);
     box-shadow: 0 0 8px var(--gold);
+    flex-shrink: 0;
 }
 
 /* Category color classes */
@@ -1412,8 +1416,11 @@ img {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    color: var(--muted);
-    font-size: 0.9rem;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.95;
+    text-shadow: 0 0 14px color-mix(in srgb, var(--gold) 25%, transparent);
 }
 
 .article-figure img {
