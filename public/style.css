@@ -1396,28 +1396,8 @@ img {
 }
 
 /* ===== Lajm i ri live ===== */
-.news-live-tag {
-    display: inline-block;
-    background: #e53935;
-    color: #fff;
-    font-size: 0.62rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 0.12rem 0.45rem;
-    border-radius: 2px;
-    margin-left: 0.4rem;
-    animation: pulse 1.4s infinite;
-    vertical-align: middle;
-}
-
 .news-row.live-flash {
-    border-color: #e53935;
-    animation: liveFlash 1.2s ease;
-}
-
-@keyframes liveFlash {
-    0% { background: rgba(229, 57, 53, 0.22); border-color: #e53935; }
-    100% { background: var(--surface); border-color: var(--line); }
+    animation: none;
 }
 
 /* ===== Toast për lajmet live ===== */
