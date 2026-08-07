@@ -306,6 +306,23 @@ const seedArticles = [
         category: 'Ushtrime',
         title: 'Ushtrime në shtëpi pa pajisje: rutina 15-minutëshe',
         excerpt: 'Nuk ke nevojë për palestër. Një rutinë e thjeshtë me ushtrime me peshë trupore që mund ta bësh kudo.',
+        image: 'https://loremflickr.com/640/400/home,workout',
+        body: [
+            'Një stërvitje efektive nuk kërkon domosdoshmërisht palestër apo pajisje. Me trupin tënd dhe 15 minuta në ditë mund të ndërtosh forcë, durim dhe energji, thjesht duke ndjekur këtë rutinë të organizuar.',
+            '### Ngrohja (2 minuta)',
+            'Filloni me ngrohje të lehtë: marshimi në vend për 1 minutë, më pas rrotullime të krahëve përpara dhe prapa. Kjo rrit temperaturën e trupit dhe përgatit muskujt, duke parandaluar lëndimet.',
+            '### Squat (3 seri x 12 përsëritje)',
+            'Qëndroni me këmbët sa gjerësia e shpatullave, uleni sikur të uleshit në një karrige imagjinare, duke e mbajtur shpinën drejt. Shtyni gjunjët nga jashtë dhe kthehuni lart duke i shtrënguar vithet. Squati aktivizon këmbët dhe muskujt e kofshëve.',
+            '### Pikë shtytjeje (3 seri x 8-10 përsëritje)',
+            'Vendosni duart pak më të gjera se shpatullat, trupi në vijë të drejtë nga koka te këmbët. Uluni duke përkulur bërrylat derisa gjoksi t\'i afrohet dyshemesë, pastaj shtyjeni lart. Nëse është shumë e vështirë, mbështetni gjunjët në dysheme.',
+            '### Lunge (3 seri x 10 për këmbë)',
+            'Bëni një hap të madh përpara, uleni gjurin e pasmë drejt dyshemesë dhe kthehuni në pozicionin fillestar. Mbani gjurin e përparmë mbi kyçin e këmbës. Lungjet forcojnë këmbët, vithet dhe ekuilibrin.',
+            '### Plank (3 x 30 sekonda)',
+            'Mbështetni bërrylat në dysheme dhe trupin në vijë të drejtë, duke i shtrënguar barkun dhe vithet. Mbajeni pozicionin pa e ngritur ijet. Plank forcon muskujt e barkut dhe shpinës.',
+            '### Ftohja (1 minutë)',
+            'Përfundoni me shtrirje të lehta: përkuluni përpara drejt këmbëve dhe mbajeni 20 sekonda, pastaj shtrini krahët mbi kokë. Kjo ndihmon muskujt të rikuperohen dhe qetëson rrahjet e zemrës.',
+            'Kjo rutinë mund të përsëritet 4-5 herë në javë. Rritni ngadalë numrin e përsëritjeve ose kohën e plank-ut sapo ndjeheni më të fortë.'
+        ],
         seed: 'ushtrime-ne-shtepi',
         date: 'Dje',
         time: '15:05'
@@ -316,6 +333,18 @@ const seedArticles = [
         category: 'Ushtrime',
         title: 'Ecja: ushtrimi më i nënvlerësuar për shëndetin',
         excerpt: '30 minuta ecje në ditë ulin stresin, përmirësojnë zemrën dhe ndihmojnë në menaxhimin e peshës.',
+        image: 'https://loremflickr.com/640/400/walking,nature',
+        body: [
+            'Ecja është ushtrimi më i thjeshtë, i lirë dhe më i sigurt që ekziston, por shpesh e nënvlerësojmë. Një ecje e shpejtë prej 30 minutash në ditë përmirëson zemrën, djeg kalori dhe qetëson mendjen.',
+            '### Si të ecësh si duhet',
+            'Mbani shpinën drejt, shpatullat të relaksuara dhe kokën lart. Lëvizni krahët natyrshëm përgjatë trupit dhe bëni hapa të gjatë por të rehatshëm. Toka me qetësi fillimisht, duke u siguruar që mund të flisni pa e këputur frymën.',
+            '### Sa shpejt duhet të ecësh',
+            'Për të djegur kalori dhe përmirësuar zemrën, synoni një temp të shpejtë — rreth 5-6 km/h. Nëse e filloni, filloni më ngadalë dhe rriteni gradualisht gjatë dy javëve të para.',
+            '### Çfarë të bësh në natyrë',
+            'Zgjidhni një park, pyll ose bregdet. Ecja mbi bar, dhe apo terrene të pabarabarta aktivizon më shumë muskuj sesa trotuari i sheshtë, duke përmirësuar edhe ekuilibrin.',
+            '### Si ta bësh zakon',
+            'Lini orar fiks — mëngjes, mesdite ose pasdite — dhe shoqërojeni me muzikë ose podcast. Edhe 3 ecje të shkurtra 10-minutëshe në ditë llogariten njësoj si një ecje e gjatë.'
+        ],
         seed: 'ecja-shendeti',
         date: 'Dje',
         time: '13:15'
@@ -326,6 +355,19 @@ const seedArticles = [
         category: 'Ushtrime',
         title: 'Stretching: pse duhet ta bësh çdo mëngjes',
         excerpt: 'Shtrirja e mëngjesit zgjon muskujt, përmirëson fleksibilitetin dhe parandalon lëndimet gjatë ditës.',
+        image: 'https://loremflickr.com/640/400/stretching,morning',
+        body: [
+            'Shtrirja e mëngjesit është si të thuash "zgjohu" trupit. Ajo liron tensionin e grumbulluar gjatë natës, përmirëson qarkullimin dhe e përgatit trupin për ditën, duke reduktuar rrezikun e lëndimeve.',
+            '### Shtrirje për qafën (5 përsëritje secila anë)',
+            'Uleni ngadalë kokën drejt shpatullës së djathtë, mbajeni 15 sekonda dhe kthehuni. Përsëriteni në anën tjetër. Ky ushtrim çliron tensionin e qafës pas orëve me telefon ose kompjuter.',
+            '### Shtrirje për shpatullat (5 përsëritje)',
+            'Vendosni njërën krah horizontalisht përpara gjoksit dhe tërhiqeni butësisht me krahun tjetër për 20 sekonda. Përsëriteni me krahun tjetër. Hap shpatullat dhe përmirëson qëndrimin.',
+            '### Shtrirje për shpinën (5 përsëritje)',
+            'Qëndroni në të katërta, alternoni midis harkimit të shpinës lart (si maceja) dhe uljes së barkut poshtë (si lopa). Kjo lëvizje e butë zgjon shtyllën kurrizore dhe lehtëson ngurtësinë e mëngjesit.',
+            '### Shtrirje për këmbët (10 sekonda secila)',
+            'Uluni, shtrini njërën këmbë përpara dhe përkuluni drejt gishtave, duke e mbajtur shpinën drejt. Përsëriteni me këmbën tjetër. Kjo zgjon muskujt e kofshëve dhe përmirëson qarkullimin.',
+            'Bëjini këto shtrirje çdo mëngjes para se të nisesh për drekë ose punë. Nuk kërkojnë më shumë se 5 minuta dhe ndryshimi ndihet që në ditën e parë.'
+        ],
         seed: 'stretching-mengjes',
         date: 'Dje',
         time: '11:10'
@@ -422,6 +464,58 @@ const seedArticles = [
         date: 'Sot',
         time: '13:45',
         live: true
+    },
+    {
+        id: 29,
+        cat: 'ushtrime',
+        category: 'Ushtrime',
+        title: 'Ushtrime në natyrë: rutina 30-minutëshe për ajër të pastër',
+        excerpt: 'Stërvitja jashtë shtëpisë djeg më shumë kalori dhe përmirëson humorin. Ja një rutinë e plotë për parkun.',
+        image: 'https://loremflickr.com/640/400/outdoor,exercise,park',
+        body: [
+            'Ushtrimet në natyrë kanë një përfitim shtesë që s\'e jep asnjë palestër: ajri i pastër dhe drita e diellit. Ato përmirësojnë disponimin, forcojnë zemrën dhe djegin më shumë kalori, sepse terreni i pabarabartë punon më shumë muskuj.',
+            '### Ngrohja (3 minuta)',
+            'Filloni me ecje të shpejtë në vend ose në një shteg të sheshtë. Shtoni rrotullime krahësh dhe rrathë me ijët për të përgatitur trupin.',
+            '### Intervale vrapimi (10 minuta)',
+            'Alternoni 1 minutë vrapim të lehtë me 1 minutë ecje, duke e përsëritur 5 herë. Intervalet rrisin ritmin e zemrës dhe djegin yndyrë më shpejt sesa ushtrimi i qëndrueshëm.',
+            '### Squat + lunge në stol (3 seri)',
+            'Përdorni një stol parku për lunge të ngritura: vendosni njërën këmbë mbi stol dhe bëni squats të alternuara. Më pas bëni 10 squats të rregullta me duart përpara gjoksit.',
+            '### Push-ups mbi stol (3 seri x 10)',
+            'Mbështetini duart në anët e stolit dhe bëni pikë shtytjeje të pjerrëta. Ato janë më të lehta se ato në dysheme, por aktivizojnë njësoj gjoksin, krahët dhe barkun.',
+            '### Ecje e shpejtë e ftohjes (7 minuta)',
+            'Përfundoni me ecje të qetë që të ulni gradualisht ritmin e zemrës. Mbylleni me shtrirje të këmbëve dhe shpatullave.',
+            'Provoni këtë rutinë 3-4 herë në javë në park ose në çdo hapësirë të gjelbër. Mëngjesi herët është ideal: ajri është më i freskët dhe parku më i qetë.'
+        ],
+        seed: 'ushtrime-ne-natyre',
+        date: 'Dje',
+        time: '09:40'
+    },
+    {
+        id: 30,
+        cat: 'ushtrime',
+        category: 'Ushtrime',
+        title: 'Ushtrime në shtëpi: hiq barkun dhe forco këmbët pa pajisje',
+        excerpt: 'Një rutinë 20-minutëshe për forcë dhe tonifikim, e bërë thjesht me peshën e trupit në dhomën e ndenjes.',
+        image: 'https://loremflickr.com/640/400/home,workout,exercise',
+        body: [
+            'Nuk ke nevojë për pajisje për të ndërtuar muskuj të fortë. Pesha e trupit është një nga mjetet më efektive stërvitjeje. Kjo rutinë 20-minutëshe fokusohet te barku dhe këmbët, dy zonat më të kërkuara nga shumica.',
+            '### Ngrohje dinamike (2 minuta)',
+            'Marshoni në vend duke i ngritur gjunjët lart për 1 minutë, më pas bëni 10 rrethime ijesh secila anë dhe 10 lunge pa peshë për të zgjuar muskujt.',
+            '### Squats klasikë (3 seri x 15)',
+            'Këmbët sa gjerësia e shpatullave, uluni ngadalë duke mbajtur shpinën drejt dhe gjunjët mbi kyçet. Shtrëngoni vithet kur ngriheni. Për më shumë intensitet, mbani një shishe uji përpara gjoksit.',
+            '### Crunches për barkun (3 seri x 15)',
+            'Shtrihuni në shpinë, përkulni gjunjët dhe ngrihuni drejt gjunjëve duke shtrënguar muskujt e barkut. Mos tërhiqni kokën me duar — mbështetini gishtat lehtë pas veshëve dhe përdorni barkun për ngritjen.',
+            '### Lunge përpara (3 seri x 12 për këmbë)',
+            'Bëni një hap të gjatë përpara, uleni gjurin e pasmë drejt dyshemesë dhe kthehuni. Alternoni këmbët. Lungjet tonifikojnë kofshët, vithet dhe përmirësojnë ekuilibrin.',
+            '### Plank me ngritje këmbe (3 x 20 sekonda)',
+            'Në pozicion plank me bërryla në dysheme, ngrini në mënyrë alternative njërën këmbë dhe mbajeni 2 sekonda. Ky variant i plank-ut djeg më shumë dhe forcon barkun e thellë.',
+            '### Ftohja (2 minuta)',
+            'Shtrihuni në shpinë, afrojeni njërin gju drejt gjoksit dhe mbajeni 20 sekonda, pastaj përsëriteni me këmbën tjetër. Mbylleni me shtrirje të barkut duke u mbështetur te bërrylat.',
+            'Kjo rutinë mund të bëhet çdo ditë tjetër. Kombinojeni me ecje të shpejtë për rezultate më të shpejta në djegien e kalorive.'
+        ],
+        seed: 'ushtrime-ne-shpi-ab',
+        date: 'Dje',
+        time: '08:15'
     }
 ];
 
