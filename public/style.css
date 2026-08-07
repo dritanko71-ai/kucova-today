@@ -44,6 +44,7 @@
     --cat-shqiperia: #fb7185;
     --cat-bota: #60a5fa;
 
+    --meta-gold: #fcd34d;
     --grad-1: #6366f1;
     --grad-2: #8b5cf6;
     --grad-3: #ec4899;
@@ -88,6 +89,7 @@
     --cat-shqiperia: #e11d48;
     --cat-bota: #2563eb;
 
+    --meta-gold: #b45309;
     --grad-1: #6366f1;
     --grad-2: #8b5cf6;
     --grad-3: #ec4899;
@@ -238,6 +240,13 @@ img {
 
 .utility-right a:hover {
     color: #fff;
+}
+
+.utility-right #today-date {
+    color: var(--meta-gold);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-shadow: 0 0 10px color-mix(in srgb, var(--meta-gold) 60%, transparent);
 }
 
 .utility-weather {
@@ -794,23 +803,22 @@ img {
 }
 
 .news-meta {
-    color: var(--ink);
+    color: var(--meta-gold);
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 800;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    opacity: 0.95;
-    text-shadow: 0 0 12px color-mix(in srgb, var(--gold) 25%, transparent);
+    text-shadow: 0 0 10px color-mix(in srgb, var(--meta-gold) 60%, transparent);
 }
 
 .news-meta::before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--gold);
-    box-shadow: 0 0 8px var(--gold);
+    box-shadow: 0 0 10px var(--gold);
     flex-shrink: 0;
 }
 
@@ -1416,11 +1424,10 @@ img {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    color: var(--ink);
-    font-size: 0.95rem;
-    font-weight: 600;
-    opacity: 0.95;
-    text-shadow: 0 0 14px color-mix(in srgb, var(--gold) 25%, transparent);
+    color: var(--meta-gold);
+    font-size: 0.98rem;
+    font-weight: 800;
+    text-shadow: 0 0 12px color-mix(in srgb, var(--meta-gold) 60%, transparent);
 }
 
 .article-figure img {
