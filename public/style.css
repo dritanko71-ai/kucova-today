@@ -1182,6 +1182,13 @@ img {
         padding-left: 1.2rem;
         padding-right: 1.2rem;
     }
+    .article-ingredients {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+    .article-ingredients ul {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Safe area për pajisje me bllokim (notch) */
@@ -1519,6 +1526,50 @@ img {
     color: var(--ink);
     margin-bottom: 1.1rem;
     text-align: justify;
+}
+
+.article-ingredients {
+    padding: 1.2rem 2.2rem 0.5rem;
+}
+
+.article-ingredients h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+}
+
+.article-ingredients ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+    padding: 0;
+}
+
+.article-ingredients li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+.article-ingredients li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
 }
 
 .article-nav {

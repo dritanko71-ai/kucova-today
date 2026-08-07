@@ -62,6 +62,14 @@ function renderArticle(a) {
             <img src="${img}" alt="${a.title}">
         </figure>
         ${media}
+        ${a.ingredients ? `
+            <div class="article-ingredients">
+                <h2>Përbërësit</h2>
+                <ul>
+                    ${a.ingredients.map(i => `<li>${i}</li>`).join('')}
+                </ul>
+            </div>
+        ` : ''}
         <div class="article-body">
             ${body.map(p => `<p>${p}</p>`).join('')}
         </div>

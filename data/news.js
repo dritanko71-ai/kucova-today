@@ -50,6 +50,18 @@ const seedArticles = [
         cat: 'receta',
         category: 'Receta',
         title: 'Sallatë e shëndetshme me quinoa dhe perime sezonale',
+        image: 'https://loremflickr.com/640/400/quinoa,salad',
+        ingredients: [
+            '1 filxhan quinoa',
+            '2 domate të pjekura',
+            '1 kastravec',
+            '½ qepë e kuqe',
+            '1 spec të verdhë',
+            '100g djathë feta',
+            '2 lugë vaj ulliri',
+            '1 lugë lëng limoni',
+            'kripë dhe piper'
+        ],
         seed: 'receta-quinoa',
         date: 'Sot',
         time: '09:00',
@@ -171,6 +183,17 @@ const seedArticles = [
         cat: 'receta',
         category: 'Receta',
         title: 'Receta: Supë krem me kungull dhe xhenxhefil',
+        image: 'https://loremflickr.com/640/400/pumpkin,soup',
+        ingredients: [
+            '1 kungull i mesëm (rreth 1 kg)',
+            '1 qepë',
+            '2 thelpinj hudhër',
+            '1 copë xhenxhefil (2 cm)',
+            '1 lugë vaj ulliri',
+            '1 litër lëng perimesh',
+            '100ml qumësht kokosi',
+            'kripë dhe piper'
+        ],
         excerpt: 'Një supë e ngrohtë, e lehtë dhe e plotë me vitamina. Perfekte për ditët e ftohta, gati në vetëm 30 minuta.',
         seed: 'receta-supe-kungull',
         date: 'Dje',
@@ -181,6 +204,17 @@ const seedArticles = [
         cat: 'receta',
         category: 'Receta',
         title: 'Receta: Tortë me tërshërë dhe banane pa sheqer',
+        image: 'https://loremflickr.com/640/400/banana,cake,oats',
+        ingredients: [
+            '2 banane të pjekura',
+            '150g tërshërë',
+            '2 vezë',
+            '2 lugë mjaltë',
+            '1 lugë çaji pluhur pjekjeje',
+            '1 lugë çaji kanellë',
+            '1 lugë ekstrakt vanilje',
+            '3 lugë gjalpë kokosi'
+        ],
         excerpt: 'Ëmbëlsirë e shëndetshme që plotëson dëshirën për diçka të ëmbël pa faj. Vetëm tre përbërës dhe gati në 10 minuta.',
         seed: 'receta-torte-tersthere',
         date: 'Dje',
@@ -193,6 +227,17 @@ const seedArticles = [
         cat: 'receta',
         category: 'Receta',
         title: 'Receta: Pula me limon dhe hudhër në furrë',
+        image: 'https://loremflickr.com/640/400/chicken,lemon,roast',
+        ingredients: [
+            '4 copë gjoks pule',
+            '1 limon organik',
+            '4 thelpinj hudhër',
+            '2 lugë vaj ulliri',
+            '1 lugë rozmarinë',
+            '1 lugë çaji kripë deti',
+            '½ lugë çaji piper i zi',
+            '2 speca të ëmbël'
+        ],
         excerpt: 'Një pjatë kryesore e shëndetshme me proteina të larta, aromatike dhe e thjeshtë për t\'u përgatitur.',
         seed: 'receta-pula',
         date: 'Dje',
@@ -346,6 +391,58 @@ const templates = [
 const categories = ['Humbje Peshe', 'Ushqim i Shëndetshëm', 'Receta', 'Ushtrime', 'Jete e Shëndetshme', 'Shëndet'];
 const foods = ['avokado', 'boronicat', 'kungulli', 'spinaci', 'thjerrëzat', 'quinoa', 'kale', 'salmoni'];
 const dishes = ['sallatë perimesh', 'supë krem', 'tavë perimesh', 'petulla tërshëre', 'smoothie jeshil', 'tuna në gril'];
+
+// ===== Detaje për çdo pjatë: përbërës + foto tematike =====
+const RECIPE_DETAILS = {
+    'sallatë perimesh': {
+        image: 'https://loremflickr.com/640/400/vegetable,salad',
+        ingredients: [
+            '2 domate', '1 kastravec', '½ qepë e kuqe', '1 spec i ëmbël',
+            '100g ullinj të zinj', '100g djathë feta', '2 lugë vaj ulliri',
+            '1 lugë uthull balsamike', 'kripë dhe piper'
+        ]
+    },
+    'supë krem': {
+        image: 'https://loremflickr.com/640/400/cream,soup',
+        ingredients: [
+            '2 kunguj të vegjël', '1 qepë', '2 thelpinj hudhër',
+            '1 patate', '1 litër lëng perimesh', '3 lugë vaj ulliri',
+            'kripë dhe piper', 'fara kungulli për garniturë'
+        ]
+    },
+    'tavë perimesh': {
+        image: 'https://loremflickr.com/640/400/vegetable,roast,oven',
+        ingredients: [
+            '2 kunguj', '2 patate', '1 patllixhan', '2 domate',
+            '1 spec i kuq', '2 thelpinj hudhër', '3 lugë vaj ulliri',
+            'trumzë, rozmarinë, kripë dhe piper'
+        ]
+    },
+    'petulla tërshëre': {
+        image: 'https://loremflickr.com/640/400/oatmeal,pancakes',
+        ingredients: [
+            '2 banane të pjekura', '150g tërshërë', '2 vezë',
+            '1 lugë mjaltë', '1 lugë çaji kanellë', '1 lugë çaji pluhur pjekjeje',
+            'fruta të freskëta për sipër'
+        ]
+    },
+    'smoothie jeshil': {
+        image: 'https://loremflickr.com/640/400/green,smoothie',
+        ingredients: [
+            '1 banane', '1 grusht spinaq', '½ avokado',
+            '1 kivi', '250ml qumësht bajamesh', '1 lugë çaji fara chia',
+            '1 lugë mjaltë', 'akull sipas dëshirës'
+        ]
+    },
+    'tuna në gril': {
+        image: 'https://loremflickr.com/640/400/tuna,grill,fish',
+        ingredients: [
+            '2 bife tuna të freskët', '2 lugë vaj ulliri',
+            '1 limon', '2 thelpinj hudhër', '1 lugë rozmarinë',
+            'kripë dhe piper', 'sallatë jeshile për shoqërim'
+        ]
+    }
+};
 const exercises = ['squat', 'plank', 'push-up', 'lunges', 'burpees', 'deadlift'];
 const routines = ['15-minutëshe', 'mëngjesore', 'mbrëmëse', 'pa pajisje', 'me pesha trupore'];
 const goals = ['stabilizojë peshën', 'rrisë energjinë', 'përmirësojë tretjen', 'ulë stresin'];
@@ -377,6 +474,8 @@ function generateArticle(articles) {
         focus: pick(focuses)
     };
     const hasVideo = Math.random() < 0.4;
+    const isRecipe = t.cat === 'receta';
+    const recipe = isRecipe ? (RECIPE_DETAILS[p.dish] || null) : null;
     return {
         id: newId(articles),
         cat: t.cat,
@@ -387,6 +486,7 @@ function generateArticle(articles) {
         date: 'Sot',
         time: nowTime(),
         live: true,
+        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients } : {}),
         ...(hasVideo ? { video: pick(SAMPLE_VIDEOS), videoPoster: pick(VIDEO_POSTERS) } : {})
     };
 }
@@ -418,6 +518,7 @@ function generateLatestArticle(articles) {
         goal: pick(goals),
         focus: pick(focuses)
     };
+    const recipe = RECIPE_DETAILS[p.dish] || null;
     return {
         id: newId(articles),
         cat: 'latest',
@@ -427,7 +528,8 @@ function generateLatestArticle(articles) {
         seed: `latest-${Date.now()}-${Math.floor(Math.random() * 9999)}`,
         date: 'Sot',
         time: nowTime(),
-        live: true
+        live: true,
+        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients } : {})
     };
 }
 
