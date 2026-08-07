@@ -3,33 +3,30 @@ const params = new URLSearchParams(window.location.search);
 const id = Number(params.get('id'));
 
 const catClass = {
-    'Kronikë': 'kronika',
-    'Sport': 'sport',
-    'Politikë': 'politika',
-    'Ekonomi': 'ekonomia',
-    'Evente': 'eventi',
-    'Arsim': 'arsim',
-    'Turizëm': 'turizem',
-    'Shërbime': 'sherbime',
-    'Shqipëria': 'shqiperia',
-    'Bota': 'bota'
+    'Më e reja': 'latest',
+    'Humbje Peshe': 'humbjepeshe',
+    'Ushqim i Shëndetshëm': 'ushqim',
+    'Receta': 'receta',
+    'Ushtrime': 'ushtrime',
+    'Jete e Shëndetshme': 'jete',
+    'Shëndet': 'shendet'
 };
-const catCls = a => `cat-${catClass[a.category] || 'kronika'}`;
+const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
 
 // ===== Zgjerimi i tekstit =====
 function expandBody(article) {
-    const cat = article.category || 'Lajm';
+    const cat = article.category || 'Artikull';
     const pars = [];
 
     if (article.excerpt) {
         pars.push(article.excerpt);
     } else {
-        pars.push(`${article.title}. Lajmi raportohet nga burime të besueshme dhe pritet të ndiqet nga detaje të mëtejshme gjatë ditës.`);
+        pars.push(`${article.title}. Një këshillë praktike e ndjekur nga ekspertët e të ushqyerit dhe jetës së shëndetshme.`);
     }
 
-    pars.push(`Sipas të dhënave të fundit, ${article.title.toLowerCase()}. Autoritetet dhe institucionet përkatëse janë njoftuar dhe po ndjekin nga afër zhvillimet për të dhënë informacion zyrtar në kohë reale.`);
+    pars.push(`Sipas nutricionistëve, ndryshimet e vogla dhe të qëndrueshme në dietën e përditshme sjellin rezultatet më të mira afatgjatë. Rekomandohet që çdo ndryshim i rëndësishëm në ushqim apo aktivitet fizik të shoqërohet me konsultën e një profesionisti të shëndetit.`);
 
-    pars.push(`Për këtë temë në kuadër të ${cat.toLowerCase()}, qytetarët kanë shprehur interes të shtuar, ndërsa ekspertët e fushës pritet të japin një vlerësim më të detajuar në ditët në vijim. KuçovaToday do të vijojë ta përditësojë këtë artikull me çdo informacion të ri sapo ai të bëhet i disponueshëm.`);
+    pars.push(`Në kuadër të temës së ${cat.toLowerCase()}, lexuesit e JetoBukur kërkojnë informacion të saktë dhe të përditësuar. Ky artikull do të pasurohet me detaje të reja sapo ato të vërtetohen nga burime të besueshme.`);
 
     return pars;
 }
@@ -73,7 +70,7 @@ function renderArticle(a) {
         </div>
     `;
 
-    document.title = `${a.title} - KuçovaToday`;
+    document.title = `${a.title} - JetoBukur`;
     document.getElementById('article-loading').style.display = 'none';
 }
 
@@ -84,7 +81,7 @@ let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark'
 
 function setTheme(theme) {
     currentTheme = theme;
-    try { localStorage.setItem('kucovatoday-theme', theme); } catch (e) {}
+    try { localStorage.setItem('jetobukur-theme', theme); } catch (e) {}
     document.documentElement.setAttribute('data-theme', theme);
     lightBtn.classList.toggle('active', theme === 'light');
     darkBtn.classList.toggle('active', theme === 'dark');
@@ -112,7 +109,7 @@ async function init() {
         const a = await res.json();
         renderArticle(a);
     } catch (e) {
-        document.getElementById('article-loading').textContent = 'Artikulli nuk u gjet. Kthehu te lajmet.';
+        document.getElementById('article-loading').textContent = 'Artikulli nuk u gjet. Kthehu te artikujt.';
     }
 }
 

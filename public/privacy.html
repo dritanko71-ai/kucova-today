@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politika e privatësisë - KuçovaToday</title>
+    <title>Politika e privatësisë - JetoBukur</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <script>
         (function () {
             try {
-                var t = localStorage.getItem('kucovatoday-theme') || 'dark';
+                var t = localStorage.getItem('jetobukur-theme') || 'dark';
                 document.documentElement.setAttribute('data-theme', t);
             } catch (e) {
                 document.documentElement.setAttribute('data-theme', 'dark');
@@ -21,17 +21,17 @@
 
     <div class="utility-bar">
         <div class="container utility-inner">
-            <span class="ticker">KuçovaToday - Qyteti i Naftës</span>
+            <span class="ticker">JetoBukur - Jeto më shëndetshëm</span>
             <span class="utility-right">
                 <span id="today-date"></span>
-                <a href="index.html">Kthehu te lajmet</a>
+                <a href="index.html">Kthehu te artikujt</a>
             </span>
         </div>
     </div>
 
     <header class="site-header">
         <div class="container header-inner">
-            <a class="logo" href="index.html">Kuçova<span>Today</span></a>
+            <a class="logo" href="index.html">Jeto<span>Bukur</span></a>
             <div class="header-actions">
                 <button class="theme-toggle" id="theme-light" aria-label="Temë e çelët" title="Temë e çelët">&#9728;&#65039;</button>
                 <button class="theme-toggle" id="theme-dark" aria-label="Temë e errët" title="Temë e errët">&#127769;</button>
@@ -48,7 +48,7 @@
 
             <section>
                 <h2>1. Informacioni që mbledhim</h2>
-                <p>KuçovaToday respekton privatësinë e vizitorëve të saj. Ne nuk mbledhim të dhëna personale identifikuese pa pëlqimin tuaj. Mund të mbledhim të dhëna të përgjithshme statistikore, si numri i vizitorëve dhe faqet e vizituara, për të përmirësuar përvojën tuaj.</p>
+                <p>JetoBukur respekton privatësinë e vizitorëve të saj. Ne nuk mbledhim të dhëna personale identifikuese pa pëlqimin tuaj. Mund të mbledhim të dhëna të përgjithshme statistikore, si numri i vizitorëve dhe faqet e vizituara, për të përmirësuar përvojën tuaj.</p>
             </section>
 
             <section>
@@ -77,7 +77,7 @@
             </section>
 
             <div class="legal-nav">
-                <a class="article-back" href="index.html">&larr; Kthehu te lajmet</a>
+                <a class="article-back" href="index.html">&larr; Kthehu te artikujt</a>
             </div>
         </div>
     </main>
@@ -85,19 +85,18 @@
     <footer class="site-footer">
         <div class="container footer-cols">
             <div>
-                <h4>KuçovaToday</h4>
-                <p>Lajme, kronika dhe informacione nga qyteti i Kuçovës, i njohur si "qyteti i naftës".</p>
+                <h4>JetoBukur</h4>
+                <p>Këshilla për humbje peshe, ushqim të shëndetshëm dhe receta të shijshme për një jetë më të mirë.</p>
             </div>
             <div>
                 <h4>Seksione</h4>
                 <ul>
-                    <li><a href="section.html?cat=shqiperia">Shqipëria</a></li>
-                    <li><a href="section.html?cat=bota">Bota</a></li>
-                    <li><a href="section.html?cat=kronika">Kronikë</a></li>
-                    <li><a href="section.html?cat=sport">Sport</a></li>
-                    <li><a href="section.html?cat=politika">Politikë</a></li>
-                    <li><a href="section.html?cat=ekonomia">Ekonomi</a></li>
-                    <li><a href="section.html?cat=eventi">Evente &amp; Kulturë</a></li>
+                    <li><a href="section.html?cat=humbjepeshe">Humbje Peshe</a></li>
+                    <li><a href="section.html?cat=ushqim">Ushqim i Shëndetshëm</a></li>
+                    <li><a href="section.html?cat=receta">Receta</a></li>
+                    <li><a href="section.html?cat=ushtrime">Ushtrime</a></li>
+                    <li><a href="section.html?cat=jete">Jete e Shëndetshme</a></li>
+                    <li><a href="section.html?cat=shendet">Shëndet</a></li>
                 </ul>
             </div>
             <div>
@@ -120,7 +119,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
-                <span class="copyright">&copy; 2026 KuçovaToday &middot; Të gjitha të drejtat e rezervuara &middot; Reg. Nr. 1234/2026</span>
+                <span class="copyright">&copy; 2026 JetoBukur &middot; Të gjitha të drejtat e rezervuara &middot; Reg. Nr. 1234/2026</span>
             </div>
         </div>
     </footer>
@@ -132,7 +131,7 @@
             let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
             function setTheme(theme) {
                 currentTheme = theme;
-                try { localStorage.setItem('kucovatoday-theme', theme); } catch (e) {}
+                try { localStorage.setItem('jetobukur-theme', theme); } catch (e) {}
                 document.documentElement.setAttribute('data-theme', theme);
                 lightBtn.classList.toggle('active', theme === 'light');
                 darkBtn.classList.toggle('active', theme === 'dark');

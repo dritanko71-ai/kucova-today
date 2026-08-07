@@ -17,16 +17,16 @@ const VIDEO_POSTERS = [
     'https://picsum.photos/seed/video-poster-4/1280/720'
 ];
 
-// ===== Lajmet fillestare =====
+// ===== Artikujt fillestarë =====
 const seedArticles = [
     {
         id: 1,
         pos: 'hero-main',
-        cat: 'ekonomia',
-        category: 'Ekonomi',
-        title: 'Kuçova drejt rikthimit si qendër energjetike e vendit',
-        excerpt: 'Rigjetja e fushave të naftës dhe investimet e reja ndërkombëtare kthejnë vëmendjen te qyteti i njohur si "qyteti i naftës".',
-        seed: 'kucova-nafta',
+        cat: 'humbjepeshe',
+        category: 'Humbje Peshe',
+        title: 'Humbja e shëndetshme e peshës: 7 hapa që vërtet funksionojnë',
+        excerpt: 'Pa dieta ekstreme dhe pa uri. Zbulo si të humbësh peshë në mënyrë të qëndrueshme me ndryshime të vogla të përditshme.',
+        seed: 'humbjepeshe-7hapa',
         date: 'Sot',
         time: '07:30',
         video: SAMPLE_VIDEOS[0],
@@ -35,10 +35,10 @@ const seedArticles = [
     {
         id: 2,
         pos: 'hero-side',
-        cat: 'sport',
-        category: 'Sport',
-        title: 'Naftëtari, në kërkim të ringjalljes në kampionatin rajonal',
-        seed: 'kucova-futboll',
+        cat: 'ushqim',
+        category: 'Ushqim i Shëndetshëm',
+        title: 'Ushqimet me proteina që duhet të kesh në frigorifer',
+        seed: 'ushqim-proteina',
         date: 'Sot',
         time: '08:15',
         video: SAMPLE_VIDEOS[4],
@@ -47,10 +47,10 @@ const seedArticles = [
     {
         id: 3,
         pos: 'hero-side',
-        cat: 'eventi',
-        category: 'Evente',
-        title: 'Panairi i verës 2026, mbrëmjet e koncerteve nisin të premten',
-        seed: 'kucova-festival',
+        cat: 'receta',
+        category: 'Receta',
+        title: 'Sallatë e shëndetshme me quinoa dhe perime sezonale',
+        seed: 'receta-quinoa',
         date: 'Sot',
         time: '09:00',
         video: SAMPLE_VIDEOS[5],
@@ -59,20 +59,20 @@ const seedArticles = [
     {
         id: 4,
         cat: 'latest',
-        category: 'Kronikë',
-        title: 'Aksident në hyrje të Kuçovës, dy të plagosur dërgohen në spital',
-        excerpt: 'Një përplasje midis dy automjeteve pranë hyrjes së qytetit la të plagosur dy persona. Policia po heton shkaqet e aksidentit.',
-        seed: 'kucova-aksident',
+        category: 'Më e reja',
+        title: 'Mëngjesi ideal për të nisur ditën me energji',
+        excerpt: 'Ushqimi i parë i ditës vendos tonin për gjithë ditën. Ja çfarë rekomandojnë nutricionistët për një mëngjes të ekuilibruar.',
+        seed: 'mengjesi-energji',
         date: 'Sot',
         time: '10:24'
     },
     {
         id: 5,
         cat: 'latest',
-        category: 'Politikë',
-        title: 'Bashkia Kuçovë miraton buxhetin për vitin 2026',
-        excerpt: 'Këshilli bashkiak miratoi buxhetin vjetor me fokus infrastrukturën dhe arsimin. Zërat më të mëdhenj shkojnë për rrugët dhe shkollat.',
-        seed: 'kucova-bashkia',
+        category: 'Më e reja',
+        title: 'Hidratimi: sa ujë duhet të pish çdo ditë?',
+        excerpt: 'Uji është jetik për trupin, por sa është shuma e duhur ditore? Zbulo shenjat që tregojnë se duhet të pish më shumë.',
+        seed: 'hidratimi-uje',
         date: 'Sot',
         time: '09:05',
         video: SAMPLE_VIDEOS[2],
@@ -81,10 +81,10 @@ const seedArticles = [
     {
         id: 6,
         cat: 'latest',
-        category: 'Sport',
-        title: 'Naftëtari mposht rivalin në kohën shtesë, 2-1',
-        excerpt: 'Skuadra kuçovare arriti një fitore dramatike në kampionatin rajonal, duke shkënduar entuziazëm te tifozët e pranishëm në stadium.',
-        seed: 'kucova-nder',
+        category: 'Më e reja',
+        title: 'Vrapimi i mëngjesit: përfitimet për trupin dhe mendjen',
+        excerpt: 'Një vrapim 20-minutësh në mëngjes përmirëson qarkullimin, rrit energjinë dhe ndihmon në djegien e kalorive.',
+        seed: 'vrapim-mengjes',
         date: 'Sot',
         time: '08:40',
         video: SAMPLE_VIDEOS[3],
@@ -93,10 +93,10 @@ const seedArticles = [
     {
         id: 7,
         cat: 'latest',
-        category: 'Evente',
-        title: 'Festivali i verës 2026, programi i plotë i mbrëmjeve',
-        excerpt: 'Qyteti përgatitet për festivalin vjetor me muzikë live, kuzhinë lokale dhe aktivitete për fëmijë në sheshin qendror.',
-        seed: 'kucova-skena',
+        category: 'Më e reja',
+        title: 'Sekreti i darkës së lehtë: çfarë të hash para gjumit',
+        excerpt: 'Ushqimi i natës ndikon në cilësinë e gjumit. Mëso cilat ushqime të zgjedhësh për një gjumë të thellë dhe rikthyes.',
+        seed: 'darka-e-lehte',
         date: 'Dje',
         time: '18:15',
         video: SAMPLE_VIDEOS[6],
@@ -104,21 +104,21 @@ const seedArticles = [
     },
     {
         id: 8,
-        cat: 'kronika',
-        category: 'Kronikë',
-        title: 'Operacion i policisë kundër karburanteve të paligjshme në zonën e naftës',
-        excerpt: 'Forcat e policisë goditën një rrjet që tregtonte karburant pa licencë. U sekuestruan sasi të konsiderueshme malli.',
-        seed: 'kucova-policia',
+        cat: 'humbjepeshe',
+        category: 'Humbje Peshe',
+        title: 'Deficiti kalorik: si ta llogaritësh pa u bërë obsesiv',
+        excerpt: 'Baza e humbjes së peshës është më e thjeshtë seç mendon. Një udhëzues praktik për të krijuar deficit pa anashkaluar ushqimin.',
+        seed: 'deficiti-kalorik',
         date: 'Dje',
         time: '16:40'
     },
     {
         id: 9,
-        cat: 'kronika',
-        category: 'Kronikë',
-        title: 'Zjarri në një zonë shkurresh, zjarrfikësit ndërhyjnë me shpejtësi',
-        excerpt: 'Zjarrfikësit e Kuçovës arritën të lokalizojnë flakët para se ato të përhapeshin në sipërfaqe më të mëdha.',
-        seed: 'kucova-zjarr',
+        cat: 'humbjepeshe',
+        category: 'Humbje Peshe',
+        title: 'Pse peshorja mashtron: yndyra kundrejt muskujve',
+        excerpt: 'Pesha në peshore nuk tregon gjithçka. Zbulo pse muskujt peshojnë më shumë se yndyra dhe si ta ndjekësh progresin real.',
+        seed: 'peshorja-mashtron',
         date: 'Dje',
         time: '14:10',
         video: SAMPLE_VIDEOS[1],
@@ -126,31 +126,31 @@ const seedArticles = [
     },
     {
         id: 10,
-        cat: 'kronika',
-        category: 'Kronikë',
-        title: 'Nis rimodelimi i sheshit qendror, banorët kërkojnë edhe më shumë gjelbërim',
-        excerpt: 'Punimet për rikualifikimin e sheshit të qytetit kanë nisur. Projekti parashikon trotuare të reja dhe hapësira të gjelbra.',
-        seed: 'kucova-sheshi',
+        cat: 'humbjepeshe',
+        category: 'Humbje Peshe',
+        title: '5 gabime që pengojnë humbjen e peshës',
+        excerpt: 'Edhe me dietë dhe sport, pesha mund të ngecë. Identifiko gabimet e zakonshme që po e sabotojnë progresin tënd.',
+        seed: 'gabimet-pesha',
         date: 'Dje',
         time: '11:55'
     },
     {
         id: 11,
-        cat: 'sport',
-        category: 'Sport',
-        title: 'Naftëtari zyrtarizon trajnerin e ri për sezonin e ardhshëm',
-        excerpt: 'Drejtuesit e klubit kuçovar konfirmuan emrin e trajnerit që do të udhëheqë skuadrën në kampionatin e ri.',
-        seed: 'kucova-trajner',
+        cat: 'ushqim',
+        category: 'Ushqim i Shëndetshëm',
+        title: 'Fibra: superushqimi që po e anashkalojmë',
+        excerpt: 'Fibrat ndihmojnë tretjen, ngopin dhe stabilizojnë sheqerin në gjak. Zbulo si t\'i shtosh në dietën e përditshme.',
+        seed: 'fibrat-ushtrime',
         date: 'Dje',
         time: '19:20'
     },
     {
         id: 12,
-        cat: 'sport',
-        category: 'Sport',
-        title: 'Kuçova pret ndeshjen vendimtare të kampionatit rajonal',
-        excerpt: 'Stadiumi i qytetit do të presë javën e ardhshme sfidën që mund të vendosë fatin e grupit. Biletat po shiten me shpejtësi.',
-        seed: 'kucova-stadium',
+        cat: 'ushqim',
+        category: 'Ushqim i Shëndetshëm',
+        title: 'Superushqimet e vitit: çfarë duhet të shtosh në tryezë',
+        excerpt: 'Nga avokado te boronicat, zbulo ushqimet e pasura me antioksidantë që mbështesin shëndetin dhe energjinë.',
+        seed: 'superushqime',
         date: 'Dje',
         time: '13:30',
         video: SAMPLE_VIDEOS[7],
@@ -158,31 +158,31 @@ const seedArticles = [
     },
     {
         id: 13,
-        cat: 'sport',
-        category: 'Sport',
-        title: 'Gara e çiklizmit kalon nëpër kodrat e fushës së naftës',
-        excerpt: 'Mbi 120 çiklistë nga i gjithë vendi u mblodhën për garën tradicionale që kalon nëpër peizazhin e njohur të Kuçovës.',
-        seed: 'kucova-cikli',
+        cat: 'ushqim',
+        category: 'Ushqim i Shëndetshëm',
+        title: 'Yndyrnat e mira vs të këqijat: mitet e shkatërruara',
+        excerpt: 'Jo të gjitha yndyrnat janë armiq. Mëso të dallosh yndyrnat e shëndetshme nga ato të përpunuara.',
+        seed: 'yndyrnat',
         date: 'Dje',
         time: '10:00'
     },
     {
         id: 14,
-        cat: 'politika',
-        category: 'Politikë',
-        title: 'Kryetari takohet me qytetarët, në fokus rrugët dhe ndriçimi',
-        excerpt: 'Në takimin publik të zhvilluar në lagjen e re, banorët ngritën shqetësimet për infrastrukturën rrugore dhe ndriçimin publik.',
-        seed: 'kucova-takim',
+        cat: 'receta',
+        category: 'Receta',
+        title: 'Receta: Supë krem me kungull dhe xhenxhefil',
+        excerpt: 'Një supë e ngrohtë, e lehtë dhe e plotë me vitamina. Perfekte për ditët e ftohta, gati në vetëm 30 minuta.',
+        seed: 'receta-supe-kungull',
         date: 'Dje',
         time: '12:45'
     },
     {
         id: 15,
-        cat: 'politika',
-        category: 'Politikë',
-        title: 'Investim 40 milionë lekë për rrjetin e ujësjellësit',
-        excerpt: 'Bashkia nënshkroi kontratën për rehabilitimin e rrjetit të ujësjellësit, që do të prekë mbi 2 mijë familje.',
-        seed: 'kucova-uje',
+        cat: 'receta',
+        category: 'Receta',
+        title: 'Receta: Tortë me tërshërë dhe banane pa sheqer',
+        excerpt: 'Ëmbëlsirë e shëndetshme që plotëson dëshirën për diçka të ëmbël pa faj. Vetëm tre përbërës dhe gati në 10 minuta.',
+        seed: 'receta-torte-tersthere',
         date: 'Dje',
         time: '09:50',
         video: SAMPLE_VIDEOS[0],
@@ -190,21 +190,21 @@ const seedArticles = [
     },
     {
         id: 16,
-        cat: 'politika',
-        category: 'Politikë',
-        title: 'Muzeu i naftës, bashkia kërkon statusin e monumentit',
-        excerpt: 'Propozohet që objekti i parë i nxjerrjes së naftës në vend të mbrohet si trashëgimi industriale dhe turistike.',
-        seed: 'kucova-muze',
+        cat: 'receta',
+        category: 'Receta',
+        title: 'Receta: Pula me limon dhe hudhër në furrë',
+        excerpt: 'Një pjatë kryesore e shëndetshme me proteina të larta, aromatike dhe e thjeshtë për t\'u përgatitur.',
+        seed: 'receta-pula',
         date: 'Dje',
         time: '08:20'
     },
     {
         id: 17,
-        cat: 'ekonomia',
-        category: 'Ekonomi',
-        title: 'Rigjetja e fushave të naftës, investitorët nënshkruajnë marrëveshje të re',
-        excerpt: 'Kompania ndërkombëtare do të rihapë një pjesë të fushave të vjetra, duke premtuar vende pune për vendasit.',
-        seed: 'kucova-rigjetja',
+        cat: 'ushtrime',
+        category: 'Ushtrime',
+        title: 'Ushtrime në shtëpi pa pajisje: rutina 15-minutëshe',
+        excerpt: 'Nuk ke nevojë për palestër. Një rutinë e thjeshtë me ushtrime me peshë trupore që mund ta bësh kudo.',
+        seed: 'ushtrime-ne-shtepi',
         date: 'Dje',
         time: '15:05',
         video: SAMPLE_VIDEOS[5],
@@ -212,41 +212,41 @@ const seedArticles = [
     },
     {
         id: 18,
-        cat: 'ekonomia',
-        category: 'Ekonomi',
-        title: 'Rafineria e vjetër e Kuçovës, një simbol që pret të ringjallet',
-        excerpt: 'E ndërtuar në vitet \'70, rafineria mbetet një nga simbolet e qytetit. Ekspertët diskutojnë për të ardhmen e saj.',
-        seed: 'kucova-rafineri',
+        cat: 'ushtrime',
+        category: 'Ushtrime',
+        title: 'Ecja: ushtrimi më i nënvlerësuar për shëndetin',
+        excerpt: '30 minuta ecje në ditë ulin stresin, përmirësojnë zemrën dhe ndihmojnë në menaxhimin e peshës.',
+        seed: 'ecja-shendeti',
         date: 'Dje',
         time: '13:15'
     },
     {
         id: 19,
-        cat: 'ekonomia',
-        category: 'Ekonomi',
-        title: 'Bizneset lokale kërkojnë lehtësira fiskale dhe mbështetje',
-        excerpt: 'Dhomët e tregtisë i paraqitën qeverisë kërkesat për paketat mbështetëse të ndërmarrjeve të vogla e të mesme.',
-        seed: 'kucova-biznes',
+        cat: 'ushtrime',
+        category: 'Ushtrime',
+        title: 'Stretching: pse duhet ta bësh çdo mëngjes',
+        excerpt: 'Shtrirja e mëngjesit zgjon muskujt, përmirëson fleksibilitetin dhe parandalon lëndimet gjatë ditës.',
+        seed: 'stretching-mengjes',
         date: 'Dje',
         time: '11:10'
     },
     {
         id: 20,
-        cat: 'eventi',
-        category: 'Evente',
-        title: 'Panairi i verës mbledh prodhuesit dhe zejtarët e zonës',
-        excerpt: 'Dhjetëra stenda u ngritën në shesh për të promovuar produktet bujqësore dhe punimet artizanale të Kuçovës.',
-        seed: 'kucova-panair',
+        cat: 'jete',
+        category: 'Jete e Shëndetshme',
+        title: 'Gjumi 8-orësh: ritualet për një natë rikthyes',
+        excerpt: 'Cilësia e gjumit ndikon në peshë, humor dhe energji. Zbulo ritualet që të ndihmojnë të flesh më mirë.',
+        seed: 'gjumi-rikthyes',
         date: 'Dje',
         time: '17:00'
     },
     {
         id: 21,
-        cat: 'eventi',
-        category: 'Evente',
-        title: 'Nata e muzikës në sheshin e qytetit, koncert për të gjitha moshat',
-        excerpt: 'Bandat lokale dhe artistët e ftuar do të performojnë deri vonë natën, në mbyllje të festivalit të verës.',
-        seed: 'kucova-koncert',
+        cat: 'jete',
+        category: 'Jete e Shëndetshme',
+        title: 'Menaxhimi i stresit: teknika që funksionojnë',
+        excerpt: 'Stresi kronik saboton shëndetin dhe peshën. Mëso teknika praktike për t\'u qetësuar dhe rikthyer fokusin.',
+        seed: 'stresi-teknika',
         date: 'Dje',
         time: '20:30',
         video: SAMPLE_VIDEOS[3],
@@ -254,51 +254,51 @@ const seedArticles = [
     },
     {
         id: 22,
-        cat: 'eventi',
-        category: 'Evente',
-        title: 'Ekspozita kushtuar historisë 100-vjeçare të naftës në Kuçovë',
-        excerpt: 'Arkivi i qytetit hap ekspozitën me fotografi dhe dokumente nga fillimet e industrisë së naftës në vitin 1928.',
-        seed: 'kucova-ekspozite',
+        cat: 'jete',
+        category: 'Jete e Shëndetshme',
+        title: 'Rutina e mëngjesit: si ta nisësh ditën produktiv',
+        excerpt: 'Një mëngjes i strukturuar përmirëson produktivitetin dhe gjendjen shpirtërore gjatë gjithë ditës.',
+        seed: 'rutina-mengjesit',
         date: 'Dje',
         time: '12:00'
     },
     {
         id: 23,
-        cat: 'altre',
-        category: 'Arsim',
-        title: 'Shkolla e mesme "Naftëtari" rinovohet, investim në laboratorë të rinj',
-        excerpt: 'Hapësirat e reja do të shërbejnë për lëndët shkencore dhe informatike për qindra nxënës të qytetit.',
-        seed: 'kucova-shkolle',
+        cat: 'shendet',
+        category: 'Shëndet',
+        title: 'Uji dhe hidratimi: çfarë ndodh kur pi 2 litra në ditë',
+        excerpt: 'Hidratimi i duhur përmirëson tretjen, lëkurën dhe energjinë. Zbulo ndryshimet që ndjen në trupin tënd.',
+        seed: 'hidratimi-2litra',
         date: 'Dje',
         time: '10:45'
     },
     {
         id: 24,
-        cat: 'altre',
-        category: 'Turizëm',
-        title: 'Turizmi rural në rritje, vizitorët zbulojnë fshatrat përreth Kuçovës',
-        excerpt: 'Gjithnjë e më shumë vizitorë zgjedhin të njohin natyrën, kuzhinën dhe mikpritjen e fshatrave të zonës.',
-        seed: 'kucova-turizem',
+        cat: 'shendet',
+        category: 'Shëndet',
+        title: 'Vitaminat që ju mungojnë në dietën mesdhetare',
+        excerpt: 'Edhe me dietën më të mirë, mund të kesh mangësi. Mëso cilat vitamina janë më të zakonshme të mungojnë.',
+        seed: 'vitaminat-mangesi',
         date: 'Dje',
         time: '09:30'
     },
     {
         id: 25,
-        cat: 'altre',
-        category: 'Shërbime',
-        title: 'Një ditë me ndërprerje uji, bashkia: "Rrjeti i ri do ta zgjidhë problemin"',
-        excerpt: 'Punimet e planifikuara shkaktuan ndërprerje të përkohshme, ndërsa bashkia kërkon mirëkuptim nga qytetarët.',
-        seed: 'kucova-pune',
+        cat: 'shendet',
+        category: 'Shëndet',
+        title: 'Sheqeri: si ta njohësh dhe ta reduktosh në dietë',
+        excerpt: 'Sheqeri i fshehur gjendet kudo. Mëso të lexosh etiketat dhe ta reduktosh pa hequr dorë nga shija.',
+        seed: 'sheqeri-dieta',
         date: 'Dje',
         time: '08:00'
     },
     {
         id: 26,
         cat: 'latest',
-        category: 'Lajm i fundit',
-        title: 'Kuçova në fokus: punimet e reja dhe zhvillimet e ditës',
-        excerpt: 'Redaksia po ndjek nga afër punimet e nisura në qytet dhe do t\'ju mbajë të informuar në vazhdimësi.',
-        seed: 'latest-start-1',
+        category: 'Më e reja',
+        title: 'Receta e shpejtë: omëletë me perime për 5 minuta',
+        excerpt: 'Kur nuk ke kohë, kjo omëletë proteinike të shpëton. E shijshme, e plotë dhe gati sa bën një kafe.',
+        seed: 'latest-receta-omelete',
         date: 'Sot',
         time: '09:00',
         live: true
@@ -306,10 +306,10 @@ const seedArticles = [
     {
         id: 27,
         cat: 'latest',
-        category: 'Lajm i fundit',
-        title: 'Takim i rëndësishëm në bashkinë e Kuçovës, priten njoftime të reja',
-        excerpt: 'Autoritetet lokale pritet të dalin me një qëndrim zyrtar pas takimit të sotëm.',
-        seed: 'latest-start-2',
+        category: 'Më e reja',
+        title: 'Këshillë: bëj 10 minuta ecje pas drekës',
+        excerpt: 'Një shëtitje e shkurtër pas vaktit ndihmon tretjen dhe stabilizon nivelin e sheqerit në gjak.',
+        seed: 'latest-ecje-dreka',
         date: 'Sot',
         time: '11:30',
         live: true
@@ -317,36 +317,40 @@ const seedArticles = [
     {
         id: 28,
         cat: 'latest',
-        category: 'Lajm i fundit',
-        title: 'Lajm i shpejtë: situata në qendër të qytetit, po ndiqet nga afër',
-        excerpt: 'KuçovaToday sjell detajet e reja sapo ato konfirmohen. Qëndroni të sintonizuar për përditësimet.',
-        seed: 'latest-start-3',
+        category: 'Më e reja',
+        title: 'Miti i ditës: të hahet pas orës 20:00 shton peshë?',
+        excerpt: 'E vërteta është më e nuancuar seç duket. Zbulo çfarë thonë shkencëtarët për vaktin e natës.',
+        seed: 'latest-miti-nata',
         date: 'Sot',
         time: '13:45',
         live: true
     }
 ];
 
-// ===== Gjenerator i lajmeve në kohë reale (simuluar) =====
+// ===== Gjenerator i artikujve në kohë reale (simuluar) =====
 const templates = [
-    { cat: 'kronika', category: 'Kronikë', title: (p) => `${p.focus} në vëmendje: forcat e rendit zhvillojnë një operacion të befasishëm në qytet`, excerpt: (p) => `Një aksion i koordinuar u zhvillua gjatë orëve të mëngjesit. Zyrtarët pritet të japin detaje të reja gjatë ditës.` },
-    { cat: 'kronika', category: 'Kronikë', title: (p) => `Zjarri në një banesë në ${p.zone}, zjarrfikësit ndërhyjnë menjëherë`, excerpt: (p) => `Forcat e zjarrfikësve të Kuçovës u mobilizuan me shpejtësi. Nuk raportohen të lënduar.` },
-    { cat: 'sport', category: 'Sport', title: (p) => `Naftëtari përgatitet për sfidën kundër ${p.rival}, mungon një titullar`, excerpt: (p) => `Stafi teknik ka përcaktuar planin e ndeshjes së fundit të vitit. Tifozët pritet të mbushin stadiumin.` },
-    { cat: 'sport', category: 'Sport', title: (p) => `Fitorja historike e ${p.rival2}, festa në qytetin e naftës`, excerpt: (p) => `Një rezultat i papritur emocionoi sportdashësit vendas. Delegacioni u prit në shesh me nderime.` },
-    { cat: 'politika', category: 'Politikë', title: (p) => `Bashkia njofton projektin e ri për ${p.zone}, vlera investimit rritet`, excerpt: (p) => `Autoritetet lokale paraqitën planin final, që pritet të nisë punimet brenda muajit të ardhshëm.` },
-    { cat: 'politika', category: 'Politikë', title: (p) => `Këshilli bashkiak diskuton paketën e re të ndihmave për ${p.focus}`, excerpt: (p) => `Në seancën e sotme u shqyrtuan masat mbështetëse dhe prioritetet për buxhetin e vitit të ardhshëm.` },
-    { cat: 'ekonomia', category: 'Ekonomi', title: (p) => `Çmimet e produkteve bazë në ${p.zone}, çka thonë tregtarët`, excerpt: (p) => `Tregjet lokale pasqyrojnë lëvizjet e fundit të çmimeve. Konsumatorët kërkojnë stabilitet.` },
-    { cat: 'ekonomia', category: 'Ekonomi', title: (p) => `Investim i ri në ${p.focus}, do të hapen vende të reja pune në Kuçovë`, excerpt: (p) => `Kompania private njoftoi zgjerimin e aktivitetit, duke premtuar mbështetje për fuqinë punëtore vendase.` },
-    { cat: 'eventi', category: 'Evente', title: (p) => `Koncerti i fundjavës mbledh mijëra njerëz në sheshin e ${p.zone}`, excerpt: (p) => `Mbrëmja muzikore vijoi deri në orët e vona me artistë të njohur të skenës shqiptare.` },
-    { cat: 'eventi', category: 'Evente', title: (p) => `Kuzhina e ${p.zone}, festivali i shijeve tërheq vizitorë nga i gjithë vendi`, excerpt: (p) => `Prodhuesit lokalë ekspozuan produktet tradicionale në një atmosferë festive pranverore.` },
-    { cat: 'altre', category: 'Arsim', title: (p) => `Nxënësit e ${p.zone} fitojnë garën kombëtare, bashkia i nderon`, excerpt: (p) => `Një sukses i madh për shkollat e qytetit, që u prit me entuziazëm nga e gjithë komuniteti.` },
-    { cat: 'altre', category: 'Shërbime', title: (p) => `Njoftim për ${p.focus}: punime të planifikuara gjatë ditës së nesërme`, excerpt: (p) => `Bashkia kërkon mirëkuptim nga qytetarët për ndërprerjet e përkohshme të shërbimeve.` }
+    { cat: 'humbjepeshe', category: 'Humbje Peshe', title: (p) => `Humbje peshe e qëndrueshme: ${p.focus} në fokus sot`, excerpt: (p) => `Ekspertët e të ushqyerit rekomandojnë një qasje të balancuar. Detajet e plota brenda artikullit.` },
+    { cat: 'humbjepeshe', category: 'Humbje Peshe', title: (p) => `Rutina ${p.routine} dhe efekti në humbjen e peshës`, excerpt: (p) => `Aktiviteti fizik i rregullt kombinon më së miri me një dietë të ekuilibruar.` },
+    { cat: 'ushqim', category: 'Ushqim i Shëndetshëm', title: (p) => `${p.food}: një superushqim që duhet ta provosh`, excerpt: (p) => `I pasur me vitamina dhe antioksidantë, ky ushqim mbështet shëndetin e përditshëm.` },
+    { cat: 'ushqim', category: 'Ushqim i Shëndetshëm', title: (p) => `Ushqimet që ndihmojnë ${p.goal} në mënyrë natyrale`, excerpt: (p) => `Një listë praktike për ta shtuar në shportën jeshile javore.` },
+    { cat: 'receta', category: 'Receta', title: (p) => `Receta e sotme: ${p.dish} në vetëm 20 minuta`, excerpt: (p) => `E shpejtë, e shëndetshme dhe me përbërës që ke në kuzhinë.` },
+    { cat: 'receta', category: 'Receta', title: (p) => `Si të përgatisësh ${p.dish} pa sakrifikuar shijen`, excerpt: (p) => `Një version më i lehtë i një pjate klasike, me të njëjtin shije të mrekullueshme.` },
+    { cat: 'ushtrime', category: 'Ushtrime', title: (p) => `${p.exercise}: ushtrimi që aktivizon gjithë trupin`, excerpt: (p) => `Përfshi në rutinën tënde javore dhe ndje diferencën në energji dhe forcë.` },
+    { cat: 'ushtrime', category: 'Ushtrime', title: (p) => `Sesioni i shkurtër ${p.routine}, pse duhet ta provosh`, excerpt: (p) => `Edhe 15 minuta stërvitje e fokusuar japin rezultate të dukshme me kalimin e kohës.` },
+    { cat: 'jete', category: 'Jete e Shëndetshme', title: (p) => `Jeta e shëndetshme: ${p.habit} që ndryshon gjithçka`, excerpt: (p) => `Ndryshimet e vogla të përditshme kanë ndikim të madh në mirëqenien tënde.` },
+    { cat: 'jete', category: 'Jete e Shëndetshme', title: (p) => `${p.routine} për mëngjes: sekreti i një dite të mirë`, excerpt: (p) => `Fillo ditën me hapin e duhur dhe vëre ndryshimin në produktivitet dhe humor.` },
+    { cat: 'shendet', category: 'Shëndet', title: (p) => `Çfarë thonë mjekët për ${p.goal}: mitet dhe faktet`, excerpt: (p) => `Zbërthen mitet e zakonshme dhe merr informacion të bazuar në shkencë.` },
+    { cat: 'shendet', category: 'Shëndet', title: (p) => `Shenjat që trupi yt ka nevojë për ${p.focus}`, excerpt: (p) => `Mëso t\'i dëgjosh sinjalet që të dërgon trupi dhe të veprosh në kohë.` }
 ];
 
-const categories = ['Kronikë', 'Sport', 'Politikë', 'Ekonomi', 'Evente'];
-const places = ['qendrës së qytetit', 'zonës së naftës', 'lagjes së re', 'periferisë', 'stadiumit', 'sheshit qendror', 'parkut të qytetit'];
-const topics = ['infrastrukturën', 'transportin publik', 'ndriçimin', 'shërbimet e ujit', 'turizmin', 'arsimin', 'shëndetësinë'];
-const rivals = ['Pobedit', 'Sopotit', 'Ballshi', 'Lushnjës', 'Gramshit', 'Cërrikut'];
+const categories = ['Humbje Peshe', 'Ushqim i Shëndetshëm', 'Receta', 'Ushtrime', 'Jete e Shëndetshme', 'Shëndet'];
+const foods = ['avokado', 'boronicat', 'kungulli', 'spinaci', 'thjerrëzat', 'quinoa', 'kale', 'salmoni'];
+const dishes = ['sallatë perimesh', 'supë krem', 'tavë perimesh', 'petulla tërshëre', 'smoothie jeshil', 'tuna në gril'];
+const exercises = ['squat', 'plank', 'push-up', 'lunges', 'burpees', 'deadlift'];
+const routines = ['15-minutëshe', 'mëngjesore', 'mbrëmëse', 'pa pajisje', 'me pesha trupore'];
+const goals = ['stabilizojë peshën', 'rrisë energjinë', 'përmirësojë tretjen', 'ulë stresin'];
+const habits = ['pij më shumë ujë', 'fle 8 orë', 'bëj një shëtitje ditore', 'ha vakte të rregullta', 'medito 5 minuta'];
+const focuses = ['më shumë fibra', 'më shumë vitamina', 'pushim të duhur', 'aktivitet fizik'];
 
 function pick(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -364,10 +368,13 @@ function nowTime() {
 function generateArticle(articles) {
     const t = pick(templates);
     const p = {
-        zone: pick(places),
-        focus: pick(topics),
-        rival: pick(rivals),
-        rival2: pick(rivals)
+        food: pick(foods),
+        dish: pick(dishes),
+        exercise: pick(exercises),
+        routine: pick(routines),
+        goal: pick(goals),
+        habit: pick(habits),
+        focus: pick(focuses)
     };
     const hasVideo = Math.random() < 0.4;
     return {
@@ -384,33 +391,37 @@ function generateArticle(articles) {
     };
 }
 
-// ===== Lajmet e fundit (azhornohen çdo 5 minuta) =====
+// ===== Më të rejat (azhornohen çdo 5 minuta) =====
 const latestTitles = (p) => [
-    `Kuçova në fokus: ${p.focus}, zhvillimet më të fundit`,
-    `Përditësim: situata në ${p.zone} sa më vonë gjatë ditës`,
-    `Tik-tak në ${p.zone}, çfarë po ndodh tani në qytetin e naftës`,
-    `Lajm i shpejtë nga ${p.zone}: reagimi i parë i bashkisë`,
-    `Në vijim: ecuria e ${p.focus} në Kuçovë`,
-    `Flash: takim i rëndësishëm në bashkinë e Kuçovës për ${p.focus}`
+    `Këshillë e shpejtë: ${p.habit} sot`,
+    `Receta e shpejtë: ${p.dish} me pak kalori`,
+    `Flash shëndeti: pse ${p.food} duhet të jetë në dietën tënde`,
+    `Në fokus: ${p.goal} në mënyrë natyrale`,
+    `E reja e ditës: ushtrimi ${p.exercise} që po bën xhiron`,
+    `Përditësim: shenjat që tregojnë se trupi ka nevojë për ${p.focus}`
 ];
 
 const latestExcerpts = (p) => [
-    `Redaksia po ndjek nga afër zhvillimet e fundit në lidhje me ${p.focus} dhe do t'ju mbajë të informuar në vazhdimësi.`,
-    `KuçovaToday sjell detajet e reja sapo ato konfirmohen. Qëndroni të sintonizuar për përditësimet në vijim.`,
-    `Të dhënat e fundit tregojnë një interes në rritje për ${p.focus} në të gjithë qytetin. Më shumë informacion së shpejti.`,
-    `Një zhvillim i ri pritet gjatë orëve të ardhshme. Redaksia jonë është në terren për të mbledhur detajet e plota.`,
-    `Bashkia e Kuçovës njofton se do të dalë me një qëndrim zyrtar pas përfundimit të takimit të sotëm.`
+    `Një hap i vogël sot, një ndryshim i madh nesër. JetoBukur të sjell këshillën e ditës.`,
+    `Praktiko këtë sugjerim dhe vëre ndryshimin në mirëqenien tënde të përditshme.`,
+    `Ekspertët e të ushqyerit e konfirmojnë: kjo zgjedhje e vogël ka ndikim të madh.`,
+    `Qëndro i informuar me më të fundit nga bota e shëndetit dhe jetës së shëndetshme.`,
+    `Një përkujtesë e shëndetshme për t\'u kujtuar të kujdesesh për veten çdo ditë.`
 ];
 
 function generateLatestArticle(articles) {
     const p = {
-        zone: pick(places),
-        focus: pick(topics)
+        food: pick(foods),
+        dish: pick(dishes),
+        exercise: pick(exercises),
+        habit: pick(habits),
+        goal: pick(goals),
+        focus: pick(focuses)
     };
     return {
         id: newId(articles),
         cat: 'latest',
-        category: 'Lajm i fundit',
+        category: 'Më e reja',
         title: pick(latestTitles(p)),
         excerpt: pick(latestExcerpts(p)),
         seed: `latest-${Date.now()}-${Math.floor(Math.random() * 9999)}`,

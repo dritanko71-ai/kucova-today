@@ -33,16 +33,13 @@
     --overlay-b2: rgba(10, 14, 26, 0.95);
     --hero-sub: #e2e8f8;
 
-    --cat-kronika: #38bdf8;
-    --cat-sport: #34d399;
-    --cat-politika: #a78bfa;
-    --cat-ekonomia: #fbbf24;
-    --cat-eventi: #f472b6;
-    --cat-arsim: #22d3ee;
-    --cat-turizem: #2dd4bf;
-    --cat-sherbime: #94a3b8;
-    --cat-shqiperia: #fb7185;
-    --cat-bota: #60a5fa;
+    --cat-latest: #fcd34d;
+    --cat-humbjepeshe: #34d399;
+    --cat-ushqim: #4ade80;
+    --cat-receta: #fb923c;
+    --cat-ushtrime: #38bdf8;
+    --cat-jete: #a78bfa;
+    --cat-shendet: #fb7185;
 
     --meta-gold: #fcd34d;
     --grad-1: #6366f1;
@@ -78,16 +75,13 @@
     --overlay-b2: rgba(20, 33, 61, 0.94);
     --hero-sub: #eef2fb;
 
-    --cat-kronika: #0ea5e9;
-    --cat-sport: #10b981;
-    --cat-politika: #7c3aed;
-    --cat-ekonomia: #d97706;
-    --cat-eventi: #db2777;
-    --cat-arsim: #0891b2;
-    --cat-turizem: #0d9488;
-    --cat-sherbime: #64748b;
-    --cat-shqiperia: #e11d48;
-    --cat-bota: #2563eb;
+    --cat-latest: #b45309;
+    --cat-humbjepeshe: #059669;
+    --cat-ushqim: #16a34a;
+    --cat-receta: #ea580c;
+    --cat-ushtrime: #0284c7;
+    --cat-jete: #7c3aed;
+    --cat-shendet: #e11d48;
 
     --meta-gold: #b45309;
     --grad-1: #6366f1;
@@ -690,24 +684,20 @@ img {
     background: linear-gradient(90deg, var(--gold), transparent);
 }
 
-.sec-latest .section-header { border-left-color: var(--primary); }
-.sec-latest .section-header h2 { color: var(--cat-kronika); }
-.sec-kronika .section-header { border-left-color: var(--cat-kronika); }
-.sec-kronika .section-header h2 { color: var(--cat-kronika); }
-.sec-sport .section-header { border-left-color: var(--cat-sport); }
-.sec-sport .section-header h2 { color: var(--cat-sport); }
-.sec-politika .section-header { border-left-color: var(--cat-politika); }
-.sec-politika .section-header h2 { color: var(--cat-politika); }
-.sec-ekonomia .section-header { border-left-color: var(--cat-ekonomia); }
-.sec-ekonomia .section-header h2 { color: var(--cat-ekonomia); }
-.sec-eventi .section-header { border-left-color: var(--cat-eventi); }
-.sec-eventi .section-header h2 { color: var(--cat-eventi); }
-.sec-altre .section-header { border-left-color: var(--cat-sherbime); }
-.sec-altre .section-header h2 { color: var(--cat-sherbime); }
-.sec-shqiperia .section-header { border-left-color: var(--cat-shqiperia); }
-.sec-shqiperia .section-header h2 { color: var(--cat-shqiperia); }
-.sec-bota .section-header { border-left-color: var(--cat-bota); }
-.sec-bota .section-header h2 { color: var(--cat-bota); }
+.sec-latest .section-header { border-left-color: var(--cat-latest); }
+.sec-latest .section-header h2 { color: var(--cat-latest); }
+.sec-humbjepeshe .section-header { border-left-color: var(--cat-humbjepeshe); }
+.sec-humbjepeshe .section-header h2 { color: var(--cat-humbjepeshe); }
+.sec-ushqim .section-header { border-left-color: var(--cat-ushqim); }
+.sec-ushqim .section-header h2 { color: var(--cat-ushqim); }
+.sec-receta .section-header { border-left-color: var(--cat-receta); }
+.sec-receta .section-header h2 { color: var(--cat-receta); }
+.sec-ushtrime .section-header { border-left-color: var(--cat-ushtrime); }
+.sec-ushtrime .section-header h2 { color: var(--cat-ushtrime); }
+.sec-jete .section-header { border-left-color: var(--cat-jete); }
+.sec-jete .section-header h2 { color: var(--cat-jete); }
+.sec-shendet .section-header { border-left-color: var(--cat-shendet); }
+.sec-shendet .section-header h2 { color: var(--cat-shendet); }
 
 /* ===== News row ===== */
 .news-row {
@@ -829,17 +819,13 @@ img {
 }
 
 /* Category color classes */
-.cat-latest { --cat: var(--primary); }
-.cat-kronika { --cat: var(--cat-kronika); }
-.cat-sport { --cat: var(--cat-sport); }
-.cat-politika { --cat: var(--cat-politika); }
-.cat-ekonomia { --cat: var(--cat-ekonomia); }
-.cat-eventi { --cat: var(--cat-eventi); }
-.cat-arsim { --cat: var(--cat-arsim); }
-.cat-turizem { --cat: var(--cat-turizem); }
-.cat-sherbime { --cat: var(--cat-sherbime); }
-.cat-shqiperia { --cat: var(--cat-shqiperia); }
-.cat-bota { --cat: var(--cat-bota); }
+.cat-latest { --cat: var(--cat-latest); }
+.cat-humbjepeshe { --cat: var(--cat-humbjepeshe); }
+.cat-ushqim { --cat: var(--cat-ushqim); }
+.cat-receta { --cat: var(--cat-receta); }
+.cat-ushtrime { --cat: var(--cat-ushtrime); }
+.cat-jete { --cat: var(--cat-jete); }
+.cat-shendet { --cat: var(--cat-shendet); }
 
 /* ===== Sidebar ===== */
 .sidebar {

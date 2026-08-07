@@ -1,7 +1,7 @@
 {
-  "name": "kucova-today",
+  "name": "jetobukur",
   "version": "2.0.0",
-  "description": "KuçovaToday - Lajme në kohë reale me foto dhe video",
+  "description": "JetoBukur - Ushqim i shëndetshëm, humbje peshe, receta dhe jetë e shëndetshme",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -10,7 +10,6 @@
     "node": ">=18"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "rss-parser": "^3.13.0"
+    "express": "^4.19.2"
   }
 }

@@ -2,20 +2,16 @@
 let articles = [];
 
 const catClass = {
-    'Lajm i fundit': 'latest',
-    'Kronikë': 'kronika',
-    'Sport': 'sport',
-    'Politikë': 'politika',
-    'Ekonomi': 'ekonomia',
-    'Evente': 'eventi',
-    'Arsim': 'arsim',
-    'Turizëm': 'turizem',
-    'Shërbime': 'sherbime',
-    'Shqipëria': 'shqiperia',
-    'Bota': 'bota'
+    'Më e reja': 'latest',
+    'Humbje Peshe': 'humbjepeshe',
+    'Ushqim i Shëndetshëm': 'ushqim',
+    'Receta': 'receta',
+    'Ushtrime': 'ushtrime',
+    'Jete e Shëndetshme': 'jete',
+    'Shëndet': 'shendet'
 };
 
-const catCls = a => `cat-${catClass[a.category] || 'kronika'}`;
+const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
 const thumb = a => a.image || `https://picsum.photos/seed/${a.seed}/210/130`;
 const square = a => a.image || `https://picsum.photos/seed/${a.seed}/300/300`;
 
@@ -62,15 +58,13 @@ function renderHero() {
 
 // ===== Render sections =====
 const sections = [
-    { key: 'latest', title: 'Lajmet e fundit', accent: true },
-    { key: 'shqiperia', title: 'Shqipëria', accent: false },
-    { key: 'bota', title: 'Bota', accent: false },
-    { key: 'kronika', title: 'Kronikë', accent: false },
-    { key: 'sport', title: 'Sport', accent: false },
-    { key: 'politika', title: 'Politikë', accent: false },
-    { key: 'ekonomia', title: 'Ekonomi', accent: false },
-    { key: 'eventi', title: 'Evente & Kulturë', accent: false },
-    { key: 'altre', title: 'Lajmet e tjera', accent: false }
+    { key: 'latest', title: 'Më e reja', accent: true },
+    { key: 'humbjepeshe', title: 'Humbje Peshe', accent: false },
+    { key: 'ushqim', title: 'Ushqim i Shëndetshëm', accent: false },
+    { key: 'receta', title: 'Receta', accent: false },
+    { key: 'ushtrime', title: 'Ushtrime', accent: false },
+    { key: 'jete', title: 'Jete e Shëndetshme', accent: false },
+    { key: 'shendet', title: 'Shëndet', accent: false }
 ];
 
 function renderSections() {
@@ -107,7 +101,7 @@ function renderSections() {
 // ===== Render sidebar =====
 function renderSidebar() {
     const wrap = document.getElementById('sidebar');
-    const focusCats = ['politika', 'ekonomia', 'sport', 'eventi'];
+    const focusCats = ['humbjepeshe', 'ushqim', 'receta', 'ushtrime'];
     const focusItems = focusCats
         .map(c => articles.find(a => a.cat === c && !a.pos))
         .filter(Boolean);
@@ -154,7 +148,7 @@ let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark'
 
 function setTheme(theme) {
     currentTheme = theme;
-    try { localStorage.setItem('kucovatoday-theme', theme); } catch (e) {}
+    try { localStorage.setItem('jetobukur-theme', theme); } catch (e) {}
     document.documentElement.setAttribute('data-theme', theme);
     lightBtn.classList.toggle('active', theme === 'light');
     darkBtn.classList.toggle('active', theme === 'dark');
@@ -205,17 +199,16 @@ const progressBar = document.getElementById('progress-bar');
 const header = document.querySelector('.site-header');
 const toTop = document.getElementById('to-top');
 const navLinks = document.querySelectorAll('.main-nav a');
-const navSections = ['hero', 'sec-latest', 'sec-shqiperia', 'sec-bota', 'sec-kronika', 'sec-sport', 'sec-politika', 'sec-ekonomia', 'sec-eventi'];
+const navSections = ['hero', 'sec-latest', 'sec-humbjepeshe', 'sec-ushqim', 'sec-receta', 'sec-ushtrime', 'sec-jete', 'sec-shendet'];
 const sectionCat = {
     'hero': 'latest',
     'sec-latest': 'latest',
-    'sec-shqiperia': 'shqiperia',
-    'sec-bota': 'bota',
-    'sec-kronika': 'kronika',
-    'sec-sport': 'sport',
-    'sec-politika': 'politika',
-    'sec-ekonomia': 'ekonomia',
-    'sec-eventi': 'eventi'
+    'sec-humbjepeshe': 'humbjepeshe',
+    'sec-ushqim': 'ushqim',
+    'sec-receta': 'receta',
+    'sec-ushtrime': 'ushtrime',
+    'sec-jete': 'jete',
+    'sec-shendet': 'shendet'
 };
 
 window.addEventListener('scroll', () => {

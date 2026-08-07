@@ -2,45 +2,39 @@
 let articles = [];
 
 const catClass = {
-    'Lajm i fundit': 'latest',
-    'Kronikë': 'kronika',
-    'Sport': 'sport',
-    'Politikë': 'politika',
-    'Ekonomi': 'ekonomia',
-    'Evente': 'eventi',
-    'Arsim': 'arsim',
-    'Turizëm': 'turizem',
-    'Shërbime': 'sherbime',
-    'Shqipëria': 'shqiperia',
-    'Bota': 'bota'
+    'Më e reja': 'latest',
+    'Humbje Peshe': 'humbjepeshe',
+    'Ushqim i Shëndetshëm': 'ushqim',
+    'Receta': 'receta',
+    'Ushtrime': 'ushtrime',
+    'Jete e Shëndetshme': 'jete',
+    'Shëndet': 'shendet'
 };
 
-const catCls = a => `cat-${catClass[a.category] || 'kronika'}`;
+const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
 const thumb = a => a.image || `https://picsum.photos/seed/${a.seed}/210/130`;
 
 const SECTION_TITLES = {
-    'latest': 'Lajmet e fundit',
-    'shqiperia': 'Shqipëria',
-    'bota': 'Bota',
-    'kronika': 'Kronikë',
-    'sport': 'Sport',
-    'politika': 'Politikë',
-    'ekonomia': 'Ekonomi',
-    'eventi': 'Evente & Kulturë',
-    'altre': 'Lajmet e tjera'
+    'latest': 'Më e reja',
+    'humbjepeshe': 'Humbje Peshe',
+    'ushqim': 'Ushqim i Shëndetshëm',
+    'receta': 'Receta',
+    'ushtrime': 'Ushtrime',
+    'jete': 'Jete e Shëndetshme',
+    'shendet': 'Shëndet'
 };
 
 const params = new URLSearchParams(window.location.search);
 const cat = params.get('cat') || 'latest';
 
 document.getElementById('section-title').textContent = SECTION_TITLES[cat] || 'Seksioni';
-document.title = `${SECTION_TITLES[cat] || 'Seksioni'} - KuçovaToday`;
+document.title = `${SECTION_TITLES[cat] || 'Seksioni'} - JetoBukur`;
 
 function renderList() {
     const wrap = document.getElementById('section-list');
     const items = articles.filter(a => a.cat === cat);
     if (!items.length) {
-        wrap.innerHTML = '<p class="news-excerpt">Asnjë lajm në këtë seksion.</p>';
+        wrap.innerHTML = '<p class="news-excerpt">Asnjë artikull në këtë seksion.</p>';
         return;
     }
     wrap.innerHTML = items.map((a, i) => `
@@ -95,7 +89,7 @@ let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark'
 
 function setTheme(theme) {
     currentTheme = theme;
-    try { localStorage.setItem('kucovatoday-theme', theme); } catch (e) {}
+    try { localStorage.setItem('jetobukur-theme', theme); } catch (e) {}
     document.documentElement.setAttribute('data-theme', theme);
     lightBtn.classList.toggle('active', theme === 'light');
     darkBtn.classList.toggle('active', theme === 'dark');

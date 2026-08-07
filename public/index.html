@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KuçovaToday - Lajme në kohë reale nga Kuçova</title>
+    <title>JetoBukur - Ushqim i shëndetshëm, humbje peshe dhe receta</title>
+    <meta name="description" content="JetoBukur: këshilla për humbje peshe, ushqim të shëndetshëm, receta të shijshme dhe një jetë më të shëndetshme.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <script>
         (function () {
             try {
-                var t = localStorage.getItem('kucovatoday-theme') || 'dark';
+                var t = localStorage.getItem('jetobukur-theme') || 'dark';
                 document.documentElement.setAttribute('data-theme', t);
             } catch (e) {
                 document.documentElement.setAttribute('data-theme', 'dark');
@@ -36,23 +37,21 @@
     <!-- Header -->
     <header class="site-header">
         <div class="container header-inner">
-            <a class="logo" href="#hero">Kuçova<span>Today</span></a>
+            <a class="logo" href="#hero">Jeto<span>Bukur</span></a>
             <div class="header-actions">
-                <input type="search" id="search-input" class="search-input" placeholder="Kërko lajme..." aria-label="Kërko lajme">
+                <input type="search" id="search-input" class="search-input" placeholder="Kërko artikuj..." aria-label="Kërko artikuj">
                 <button class="theme-toggle" id="theme-light" aria-label="Temë e çelët (light)" title="Temë e çelët">&#9728;&#65039;</button>
                 <button class="theme-toggle" id="theme-dark" aria-label="Temë e errët (dark)" title="Temë e errët">&#127769;</button>
                 <button class="hamburger" id="hamburger" aria-label="Hap menunë">&#9776;</button>
             </div>
             <nav class="main-nav" id="main-nav">
-                <a href="section.html?cat=latest">Lajmet</a>
-                <a href="section.html?cat=latest">Të fundit</a>
-                <a href="section.html?cat=shqiperia">Shqipëria</a>
-                <a href="section.html?cat=bota">Bota</a>
-                <a href="section.html?cat=kronika">Kronikë</a>
-                <a href="section.html?cat=sport">Sport</a>
-                <a href="section.html?cat=politika">Politikë</a>
-                <a href="section.html?cat=ekonomia">Ekonomi</a>
-                <a href="section.html?cat=eventi">Evente</a>
+                <a href="section.html?cat=latest">Më e reja</a>
+                <a href="section.html?cat=humbjepeshe">Humbje Peshe</a>
+                <a href="section.html?cat=ushqim">Ushqim i Shëndetshëm</a>
+                <a href="section.html?cat=receta">Receta</a>
+                <a href="section.html?cat=ushtrime">Ushtrime</a>
+                <a href="section.html?cat=jete">Jete e Shëndetshme</a>
+                <a href="section.html?cat=shendet">Shëndet</a>
             </nav>
         </div>
     </header>
@@ -77,25 +76,24 @@
     <footer class="site-footer">
         <div class="container footer-cols">
             <div>
-                <h4>KuçovaToday</h4>
-                <p>Lajme, kronika dhe informacione nga qyteti i Kuçovës, i njohur si "qyteti i naftës".</p>
+                <h4>JetoBukur</h4>
+                <p>Këshilla për humbje peshe, ushqim të shëndetshëm dhe receta të shijshme për një jetë më të mirë.</p>
             </div>
             <div>
                 <h4>Seksione</h4>
                 <ul>
-                    <li><a href="section.html?cat=shqiperia">Shqipëria</a></li>
-                    <li><a href="section.html?cat=bota">Bota</a></li>
-                    <li><a href="section.html?cat=kronika">Kronikë</a></li>
-                    <li><a href="section.html?cat=sport">Sport</a></li>
-                    <li><a href="section.html?cat=politika">Politikë</a></li>
-                    <li><a href="section.html?cat=ekonomia">Ekonomi</a></li>
-                    <li><a href="section.html?cat=eventi">Evente &amp; Kulturë</a></li>
+                    <li><a href="section.html?cat=humbjepeshe">Humbje Peshe</a></li>
+                    <li><a href="section.html?cat=ushqim">Ushqim i Shëndetshëm</a></li>
+                    <li><a href="section.html?cat=receta">Receta</a></li>
+                    <li><a href="section.html?cat=ushtrime">Ushtrime</a></li>
+                    <li><a href="section.html?cat=jete">Jete e Shëndetshme</a></li>
+                    <li><a href="section.html?cat=shendet">Shëndet</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Linke të dobishëm</h4>
                 <ul>
-                    <li><a href="#">Redaksia</a></li>
+                    <li><a href="#">Ekipi redaksional</a></li>
                     <li><a href="#">Kodi i etikës</a></li>
                     <li><a href="terms.html">Kushtet e përdorimit</a></li>
                     <li><a href="privacy.html">Politika e privatësisë</a></li>
@@ -113,7 +111,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
-                <span class="copyright">&copy; 2026 KuçovaToday &middot; Të gjitha të drejtat e rezervuara &middot; Reg. Nr. 1234/2026</span>
+                <span class="copyright">&copy; 2026 JetoBukur &middot; Të gjitha të drejtat e rezervuara &middot; Reg. Nr. 1234/2026</span>
                 <div class="footer-social">
                     <a href="#" class="social-btn" aria-label="Facebook" title="Facebook">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
