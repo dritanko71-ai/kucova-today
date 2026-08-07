@@ -249,6 +249,11 @@ img {
     text-shadow: 0 0 10px color-mix(in srgb, var(--meta-gold) 60%, transparent);
 }
 
+:root[data-theme="light"] .utility-right #today-date {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.55);
+}
+
 .utility-weather {
     color: var(--gold-light);
 }
