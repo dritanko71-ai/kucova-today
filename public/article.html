@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KuçovaToday - Artikulli</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('kucovatoday-theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <div class="utility-bar">
+        <div class="container utility-inner">
+            <span class="ticker" id="ticker"></span>
+            <span class="utility-right">
+                <span id="today-date"></span>
+                <span class="utility-weather">&#9728;&#65039; Kthjellët &middot; 31&deg;C</span>
+                <a href="index.html">Kthehu te lajmet</a>
+            </span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Kuçova<span>Today</span></a>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-light" aria-label="Temë e çelët" title="Temë e çelët">&#9728;&#65039;</button>
+                <button class="theme-toggle" id="theme-dark" aria-label="Temë e errët" title="Temë e errët">&#127769;</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-page container" id="article-page">
+        <div class="article-loading" id="article-loading">Po ngarkohet artikulli...</div>
+        <article id="article-content" class="article-content"></article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-cols">
+            <div>
+                <h4>KuçovaToday</h4>
+                <p>Lajme, kronika dhe informacione nga qyteti i Kuçovës, i njohur si "qyteti i naftës".</p>
+            </div>
+            <div>
+                <h4>Seksione</h4>
+                <ul>
+                    <li><a href="index.html#sec-shqiperia">Shqipëria</a></li>
+                    <li><a href="index.html#sec-bota">Bota</a></li>
+                    <li><a href="index.html#sec-kronika">Kronikë</a></li>
+                    <li><a href="index.html#sec-sport">Sport</a></li>
+                    <li><a href="index.html#sec-politika">Politikë</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Linke të dobishëm</h4>
+                <ul>
+                    <li><a href="#">Redaksia</a></li>
+                    <li><a href="#">Kodi i etikës</a></li>
+                    <li><a href="terms.html">Kushtet e përdorimit</a></li>
+                    <li><a href="privacy.html">Politika e privatësisë</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="#">Na shkruani</a></li>
+                    <li><a href="#">Reklamoni</a></li>
+                    <li><a href="#">Rreth nesh</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span class="copyright">&copy; 2026 KuçovaToday &middot; Të gjitha të drejtat e rezervuara &middot; Reg. Nr. 1234/2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="article.js"></script>
+</body>
+</html>
