@@ -263,10 +263,10 @@ img {
 }
 
 .header-inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
     padding-top: 1.1rem;
     padding-bottom: 0.6rem;
 }
@@ -280,6 +280,9 @@ img {
     font-family: 'Playfair Display', Georgia, serif;
     color: var(--ink);
     transition: color 0.3s;
+    grid-column: 2;
+    justify-self: center;
+    text-align: center;
 }
 
 .logo span {
@@ -301,6 +304,8 @@ img {
     display: flex;
     align-items: center;
     gap: 0.7rem;
+    grid-column: 3;
+    justify-self: end;
 }
 
 .search-input {
@@ -364,10 +369,13 @@ img {
 .main-nav {
     display: flex;
     gap: 1.7rem;
+    justify-content: center;
+    align-items: center;
     margin-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding: 0.4rem 0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
+    grid-column: 1 / -1;
 }
 
 .main-nav a {
