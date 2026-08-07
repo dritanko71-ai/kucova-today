@@ -236,6 +236,67 @@ img {
     color: #e5d9b8;
 }
 
+#live-clock {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.4px;
+    font-variant-numeric: tabular-nums;
+}
+
+.weather-strip {
+    background: var(--utility-bg);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.weather-strip::-webkit-scrollbar {
+    display: none;
+}
+
+.weather-strip-label {
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    border-right: 1px solid var(--line);
+    padding-right: 1rem;
+}
+
+.weather-strip-cities {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.weather-city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    color: #d9d4c8;
+    text-align: center;
+    gap: 0.1rem;
+}
+
+.weather-city-name {
+    font-weight: 600;
+    color: #c9c4b8;
+}
+
+.weather-city-cond {
+    white-space: nowrap;
+    color: #e5d9b8;
+}
+
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.45; }
