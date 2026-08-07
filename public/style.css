@@ -846,55 +846,6 @@ img {
     box-shadow: 0 8px 20px rgba(80, 59, 59, 0.2);
 }
 
-/* ===== Kopertina revistash në anët ===== */
-.mag-cover {
-    position: fixed;
-    top: 190px;
-    z-index: 90;
-    width: 180px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.mag-cover a {
-    display: block;
-    box-shadow: 0 14px 36px rgba(80, 59, 59, 0.20);
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    transition: box-shadow 0.4s ease;
-}
-
-.mag-cover img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.mag-cover:hover a {
-    box-shadow: 0 20px 46px rgba(80, 59, 59, 0.30);
-}
-
-.mag-cover:hover {
-    transform: translateY(-6px);
-}
-
-.mag-cover-left {
-    left: calc(50% - 755px);
-}
-
-.mag-cover-right {
-    right: calc(50% - 755px);
-}
-
-@media (min-width: 1510px) {
-    .mag-cover {
-        opacity: 1;
-        pointer-events: auto;
-    }
-}
-
 /* ===== Back to top ===== */
 .to-top {
     position: fixed;
