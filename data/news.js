@@ -516,6 +516,33 @@ const seedArticles = [
         seed: 'ushtrime-ne-shpi-ab',
         date: 'Dje',
         time: '08:15'
+    },
+    {
+        id: 31,
+        cat: 'ushqim',
+        category: 'Ushqim i Shëndetshëm',
+        title: 'Ushqimet që ndihmojnë rrisë energjinë në mënyrë natyrale',
+        excerpt: 'Një listë praktike e ushqimeve që të japin energji të qëndrueshme pa sheqer dhe pa kafeinë të tepërt.',
+        image: 'https://loremflickr.com/640/400/healthy,food,energy',
+        body: [
+            'Kur energjia bie nga mesi i ditës, instinkti na çon te kafeja ose sheqeri. Por këto japin një rritje të shpejtë që zbehet shpejt. Ushqimet e duhura ofrojnë energji të qëndrueshme që zgjat me orë, pa ulje të papritur.',
+            '### Tërshëra: karbohidrati i ngadaltë',
+            'Tërshëra çliron energji gradualisht falë fibrave dhe karbohidrateve komplekse. Një tas tërshërë me fruta në mëngjes të mban aktiv dhe të përqendruar deri në drekë, duke stabilizuar sheqerin në gjak.',
+            '### Bananet: energji e menjëhershme',
+            'Banania kombinon karbohidrate të thjeshta dhe komplekse, kalium dhe vitaminë B6. Është ideale para stërvitjes ose kur ndjen rënie energjie — e shpejtë, e lehtë dhe e tretshme.',
+            '### Arrat dhe farat: yndyrnat e mira',
+            'Bajamet, arrat, farat e kungullit dhe chia ofrojnë proteina, magnez dhe yndyrna të shëndetshme. Një grusht arra pasdite ndalon dëshirën për ëmbëlsira dhe ruan nivelin e energjisë.',
+            '### Vezët: proteina e plotë',
+            'Vezët përmbajnë proteina cilësore, kolinë dhe vitamina B që ndihmojnë trupin të shndërrojë ushqimin në energji. Një vezë e zier mes vakteve të ngop dhe të ruan fokusin.',
+            '### Spinaqi dhe zarzavatet',
+            'Perimet me gjethe të errëta janë të pasura me hekur dhe folate, që ndihmojnë qelizat të marrin oksigjen. Mungesa e hekurit është një shkak i zakonshëm i lodhjes, prandaj shtoji në sallata dhe smoothies.',
+            '### Uji: energjia që e harrojmë',
+            'Edhe një dehidratim i lehtë ul energjinë dhe përqendrimin. Pini ujë rregullisht gjatë ditës, veçanërisht në mëngjes dhe pasdite, për t\'i dhënë trupit karburantin bazë.',
+            'Kombinoni këto ushqime me gjumë të rregullt dhe lëvizje të lehtë, dhe do të vini re një ndryshim të qartë në nivelin tuaj të energjisë gjatë gjithë ditës.'
+        ],
+        seed: 'ushqime-energji',
+        date: 'Sot',
+        time: '10:30'
     }
 ];
 
