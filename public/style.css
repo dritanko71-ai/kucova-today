@@ -829,6 +829,7 @@ img {
 }
 
 /* Category color classes */
+.cat-latest { --cat: var(--primary); }
 .cat-kronika { --cat: var(--cat-kronika); }
 .cat-sport { --cat: var(--cat-sport); }
 .cat-politika { --cat: var(--cat-politika); }

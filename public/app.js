@@ -2,6 +2,7 @@
 let articles = [];
 
 const catClass = {
+    'Lajm i fundit': 'latest',
     'Kronikë': 'kronika',
     'Sport': 'sport',
     'Politikë': 'politika',

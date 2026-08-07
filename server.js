@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const { seedArticles, generateArticle } = require('./data/news');
+const { seedArticles, generateArticle, generateLatestArticle } = require('./data/news');
 const { fetchAlbanianNews, fetchWorldNews } = require('./data/live-external');
 
 const app = express();
@@ -65,6 +65,13 @@ const LIVE_INTERVAL_MS = 15000;
 setInterval(() => {
     pushArticle(generateArticle(articles));
 }, LIVE_INTERVAL_MS);
+
+// ===== Lajmet e fundit: azhornohen çdo 5 minuta =====
+const LATEST_INTERVAL_MS = 5 * 60 * 1000;
+setInterval(() => {
+    pushArticle(generateLatestArticle(articles));
+}, LATEST_INTERVAL_MS);
+setTimeout(() => pushArticle(generateLatestArticle(articles)), 500);
 
 // ===== Lajme reale në shqip: Shqipëria + Bota (RSS shqiptarë) =====
 async function pollAlbanian() {

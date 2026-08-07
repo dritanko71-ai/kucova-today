@@ -291,6 +291,39 @@ const seedArticles = [
         seed: 'kucova-pune',
         date: 'Dje',
         time: '08:00'
+    },
+    {
+        id: 26,
+        cat: 'latest',
+        category: 'Lajm i fundit',
+        title: 'Kuçova në fokus: punimet e reja dhe zhvillimet e ditës',
+        excerpt: 'Redaksia po ndjek nga afër punimet e nisura në qytet dhe do t\'ju mbajë të informuar në vazhdimësi.',
+        seed: 'latest-start-1',
+        date: 'Sot',
+        time: '09:00',
+        live: true
+    },
+    {
+        id: 27,
+        cat: 'latest',
+        category: 'Lajm i fundit',
+        title: 'Takim i rëndësishëm në bashkinë e Kuçovës, priten njoftime të reja',
+        excerpt: 'Autoritetet lokale pritet të dalin me një qëndrim zyrtar pas takimit të sotëm.',
+        seed: 'latest-start-2',
+        date: 'Sot',
+        time: '11:30',
+        live: true
+    },
+    {
+        id: 28,
+        cat: 'latest',
+        category: 'Lajm i fundit',
+        title: 'Lajm i shpejtë: situata në qendër të qytetit, po ndiqet nga afër',
+        excerpt: 'KuçovaToday sjell detajet e reja sapo ato konfirmohen. Qëndroni të sintonizuar për përditësimet.',
+        seed: 'latest-start-3',
+        date: 'Sot',
+        time: '13:45',
+        live: true
     }
 ];
 
@@ -351,4 +384,40 @@ function generateArticle(articles) {
     };
 }
 
-module.exports = { seedArticles, SAMPLE_VIDEOS, VIDEO_POSTERS, generateArticle };
+// ===== Lajmet e fundit (azhornohen çdo 5 minuta) =====
+const latestTitles = (p) => [
+    `Kuçova në fokus: ${p.focus}, zhvillimet më të fundit`,
+    `Përditësim: situata në ${p.zone} sa më vonë gjatë ditës`,
+    `Tik-tak në ${p.zone}, çfarë po ndodh tani në qytetin e naftës`,
+    `Lajm i shpejtë nga ${p.zone}: reagimi i parë i bashkisë`,
+    `Në vijim: ecuria e ${p.focus} në Kuçovë`,
+    `Flash: takim i rëndësishëm në bashkinë e Kuçovës për ${p.focus}`
+];
+
+const latestExcerpts = (p) => [
+    `Redaksia po ndjek nga afër zhvillimet e fundit në lidhje me ${p.focus} dhe do t'ju mbajë të informuar në vazhdimësi.`,
+    `KuçovaToday sjell detajet e reja sapo ato konfirmohen. Qëndroni të sintonizuar për përditësimet në vijim.`,
+    `Të dhënat e fundit tregojnë një interes në rritje për ${p.focus} në të gjithë qytetin. Më shumë informacion së shpejti.`,
+    `Një zhvillim i ri pritet gjatë orëve të ardhshme. Redaksia jonë është në terren për të mbledhur detajet e plota.`,
+    `Bashkia e Kuçovës njofton se do të dalë me një qëndrim zyrtar pas përfundimit të takimit të sotëm.`
+];
+
+function generateLatestArticle(articles) {
+    const p = {
+        zone: pick(places),
+        focus: pick(topics)
+    };
+    return {
+        id: newId(articles),
+        cat: 'latest',
+        category: 'Lajm i fundit',
+        title: pick(latestTitles(p)),
+        excerpt: pick(latestExcerpts(p)),
+        seed: `latest-${Date.now()}-${Math.floor(Math.random() * 9999)}`,
+        date: 'Sot',
+        time: nowTime(),
+        live: true
+    };
+}
+
+module.exports = { seedArticles, SAMPLE_VIDEOS, VIDEO_POSTERS, generateArticle, generateLatestArticle };
