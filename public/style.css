@@ -255,7 +255,8 @@ img {
 }
 
 .utility-weather {
-    color: var(--gold-light);
+    color: #fde047;
+    text-shadow: 0 0 10px rgba(253, 224, 71, 0.55);
 }
 
 @keyframes pulse {
