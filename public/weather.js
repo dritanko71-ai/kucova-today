@@ -1,12 +1,12 @@
 // ===== Moti real i Shqipërisë (Open-Meteo, falas, pa API key) =====
 // Përfshin qytetet kryesore + Kuçovën. Qytetet ndërrohen automatikisht. Azhornon çdo 10 minuta.
 const CITIES = [
-    { name: 'Kuçova', lat: 40.8039, lon: 19.9167 },
-    { name: 'Tirana', lat: 41.3275, lon: 19.8187 },
+    { name: 'Kuçovë', lat: 40.8039, lon: 19.9167 },
+    { name: 'Tiranë', lat: 41.3275, lon: 19.8187 },
     { name: 'Durrës', lat: 41.3231, lon: 19.4414 },
     { name: 'Vlorë', lat: 40.4686, lon: 19.4831 },
     { name: 'Shkodër', lat: 42.0693, lon: 19.5129 },
-    { name: 'Korça', lat: 40.6186, lon: 20.7808 },
+    { name: 'Korçë', lat: 40.6186, lon: 20.7808 },
     { name: 'Elbasan', lat: 41.1125, lon: 20.0822 },
     { name: 'Fier', lat: 40.7239, lon: 19.5564 },
     { name: 'Berat', lat: 40.7058, lon: 19.9522 },
