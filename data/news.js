@@ -17,7 +17,7 @@ const seedArticles = [
         cat: 'ushqim',
         category: 'Ushqim i Shëndetshëm',
         title: 'Perimet e freskëta që duhet të kesh gjithmonë në frigorifer',
-        image: 'https://loremflickr.com/640/400/fresh,vegetables',
+        image: 'https://loremflickr.com/640/400/tomato,cucumber,pepper',
         excerpt: 'Mbajtja e perimeve në frigorifer i mban ato të freskëta, krokante dhe plot vitamina shumë më gjatë. Zbulo cilat perime përfitojnë më shumë nga i ftohti dhe pse duhet t\'i ruash gjithmonë aty.',
         body: [
             'Frigoriferi ngadalëson procesin e kalbëzimit. Temperaturat e ulëta ngadalësojnë enzimat dhe mikroorganizmat që prishin perimet, duke u mbajtur ato të freskëta deri në dy javë më gjatë se temperatura e dhomës.',
