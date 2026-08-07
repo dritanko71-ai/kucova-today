@@ -42,18 +42,6 @@ function formatWeather(code, temp) {
     return `${w.icon} ${t}&deg;C`;
 }
 
-// ===== Ora reale =====
-function updateClock() {
-    const now = new Date();
-    const hh = String(now.getHours()).padStart(2, '0');
-    const mm = String(now.getMinutes()).padStart(2, '0');
-    const ss = String(now.getSeconds()).padStart(2, '0');
-    const el = document.getElementById('live-clock');
-    if (el) el.textContent = `${hh}:${mm}:${ss}`;
-}
-setInterval(updateClock, 1000);
-updateClock();
-
 // ===== Strip i motit për qytetet =====
 function ensureWeatherStrip() {
     if (document.getElementById('weather-strip')) return;
@@ -91,7 +79,7 @@ async function updateWeather() {
             const html = formatWeather(d.current.weather_code, d.current.temperature_2m);
 
             if (city.name === 'Kuçova') {
-                els.forEach(el => el.innerHTML = html);
+                els.forEach(el => el.innerHTML = `<strong>${city.name}</strong>: ${html}`);
             }
 
             const card = strip && strip.querySelectorAll('.weather-city')[i];
