@@ -8,7 +8,7 @@ const catClass = {
     'Receta': 'receta',
     'Ushtrime': 'ushtrime',
     'Jete e Shëndetshme': 'jete',
-    'Shëndet': 'shendet'
+    'Horoskopi': 'horoskopi'
 };
 
 const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
@@ -64,7 +64,7 @@ const sections = [
     { key: 'receta', title: 'Receta', accent: false },
     { key: 'ushtrime', title: 'Ushtrime', accent: false },
     { key: 'jete', title: 'Jete e Shëndetshme', accent: false },
-    { key: 'shendet', title: 'Shëndet', accent: false }
+    { key: 'horoskopi', title: 'Horoskopi', accent: false }
 ];
 
 function renderSections() {

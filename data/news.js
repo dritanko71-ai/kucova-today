@@ -403,36 +403,6 @@ const seedArticles = [
         time: '12:00'
     },
     {
-        id: 23,
-        cat: 'shendet',
-        category: 'Shëndet',
-        title: 'Uji dhe hidratimi: çfarë ndodh kur pi 2 litra në ditë',
-        excerpt: 'Hidratimi i duhur përmirëson tretjen, lëkurën dhe energjinë. Zbulo ndryshimet që ndjen në trupin tënd.',
-        seed: 'hidratimi-2litra',
-        date: 'Dje',
-        time: '10:45'
-    },
-    {
-        id: 24,
-        cat: 'shendet',
-        category: 'Shëndet',
-        title: 'Vitaminat që ju mungojnë në dietën mesdhetare',
-        excerpt: 'Edhe me dietën më të mirë, mund të kesh mangësi. Mëso cilat vitamina janë më të zakonshme të mungojnë.',
-        seed: 'vitaminat-mangesi',
-        date: 'Dje',
-        time: '09:30'
-    },
-    {
-        id: 25,
-        cat: 'shendet',
-        category: 'Shëndet',
-        title: 'Sheqeri: si ta njohësh dhe ta reduktosh në dietë',
-        excerpt: 'Sheqeri i fshehur gjendet kudo. Mëso të lexosh etiketat dhe ta reduktosh pa hequr dorë nga shija.',
-        seed: 'sheqeri-dieta',
-        date: 'Dje',
-        time: '08:00'
-    },
-    {
         id: 26,
         cat: 'latest',
         category: 'Më e reja',
@@ -543,6 +513,150 @@ const seedArticles = [
         seed: 'ushqime-energji',
         date: 'Sot',
         time: '10:30'
+    },
+    {
+        id: 32,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Dashi (21 Mars – 19 Prill)',
+        excerpt: 'Dashi sot ka energji për të marrë vendime të mëdha. Zbulo çfarë të pret në dashuri, punë dhe shëndet.',
+        image: 'https://loremflickr.com/640/400/aries,zodiac,star',
+        sign: 'dashi',
+        symbol: '&#9800;',
+        date: 'Sot',
+        time: '06:00'
+    },
+    {
+        id: 33,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Demi (20 Prill – 20 Maj)',
+        excerpt: 'Demi sot vë bast mbi stabilitetin. Zbulo si t\'i përdorësh më mirë energjitë e ditës.',
+        image: 'https://loremflickr.com/640/400/taurus,zodiac,star',
+        sign: 'demi',
+        symbol: '&#9801;',
+        date: 'Sot',
+        time: '06:05'
+    },
+    {
+        id: 34,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Binjakët (21 Maj – 20 Qershor)',
+        excerpt: 'Binjakët sot komunikojnë më mirë se kurrë. Zbulo çfarë të sjell dita në marrëdhënie dhe karrierë.',
+        image: 'https://loremflickr.com/640/400/gemini,zodiac,star',
+        sign: 'binjaket',
+        symbol: '&#9802;',
+        date: 'Sot',
+        time: '06:10'
+    },
+    {
+        id: 35,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Gaforrja (21 Qershor – 22 Korrik)',
+        excerpt: 'Gaforrja sot ndien më shumë se zakonisht. Zbulo si t\'i kanalizosh emocionet me forcë.',
+        image: 'https://loremflickr.com/640/400/cancer,zodiac,star',
+        sign: 'gaforrja',
+        symbol: '&#9803;',
+        date: 'Sot',
+        time: '06:15'
+    },
+    {
+        id: 36,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Luani (23 Korrik – 22 Gusht)',
+        excerpt: 'Luani sot është në qendër të vëmendjes. Zbulo si ta shfrytëzosh karizmin tënd në maksimum.',
+        image: 'https://loremflickr.com/640/400/leo,zodiac,star',
+        sign: 'luani',
+        symbol: '&#9804;',
+        date: 'Sot',
+        time: '06:20'
+    },
+    {
+        id: 37,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Virgjëresha (23 Gusht – 22 Shtator)',
+        excerpt: 'Virgjëresha sot është e përpiktë dhe e organizuar. Zbulo çfarë detyrash të sjellin përfitim.',
+        image: 'https://loremflickr.com/640/400/virgo,zodiac,star',
+        sign: 'virgjerresha',
+        symbol: '&#9805;',
+        date: 'Sot',
+        time: '06:25'
+    },
+    {
+        id: 38,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Peshorja (23 Shtator – 22 Tetor)',
+        excerpt: 'Peshorja sot kërkon ekuilibër në çdo fushë. Zbulo si të marrësh vendime me drejtësi.',
+        image: 'https://loremflickr.com/640/400/libra,zodiac,star',
+        sign: 'peshorja',
+        symbol: '&#9806;',
+        date: 'Sot',
+        time: '06:30'
+    },
+    {
+        id: 39,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Akrepi (23 Tetor – 21 Nëntor)',
+        excerpt: 'Akrepi sot është i vendosur dhe misterioz. Zbulo si t\'i kthesh pasionet në rezultate.',
+        image: 'https://loremflickr.com/640/400/scorpio,zodiac,star',
+        sign: 'akrepi',
+        symbol: '&#9807;',
+        date: 'Sot',
+        time: '06:35'
+    },
+    {
+        id: 40,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Shigjetari (22 Nëntor – 21 Dhjetor)',
+        excerpt: 'Shigjetari sot është aventurier dhe optimist. Zbulo çfarë mundësish të sjell dita.',
+        image: 'https://loremflickr.com/640/400/sagittarius,zodiac,star',
+        sign: 'shigjetari',
+        symbol: '&#9808;',
+        date: 'Sot',
+        time: '06:40'
+    },
+    {
+        id: 41,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Bricjapi (22 Dhjetor – 19 Janar)',
+        excerpt: 'Bricjapi sot fokusohet te qëllimet afatgjata. Zbulo si të përparosh në punë dhe financa.',
+        image: 'https://loremflickr.com/640/400/capricorn,zodiac,star',
+        sign: 'bricjapi',
+        symbol: '&#9809;',
+        date: 'Sot',
+        time: '06:45'
+    },
+    {
+        id: 42,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Ujori (20 Janar – 18 Shkurt)',
+        excerpt: 'Ujori sot është inovativ dhe i pavarur. Zbulo si t\'i realizosh idetë e tua më të guximshme.',
+        image: 'https://loremflickr.com/640/400/aquarius,zodiac,star',
+        sign: 'ujori',
+        symbol: '&#9810;',
+        date: 'Sot',
+        time: '06:50'
+    },
+    {
+        id: 43,
+        cat: 'horoskopi',
+        category: 'Horoskopi',
+        title: 'Horoskopi i sotëm: Peshqit (19 Shkurt – 20 Mars)',
+        excerpt: 'Peshqit sot janë intuitivë dhe ëndërrimtarë. Zbulo si ta përdorësh ndjeshmërinë si forcë.',
+        image: 'https://loremflickr.com/640/400/pisces,zodiac,star',
+        sign: 'peshqit',
+        symbol: '&#9811;',
+        date: 'Sot',
+        time: '06:55'
     }
 ];
 
@@ -557,12 +671,10 @@ const templates = [
     { cat: 'ushtrime', category: 'Ushtrime', title: (p) => `${p.exercise}: ushtrimi që aktivizon gjithë trupin`, excerpt: (p) => `Përfshi në rutinën tënde javore dhe ndje diferencën në energji dhe forcë.` },
     { cat: 'ushtrime', category: 'Ushtrime', title: (p) => `Sesioni i shkurtër ${p.routine}, pse duhet ta provosh`, excerpt: (p) => `Edhe 15 minuta stërvitje e fokusuar japin rezultate të dukshme me kalimin e kohës.` },
     { cat: 'jete', category: 'Jete e Shëndetshme', title: (p) => `Jeta e shëndetshme: ${p.habit} që ndryshon gjithçka`, excerpt: (p) => `Ndryshimet e vogla të përditshme kanë ndikim të madh në mirëqenien tënde.` },
-    { cat: 'jete', category: 'Jete e Shëndetshme', title: (p) => `${p.routine} për mëngjes: sekreti i një dite të mirë`, excerpt: (p) => `Fillo ditën me hapin e duhur dhe vëre ndryshimin në produktivitet dhe humor.` },
-    { cat: 'shendet', category: 'Shëndet', title: (p) => `Çfarë thonë mjekët për ${p.goal}: mitet dhe faktet`, excerpt: (p) => `Zbërthen mitet e zakonshme dhe merr informacion të bazuar në shkencë.` },
-    { cat: 'shendet', category: 'Shëndet', title: (p) => `Shenjat që trupi yt ka nevojë për ${p.focus}`, excerpt: (p) => `Mëso t\'i dëgjosh sinjalet që të dërgon trupi dhe të veprosh në kohë.` }
+    { cat: 'jete', category: 'Jete e Shëndetshme', title: (p) => `${p.routine} për mëngjes: sekreti i një dite të mirë`, excerpt: (p) => `Fillo ditën me hapin e duhur dhe vëre ndryshimin në produktivitet dhe humor.` }
 ];
 
-const categories = ['Humbje Peshe', 'Ushqim i Shëndetshëm', 'Receta', 'Ushtrime', 'Jete e Shëndetshme', 'Shëndet'];
+const categories = ['Humbje Peshe', 'Ushqim i Shëndetshëm', 'Receta', 'Ushtrime', 'Jete e Shëndetshme', 'Horoskopi'];
 const foods = ['avokado', 'boronicat', 'kungulli', 'spinaci', 'thjerrëzat', 'quinoa', 'kale', 'salmoni'];
 const dishes = ['sallatë perimesh', 'supë krem', 'tavë perimesh', 'petulla tërshëre', 'smoothie jeshil', 'tuna në gril'];
 
@@ -749,4 +861,154 @@ function generateLatestArticle(articles) {
     };
 }
 
-module.exports = { seedArticles, generateArticle, generateLatestArticle };
+// ===== Horoskopi ditor =====
+const ZODIAC = {
+    dashi: {
+        name: 'Dashi',
+        element: 'Zjarr',
+        ruling: 'Marsi',
+        luckNum: [3, 9],
+        luckColor: 'E kuqe'
+    },
+    demi: {
+        name: 'Demi',
+        element: 'Dhe',
+        ruling: 'Venusi',
+        luckNum: [2, 6],
+        luckColor: 'Jeshile'
+    },
+    binjaket: {
+        name: 'Binjakët',
+        element: 'Ajër',
+        ruling: 'Merkuri',
+        luckNum: [5, 7],
+        luckColor: 'E verdhë'
+    },
+    gaforrja: {
+        name: 'Gaforrja',
+        element: 'Ujë',
+        ruling: 'Hëna',
+        luckNum: [2, 7],
+        luckColor: 'Argjend'
+    },
+    luani: {
+        name: 'Luani',
+        element: 'Zjarr',
+        ruling: 'Dielli',
+        luckNum: [1, 4],
+        luckColor: 'E artë'
+    },
+    virgjerresha: {
+        name: 'Virgjëresha',
+        element: 'Dhe',
+        ruling: 'Merkuri',
+        luckNum: [5, 8],
+        luckColor: 'E gjelbër'
+    },
+    peshorja: {
+        name: 'Peshorja',
+        element: 'Ajër',
+        ruling: 'Venusi',
+        luckNum: [6, 9],
+        luckColor: 'Rozë'
+    },
+    akrepi: {
+        name: 'Akrepi',
+        element: 'Ujë',
+        ruling: 'Plutoni',
+        luckNum: [8, 9],
+        luckColor: 'E zezë'
+    },
+    shigjetari: {
+        name: 'Shigjetari',
+        element: 'Zjarr',
+        ruling: 'Jupiteri',
+        luckNum: [3, 9],
+        luckColor: 'Blu'
+    },
+    bricjapi: {
+        name: 'Bricjapi',
+        element: 'Dhe',
+        ruling: 'Saturni',
+        luckNum: [4, 8],
+        luckColor: 'Kafe'
+    },
+    ujori: {
+        name: 'Ujori',
+        element: 'Ajër',
+        ruling: 'Urani',
+        luckNum: [1, 7],
+        luckColor: 'Elektrike'
+    },
+    peshqit: {
+        name: 'Peshqit',
+        element: 'Ujë',
+        ruling: 'Neptuni',
+        luckNum: [3, 9],
+        luckColor: 'E kaltër'
+    }
+};
+
+const HORO_LOVE = [
+    'Në dashuri, dita favorizon komunikimin e hapur. Mos hezito të thuash atë që ndjen — partneri e vlerëson sinqeritetin.',
+    'Dita sjell harmoni në çift. Nëse je beqar, një takim i rastësishëm sot mund të kthehet në diçka më serioze.',
+    'Pasionet zgjohen sot. Dëgjoje zemrën, por edhe logjikën, përpara se të marrësh vendime të mëdha emocionale.',
+    'Marrëdhëniet kërkojnë vëmendje sot. Një gjest i vogël dashamirës mund të forcojë lidhjen me personin e dashur.'
+];
+
+const HORO_WORK = [
+    'Në punë, iniciativa jote bie në sy. Mos u tremb të marrësh drejtimin — aftësitë e tua po vlerësohen.',
+    'Karriera të sjell mundësi të reja. Përqendrohu në detyrat prioritare dhe rezultatet do të flasin vetë.',
+    'Një bashkëpunim i papritur mund të të sjellë përfitime. Ji i hapur ndaj sugjerimeve të kolegëve.',
+    'Dita favorizon organizimin. Bëj një listë detyrash dhe ndjekja e saj do ta bëjë punën më të lehtë.'
+];
+
+const HORO_HEALTH = [
+    'Shëndeti kërkon ekuilibër. Fillo ditën me ujë dhe shto lëvizje të lehtë — trupi yt e meriton.',
+    'Energjia jote është e lartë sot. Shfrytëzoje për një stërvitje ose një shëtitje në natyrë.',
+    'Ji i vëmendshëm me gjumin. Një natë e mirë pushimi do të ndikojë pozitivisht në humor dhe fokus.',
+    'Dëgjoji sinjalet e trupit. Pushimi i duhur dhe ushqimi i ekuilibruar janë aleatët e tu më të mirë.'
+];
+
+const HORO_ADVICE = [
+    'Këshilla e ditës: beso në instinktet e tua dhe vepro me guxim.',
+    'Këshilla e ditës: një ndryshim i vogël sot sjell rezultate të mëdha nesër.',
+    'Këshilla e ditës: jini të mirë me veten — përparimi kërkon kohë dhe durim.',
+    'Këshilla e ditës: ndihma ndaj të tjerëve të kthen forcë të trefishtë.'
+];
+
+function daySeed() {
+    const d = new Date();
+    return d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
+}
+
+function dailyHoroscope(signKey, index, baseArticle) {
+    const s = ZODIAC[signKey];
+    const seed = daySeed() + index;
+    const r = (arr) => arr[(seed + index) % arr.length];
+    return {
+        ...baseArticle,
+        date: 'Sot',
+        time: '06:00',
+        body: [
+            `Për shenjën e ${s.name}, dita e sotme vjen e mbushur me energji të veçantë. Elementi i ${s.element} dhe planeti ${s.ruling} ndikojnë në mënyrën si ia del mbanë në çdo fushë të jetës.`,
+            '### Dashuria',
+            r(HORO_LOVE),
+            '### Puna dhe karriera',
+            r(HORO_WORK),
+            '### Shëndeti',
+            r(HORO_HEALTH),
+            '### Numrat me fat',
+            `Numrat me fat për sot: ${s.luckNum.join(' dhe ')}. Ngjyra që të sjell energji: ${s.luckColor}.`,
+            r(HORO_ADVICE)
+        ]
+    };
+}
+
+function generateHoroscopeDaily(articles) {
+    return articles
+        .filter(a => a.cat === 'horoskopi')
+        .map((a, i) => dailyHoroscope(a.sign, i, a));
+}
+
+module.exports = { seedArticles, generateArticle, generateLatestArticle, generateHoroscopeDaily };

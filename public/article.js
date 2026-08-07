@@ -9,7 +9,7 @@ const catClass = {
     'Receta': 'receta',
     'Ushtrime': 'ushtrime',
     'Jete e Shëndetshme': 'jete',
-    'Shëndet': 'shendet'
+    'Horoskopi': 'horoskopi'
 };
 const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
 
@@ -42,6 +42,7 @@ function renderArticle(a) {
                 <span>${a.time} - ${a.date}</span>
             </div>
         </header>
+        ${a.symbol ? `<div class="zodiac-hero">${a.symbol}</div>` : ''}
         <figure class="article-figure">
             <img src="${img}" alt="${a.title}">
         </figure>

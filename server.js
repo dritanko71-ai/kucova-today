@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const https = require('https');
-const { seedArticles, generateArticle, generateLatestArticle } = require('./data/news');
+const { seedArticles, generateArticle, generateLatestArticle, generateHoroscopeDaily } = require('./data/news');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -73,6 +73,29 @@ setInterval(() => {
     pushArticle(generateLatestArticle(articles));
 }, LATEST_INTERVAL_MS);
 setTimeout(() => pushArticle(generateLatestArticle(articles)), 500);
+
+// ===== Horoskopi: azhornohet çdo ditë =====
+function refreshHoroscope() {
+    const updated = generateHoroscopeDaily(articles);
+    updated.forEach(nu => {
+        const idx = articles.findIndex(a => a.id === nu.id);
+        if (idx !== -1) articles[idx] = nu;
+    });
+    console.log(`Horoskopi u azhornua: ${updated.length} shenja, ${new Date().toLocaleDateString('sq-AL')}`);
+}
+refreshHoroscope();
+
+function msUntilMidnight() {
+    const now = new Date();
+    const midnight = new Date(now);
+    midnight.setHours(24, 0, 0, 0);
+    return midnight - now;
+}
+
+setTimeout(() => {
+    refreshHoroscope();
+    setInterval(refreshHoroscope, 24 * 60 * 60 * 1000);
+}, msUntilMidnight() + 5000);
 
 // ===== Self-ping: e mban zgjuar në Render falas =====
 app.get('/api/ping', (req, res) => res.json({ ok: true, time: new Date().toISOString() }));

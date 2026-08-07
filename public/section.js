@@ -8,7 +8,7 @@ const catClass = {
     'Receta': 'receta',
     'Ushtrime': 'ushtrime',
     'Jete e Shëndetshme': 'jete',
-    'Shëndet': 'shendet'
+    'Horoskopi': 'horoskopi'
 };
 
 const catCls = a => `cat-${catClass[a.category] || 'jete'}`;
@@ -21,7 +21,7 @@ const SECTION_TITLES = {
     'receta': 'Receta',
     'ushtrime': 'Ushtrime',
     'jete': 'Jete e Shëndetshme',
-    'shendet': 'Shëndet'
+    'horoskopi': 'Horoskopi'
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -40,6 +40,7 @@ function renderList() {
     wrap.innerHTML = items.map((a, i) => `
         <article class="news-row ${a.live ? 'live-flash' : ''}" style="animation-delay: ${i * 0.05}s">
             <a class="news-thumb" href="article.html?id=${a.id}">
+                ${cat === 'horoskopi' ? `<span class="zodiac-symbol">${a.symbol || ''}</span>` : ''}
                 <img src="${thumb(a)}" alt="${a.title}">
             </a>
             <div class="news-body">

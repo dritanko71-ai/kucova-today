@@ -39,7 +39,7 @@
     --cat-receta: #ef8a4c;
     --cat-ushtrime: #4a90d9;
     --cat-jete: #9b7fd4;
-    --cat-shendet: #e0656d;
+    --cat-horoskopi: #d4a34b;
 
     --meta-gold: #8a6d2f;
     --grad-1: #DBB764;
@@ -81,7 +81,7 @@
     --cat-receta: #f0a06a;
     --cat-ushtrime: #7fb8ef;
     --cat-jete: #b79de8;
-    --cat-shendet: #ef8b93;
+    --cat-horoskopi: #e5b95c;
 
     --meta-gold: #d8be82;
     --grad-1: #DBB764;
@@ -691,7 +691,7 @@ img {
 .sec-receta .section-header .bar.accent { background: var(--cat-receta); }
 .sec-ushtrime .section-header .bar.accent { background: var(--cat-ushtrime); }
 .sec-jete .section-header .bar.accent { background: var(--cat-jete); }
-.sec-shendet .section-header .bar.accent { background: var(--cat-shendet); }
+.sec-horoskopi .section-header .bar.accent { background: var(--cat-horoskopi); }
 
 /* ===== News row ===== */
 .news-row {
@@ -812,7 +812,36 @@ img {
 .cat-receta { --cat: var(--cat-receta); }
 .cat-ushtrime { --cat: var(--cat-ushtrime); }
 .cat-jete { --cat: var(--cat-jete); }
-.cat-shendet { --cat: var(--cat-shendet); }
+.cat-horoskopi { --cat: var(--cat-horoskopi); }
+
+.zodiac-symbol {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(219, 183, 100, 0.92);
+    color: #2D2D2D;
+    font-size: 1.5rem;
+    line-height: 44px;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+.news-thumb {
+    position: relative;
+}
+
+.zodiac-hero {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--gold);
+    line-height: 1;
+    padding: 1.2rem 0 0.2rem;
+}
 
 /* ===== Sidebar ===== */
 .sidebar {
