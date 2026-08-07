@@ -1,9 +1,11 @@
 const path = require('path');
 const express = require('express');
+const https = require('https');
 const { seedArticles, generateArticle, generateLatestArticle } = require('./data/news');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 let articles = [...seedArticles];
 let liveIndex = 0;
@@ -71,6 +73,23 @@ setInterval(() => {
     pushArticle(generateLatestArticle(articles));
 }, LATEST_INTERVAL_MS);
 setTimeout(() => pushArticle(generateLatestArticle(articles)), 500);
+
+// ===== Self-ping: e mban zgjuar në Render falas =====
+app.get('/api/ping', (req, res) => res.json({ ok: true, time: new Date().toISOString() }));
+
+function selfPing() {
+    if (!PUBLIC_URL) return;
+    const req = https.get(PUBLIC_URL + '/api/ping', { timeout: 15000 }, res => {
+        res.resume();
+        res.on('end', () => console.log(`Self-ping: ${res.statusCode}`));
+    });
+    req.on('timeout', () => req.destroy());
+    req.on('error', err => console.log('Self-ping error:', err.message));
+}
+
+const PING_INTERVAL_MS = 10 * 60 * 1000;
+setInterval(selfPing, PING_INTERVAL_MS);
+setTimeout(selfPing, 60 * 1000);
 
 // ===== Statike =====
 app.use(express.static(path.join(__dirname, 'public')));
