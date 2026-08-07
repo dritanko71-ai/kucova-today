@@ -403,14 +403,12 @@ img {
     transition: transform 0.3s ease;
 }
 
-.main-nav a:hover::after,
-.main-nav a.active::after {
+.main-nav a:hover::after {
     transform: translateX(-50%) scaleX(1);
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-    color: var(--nav-link);
+.main-nav a:hover {
+    color: var(--nav-active);
     border-bottom-color: transparent;
 }
 

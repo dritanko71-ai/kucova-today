@@ -198,18 +198,6 @@ searchInput.addEventListener('input', () => {
 const progressBar = document.getElementById('progress-bar');
 const header = document.querySelector('.site-header');
 const toTop = document.getElementById('to-top');
-const navLinks = document.querySelectorAll('.main-nav a');
-const navSections = ['hero', 'sec-latest', 'sec-humbjepeshe', 'sec-ushqim', 'sec-receta', 'sec-ushtrime', 'sec-jete', 'sec-shendet'];
-const sectionCat = {
-    'hero': 'latest',
-    'sec-latest': 'latest',
-    'sec-humbjepeshe': 'humbjepeshe',
-    'sec-ushqim': 'ushqim',
-    'sec-receta': 'receta',
-    'sec-ushtrime': 'ushtrime',
-    'sec-jete': 'jete',
-    'sec-shendet': 'shendet'
-};
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
@@ -217,18 +205,6 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = `${height > 0 ? (scrollTop / height) * 100 : 0}%`;
     header.classList.toggle('scrolled', scrollTop > 30);
     toTop.classList.toggle('show', scrollTop > 500);
-
-    let current = 'hero';
-    navSections.forEach(id => {
-        const el = document.getElementById(id);
-        if (el && el.offsetTop - 120 <= scrollTop) current = id;
-    });
-    const activeCat = sectionCat[current];
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        const m = href && href.match(/cat=([a-z]+)/);
-        link.classList.toggle('active', m ? m[1] === activeCat : href === 'index.html' && activeCat === 'latest');
-    });
 });
 
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
