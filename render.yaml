@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: kucovatoday
+    name: jetobukur
     runtime: node
     plan: free
     buildCommand: npm install
