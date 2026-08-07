@@ -77,6 +77,19 @@ searchInput.addEventListener('input', () => {
     });
 });
 
+// ===== Efekti i logos JetoBukur =====
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('mouseenter', () => {
+        logo.classList.remove('logo-hover');
+        void logo.offsetWidth;
+        logo.classList.add('logo-hover');
+    });
+    logo.addEventListener('animationend', () => {
+        logo.classList.remove('logo-hover');
+    });
+}
+
 // ===== Hamburger =====
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('main-nav');

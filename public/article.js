@@ -81,6 +81,19 @@ function renderArticle(a) {
     document.getElementById('article-loading').style.display = 'none';
 }
 
+// ===== Efekti i logos JetoBukur =====
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('mouseenter', () => {
+        logo.classList.remove('logo-hover');
+        void logo.offsetWidth;
+        logo.classList.add('logo-hover');
+    });
+    logo.addEventListener('animationend', () => {
+        logo.classList.remove('logo-hover');
+    });
+}
+
 // ===== Theme =====
 const lightBtn = document.getElementById('theme-light');
 const darkBtn = document.getElementById('theme-dark');
