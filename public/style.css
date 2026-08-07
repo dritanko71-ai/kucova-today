@@ -410,7 +410,7 @@ img {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: var(--nav-active);
+    color: var(--nav-link);
     border-bottom-color: transparent;
 }
 
@@ -844,6 +844,64 @@ img {
     filter: brightness(1.1);
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(80, 59, 59, 0.2);
+}
+
+/* ===== Kopertina revistash në anët ===== */
+.mag-cover {
+    position: fixed;
+    top: 180px;
+    z-index: 90;
+    width: 150px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mag-cover a {
+    display: block;
+    box-shadow: 0 18px 44px rgba(80, 59, 59, 0.28);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.mag-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mag-cover:hover a {
+    box-shadow: 0 24px 54px rgba(80, 59, 59, 0.38);
+}
+
+.mag-cover:hover {
+    transform: translateY(-6px);
+}
+
+.mag-cover-left {
+    left: calc(50% - 740px);
+    transform: rotate(-3deg);
+}
+
+.mag-cover-left:hover {
+    transform: rotate(-3deg) translateY(-6px);
+}
+
+.mag-cover-right {
+    right: calc(50% - 740px);
+    transform: rotate(3deg);
+}
+
+.mag-cover-right:hover {
+    transform: rotate(3deg) translateY(-6px);
+}
+
+@media (min-width: 1500px) {
+    .mag-cover {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
 
 /* ===== Back to top ===== */

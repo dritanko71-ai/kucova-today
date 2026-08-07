@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+    <defs>
+        <linearGradient id="ph" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#dcefe3"/>
+            <stop offset="100%" stop-color="#8fceaa"/>
+        </linearGradient>
+        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#DBB764"/>
+            <stop offset="100%" stop-color="#b8933f"/>
+        </linearGradient>
+    </defs>
+    <rect width="300" height="400" fill="#fdfdf6"/>
+
+    <rect y="0" width="300" height="6" fill="url(#gold)"/>
+
+    <rect x="18" y="14" width="264" height="3" fill="#DBB764"/>
+
+    <text x="150" y="62" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" letter-spacing="6" fill="#2D2D2D">JETOBUKUR</text>
+    <text x="150" y="84" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#545454">Jetoni m&#235; sh&#235;ndetsh&#235;m dhe t&#235; lumtur</text>
+
+    <rect x="18" y="94" width="264" height="3" fill="#DBB764"/>
+
+    <text x="22" y="116" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="2" fill="#8a6d2f">TEMA E MUAJT</text>
+    <text x="22" y="134" font-family="Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">&#8226; Si t&#235; humbisni pesh&#235; pa uris&#235;</text>
+    <text x="22" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">&#8226; Ushtrime t&#235; thjeshta n&#235; sht&#235;pi</text>
+    <text x="22" y="166" font-family="Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">&#8226; Ushqimet q&#235; djegin dhjamin</text>
+
+    <rect x="18" y="176" width="264" height="128" rx="3" fill="url(#ph)"/>
+    <circle cx="150" cy="240" r="34" fill="#fff" opacity="0.85"/>
+    <text x="150" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="24">&#127860;</text>
+    <text x="150" y="272" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#2e7d32" letter-spacing="2">USHQIM I SH&#203;NDETSH&#203;M</text>
+
+    <text x="22" y="322" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="bold" fill="#2D2D2D">Humbje peshe</text>
+    <text x="22" y="342" font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#545454">pa uris&#235; dhe pa mundime</text>
+
+    <rect x="18" y="356" width="150" height="3" fill="url(#gold)"/>
+    <text x="18" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#545454">Nr. 7 &middot; Korrik 2026</text>
+    <text x="150" y="382" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="10" font-style="italic" fill="#8a6d2f">&#8364; 2.50</text>
+    <rect x="238" y="368" width="44" height="14" fill="#2D2D2D"/>
+    <g fill="#fff" opacity="0.9">
+        <rect x="244" y="372" width="1.6" height="6"/>
+        <rect x="247" y="372" width="1.6" height="6"/>
+        <rect x="250" y="372" width="1.6" height="6"/>
+        <rect x="253" y="372" width="1.6" height="6"/>
+        <rect x="256" y="372" width="1.6" height="6"/>
+        <rect x="259" y="372" width="1.6" height="6"/>
+        <rect x="262" y="372" width="1.6" height="6"/>
+        <rect x="265" y="372" width="1.6" height="6"/>
+        <rect x="268" y="372" width="1.6" height="6"/>
+        <rect x="271" y="372" width="1.6" height="6"/>
+    </g>
+    <rect x="244" y="380" width="2.5" height="2" fill="#fff"/>
+    <rect x="248" y="380" width="1.6" height="2" fill="#fff"/>
+    <rect x="251" y="380" width="2.5" height="2" fill="#fff"/>
+    <rect x="255" y="380" width="1.6" height="2" fill="#fff"/>
+    <rect x="258" y="380" width="2.5" height="2" fill="#fff"/>
+    <rect x="262" y="380" width="1.6" height="2" fill="#fff"/>
+    <rect x="265" y="380" width="2.5" height="2" fill="#fff"/>
+    <rect x="269" y="380" width="1.6" height="2" fill="#fff"/>
+    <rect x="272" y="380" width="2.5" height="2" fill="#fff"/>
+</svg>
