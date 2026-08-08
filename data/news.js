@@ -779,6 +779,20 @@ const goals = ['stabilizojë peshën', 'rrisë energjinë', 'përmirësojë tret
 const habits = ['pij më shumë ujë', 'fle 8 orë', 'bëj një shëtitje ditore', 'ha vakte të rregullta', 'medito 5 minuta'];
 const focuses = ['më shumë fibra', 'më shumë vitamina', 'pushim të duhur', 'aktivitet fizik'];
 
+// ===== Foto relevante për çdo kategori =====
+const CAT_IMAGES = {
+    humbjepeshe: 'weight,loss,healthy,food,scale',
+    ushqim: 'healthy,food,vegetables,fresh,organic',
+    receta: 'recipe,cooking,kitchen,plate,meal',
+    ushtrime: 'fitness,exercise,workout,gym,running',
+    jete: 'lifestyle,wellness,health,balance,meditation',
+    latest: 'healthy,lifestyle,wellness,people'
+};
+
+function catImage(cat) {
+    return `https://loremflickr.com/640/400/${CAT_IMAGES[cat] || 'healthy,food'}`;
+}
+
 function pick(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -790,6 +804,97 @@ function newId(articles) {
 function nowTime() {
     const d = new Date();
     return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+}
+
+// ===== Gjenerator i trupit të detajuar për çdo kategori =====
+function buildBody(cat, p, recipe) {
+    if (cat === 'humbjepeshe') {
+        return [
+            `Arritja e një peshe të shëndetshme nuk ka të bëjë vetëm me numrin në peshore, por me një stil jetese të qëndrueshëm. Në këtë artikull të detajuar shqyrtojmë se si të ndërtosh zakone që vërtet funksionojnë.`,
+            `### Pse është e rëndësishme ${p.focus}`,
+            `${p.focus.charAt(0).toUpperCase() + p.focus.slice(1)} luan një rol qendror në humbjen e peshës. Studimet tregojnë se vëmendja ndaj këtij aspekti përmirëson ndjeshëm rezultatet afatgjata, duke reduktuar rikthimin e peshës pas dietës.`,
+            '### Hapat praktikë që duhen ndjekur',
+            `Së pari, cakto një objektiv realist dhe të matshëm. Së dyti, strukturo vaktet rreth proteinave dhe fibrave që ngopin. Së treti, mos harro lëvizjen e përditshme — edhe një shëtitje 30-minutëshe bën diferencën.`,
+            `### Rutina ${p.routine}`,
+            `Rutina ${p.routine} është ideale për fillestarët dhe për ata që e kanë kohën e kufizuar. Kombinimi i saj me një të ushqyer të ekuilibruar jep rezultatet më të mira në 8–12 javët e para.`,
+            '### Gabimet më të zakonshme',
+            'Shumë njerëz heqin dorë pas një jave sepse presin rezultate të menjëhershme. Trupi ka nevojë për kohë për t\'u përshtatur. Konsistenca, jo intensiteti, është sekreti i suksesit.',
+            '### Përmbledhje',
+            `Humbja e shëndetshme e peshës kërkon durim, planifikim dhe ekuilibër. Ndiq këto hapa çdo ditë dhe rezultatet do të vijnë natyrshëm.`
+        ];
+    }
+    if (cat === 'ushqim') {
+        return [
+            `Ushqimi i shëndetshëm nuk nënkupton sakrifica, por zgjedhje të mençura. Ky artikull shqyrton në detaje se si të pasurosh dietën tënde me ushqime që të bëjnë të ndihesh më mirë.`,
+            `### ${p.food.charAt(0).toUpperCase() + p.food.slice(1)}: një superushqim`,
+            `${p.food.charAt(0).toUpperCase() + p.food.slice(1)} është i pasur me vitamina, minerale dhe antioksidantë. Konsumimi i rregullt i tij mbështet imunitetin, përmirëson tretjen dhe ruan nivelin e energjisë gjatë ditës.`,
+            '### Si ta përfshish në dietë',
+            `Një mënyrë e thjeshtë është ta shtosh në sallata, smoothies ose vakte kryesore. Eksperimentimi me receta të reja e bën të ushqyerit të shëndetshëm më të këndshëm dhe të qëndrueshëm në kohë.`,
+            `### Ndikimi në ${p.goal}`,
+            `Studimet sugjerojnë se një dietë e pasur me këtë lloj ushqimi ndihmon të ${p.goal}. Efekti bëhet i dukshëm kur kombinohet me hidratim të mirë dhe gjumë të rregullt.`,
+            '### Këshilla për blerjet',
+            'Zgjidh produkte sezonale dhe vendore sa herë të jetë e mundur. Produktet e freskëta ruajnë më shumë lëndë ushqyese dhe kanë shije më të mirë.',
+            '### Përmbledhje',
+            'Një dietë e ekuilibruar është investimi më i mirë për shëndetin. Fillo me ndryshime të vogla dhe ndërto zakone që zgjasin gjithë jetën.'
+        ];
+    }
+    if (cat === 'receta') {
+        const ing = recipe ? recipe.ingredients.join(', ') : 'përbërës të freskët dhe të shëndetshëm';
+        return [
+            `Kjo recetë e shijshme dhe ushqyese është e përgatitur në vetëm disa hapa. ${recipe ? 'Më poshtë gjen gjithçka që të duhet për një pjatë perfekte.' : ''}`,
+            '### Përbërësit',
+            ing,
+            '### Përgatitja hap pas hapi',
+            ...(recipe ? recipe.steps.map((s, i) => `${i + 1}. ${s}`) : ['1. Përgatit të gjithë përbërësit dhe laji mirë.', '2. Ndiq hapat me kujdes për një rezultat të shijshëm.']),
+            '### Vlerat ushqyese',
+            'Kjo pjatë ofron një ekuilibër të mirë proteinash, karbohidratesh dhe yndyrnash të shëndetshme. Është ideale si një vakt kryesor ose si shoqërim për familjen.',
+            '### Variacione',
+            'Mund të shtosh perime të ndryshme sezonale ose ta bësh versionin vegan duke zëvendësuar djathin me alternativë bimore.',
+            '### Përmbledhje',
+            'Një recetë e shijshme nuk duhet të jetë e ndërlikuar. Me përbërës cilësorë dhe pak kujdes, çdokush mund të përgatisë një vakt të mrekullueshëm.'
+        ];
+    }
+    if (cat === 'ushtrime') {
+        return [
+            `Ushtrimi i rregullt është një nga shtyllat kryesore të një jete të shëndetshme. Ky artikull analizon në detaje ${p.exercise} dhe pse duhet të jetë pjesë e rutinës tënde javore.`,
+            `### ${p.exercise.charAt(0).toUpperCase() + p.exercise.slice(1)}: çfarë aktivizon`,
+            `${p.exercise.charAt(0).toUpperCase() + p.exercise.slice(1)} angazhon muskujt e bërthamës, këmbët dhe shpinën, duke përmirësuar qëndrueshmërinë dhe ekuilibrin. Është një nga ushtrimet më efektive për forcë funksionale.`,
+            '### Si ta kryesh saktë',
+            'Filloni me ngrohje 5-minutëshe. Mbani shpinën neutrale, tensiononi barkun dhe kontrolloni lëvizjen në të dyja fazat. Cilësia e lëvizjes është më e rëndësishme se numri i përsëritjeve.',
+            `### Rutina ${p.routine}`,
+            `Përfshirja në rutinën ${p.routine} jep rezultate të shpejta. Filloni me 3 raunde dhe rriteni gradualisht intensitetin ndërsa forca rritet.`,
+            '### Përfitimet afatgjata',
+            'Ushtrimi i rregullt forcon zemrën, ul stresin, përmirëson gjumin dhe rrit energjinë e përditshme. Përfitimet vërehen si në trup, ashtu edhe në humor.',
+            '### Përmbledhje',
+            'Konsistenca e fiton çdo herë. Zgjidh një orar që të përshtatet dhe bëje ushtrimin pjesë të pandashme të javës tënde.'
+        ];
+    }
+    if (cat === 'jete') {
+        return [
+            `Një jetë e shëndetshme ndërtohet me zakone të vogla që përsëriten çdo ditë. Ky artikull eksploron mënyrat praktike për të përmirësuar mirëqenien tënde të përgjithshme.`,
+            `### ${p.habit.charAt(0).toUpperCase() + p.habit.slice(1)}`,
+            `${p.habit.charAt(0).toUpperCase() + p.habit.slice(1)} është një ndryshim i vogël me ndikim të madh. Kur bëhet pjesë e rutinës së përditshme, përmirëson energjinë, përqendrimin dhe humorin.`,
+            '### Ekuilibri mes trupit dhe mendjes',
+            `Aktiviteti fizik, ushqimi i ekuilibruar dhe pushimi i duhur punojnë së bashku. Stresi i menaxhuar mirë dhe gjumi cilësor janë po aq të rëndësishëm sa dieta dhe lëvizja.`,
+            `### Rutina ${p.routine}`,
+            `Një rutinë ${p.routine} ndihmon të ndërtosh strukturë në ditë, duke reduktuar ankthin dhe duke rritur produktivitetin.`,
+            '### Këshilla të tjera',
+            `Përpiqesh të ${p.goal}, që është një hap i shkëlqyer drejt një jete më të ekuilibruar. Shto gradualisht edhe ${p.habit} për rezultate më të mira.`,
+            '### Përmbledhje',
+            'Mirëqenia nuk është një destinacion, por një udhëtim i përditshëm. Çdo zgjedhje e vogël e shëndetshme të sjell një hap më pranë një jete më të mirë.'
+        ];
+    }
+    return [
+        `Ky artikull sjell informacion të freskët dhe praktik rreth stilit të shëndetshëm të jetesës, të ushqyerit të ekuilibruar dhe mirëqenies së përditshme.`,
+        `### ${p.food.charAt(0).toUpperCase() + p.food.slice(1)} dhe ${p.exercise}`,
+        `Kombinimi i një diete të pasur me ${p.food} dhe aktivitetit fizik si ${p.exercise} është formula më e mirë për energji dhe vitalitet.`,
+        '### Zbatoje sot',
+        `Fillo me ${p.habit} dhe syno të ${p.goal}. Edhe ndryshimi më i vogël i sotëm krijon momentum për ditët në vijim.`,
+        '### Pse ka rëndësi',
+        'Të kujdesesh për veten nuk është luks, por domosdoshmëri. Trupi dhe mendja funksionojnë më mirë kur u jep atë që kanë nevojë.',
+        '### Përmbledhje',
+        'Qëndro i informuar dhe bëj zgjedhje të ndërgjegjshme. JetoBukur të shoqëron çdo ditë në rrugën drejt një jete më të shëndetshme.'
+    ];
 }
 
 function generateArticle(articles) {
@@ -811,11 +916,13 @@ function generateArticle(articles) {
         category: t.category,
         title: t.title(p),
         excerpt: t.excerpt(p),
+        body: buildBody(t.cat, p, recipe),
         seed: `live-${Date.now()}-${Math.floor(Math.random() * 9999)}`,
         date: 'Sot',
         time: nowTime(),
         live: true,
-        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients, steps: recipe.steps } : {})
+        image: recipe ? recipe.image : catImage(t.cat),
+        ...(recipe ? { ingredients: recipe.ingredients, steps: recipe.steps } : {})
     };
 }
 
@@ -853,11 +960,13 @@ function generateLatestArticle(articles) {
         category: 'Më e reja',
         title: pick(latestTitles(p)),
         excerpt: pick(latestExcerpts(p)),
+        body: buildBody('latest', p, recipe),
         seed: `latest-${Date.now()}-${Math.floor(Math.random() * 9999)}`,
         date: 'Sot',
         time: nowTime(),
         live: true,
-        ...(recipe ? { image: recipe.image, ingredients: recipe.ingredients, steps: recipe.steps } : {})
+        image: recipe ? recipe.image : catImage('latest'),
+        ...(recipe ? { ingredients: recipe.ingredients, steps: recipe.steps } : {})
     };
 }
 
@@ -1026,6 +1135,7 @@ function generateHoroscopeDaily(articles) {
 // ===== Azhornim ditor i të gjithë artikujve statikë =====
 function refreshArticlesDaily(articles) {
     const day = daySeed();
+    const seedSet = new Set(seedArticles.map(s => s.id));
     const groups = {};
     seedArticles
         .filter(a => a.cat !== 'horoskopi')
@@ -1034,19 +1144,28 @@ function refreshArticlesDaily(articles) {
 
     const catIndex = {};
     return articles.map(a => {
-        if (a.live || a.cat === 'horoskopi') return a;
+        if (!seedSet.has(a.id) || a.cat === 'horoskopi') return a;
         const group = groups[a.cat] || [];
         if (!group.length) return a;
         catIndex[a.cat] = (catIndex[a.cat] || 0) + 1;
         const src = group[(catIndex[a.cat] - 1 + day) % group.length];
+        const p = {
+            food: pick(foods),
+            dish: pick(dishes),
+            exercise: pick(exercises),
+            routine: pick(routines),
+            goal: pick(goals),
+            habit: pick(habits),
+            focus: pick(focuses)
+        };
         return {
             ...a,
             title: src.title,
             excerpt: src.excerpt,
-            body: src.body,
+            body: src.body || buildBody(a.cat, p, null),
             ingredients: src.ingredients,
             steps: src.steps,
-            ...(src.image ? { image: src.image } : {}),
+            image: src.image || catImage(a.cat),
             date: 'Sot',
             time: src.time || a.time
         };

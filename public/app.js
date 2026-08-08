@@ -34,7 +34,7 @@ function renderHero() {
 
     grid.innerHTML = `
         <a class="hero-main ${catCls(main)}" href="article.html?id=${main.id}">
-            <img src="https://picsum.photos/seed/${main.seed}/800/430" alt="${main.title}">
+            <img src="${main.image || `https://picsum.photos/seed/${main.seed}/800/430`}" alt="${main.title}">
             ${mediaMain}
             <div class="hero-overlay">
                 <span class="news-cat">${main.category}</span>
@@ -45,7 +45,7 @@ function renderHero() {
         <div class="hero-side-col">
             ${sides.map(s => `
                 <a class="hero-side ${catCls(s)}" href="article.html?id=${s.id}">
-                    <img src="https://picsum.photos/seed/${s.seed}/400/210" alt="${s.title}">
+                    <img src="${s.image || `https://picsum.photos/seed/${s.seed}/400/210`}" alt="${s.title}">
                     <div class="hero-overlay">
                         <span class="news-cat">${s.category}</span>
                         <h3>${s.title}</h3>
@@ -99,6 +99,18 @@ function renderSections() {
 }
 
 // ===== Render sidebar =====
+const GALLERY_IMAGES = [
+    'https://loremflickr.com/300/300/healthy,food,vegetables',
+    'https://loremflickr.com/300/300/meditation,wellness,balance',
+    'https://loremflickr.com/300/300/fitness,workout,run',
+    'https://loremflickr.com/300/300/fresh,salad,recipe',
+    'https://loremflickr.com/300/300/yoga,stretch,relax',
+    'https://loremflickr.com/300/300/smoothie,fruit,breakfast',
+    'https://loremflickr.com/300/300/hydration,water,glass',
+    'https://loremflickr.com/300/300/outdoor,walk,nature',
+    'https://loremflickr.com/300/300/nutrition,whole,grains'
+];
+
 function renderSidebar() {
     const wrap = document.getElementById('sidebar');
     const focusCats = ['humbjepeshe', 'ushqim', 'receta', 'ushtrime'];
@@ -106,7 +118,13 @@ function renderSidebar() {
         .map(c => articles.find(a => a.cat === c && !a.pos))
         .filter(Boolean);
 
-    const gallery = articles.slice(0, 6).filter(a => !a.pos);
+    const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+    const gallery = articles.filter(a => !a.pos && a.image).slice(0, 3)
+        .concat(GALLERY_IMAGES.map((img, i) => GALLERY_IMAGES[(i + dayOfYear) % GALLERY_IMAGES.length]))
+        .slice(0, 9)
+        .map((a, i) => typeof a === 'string'
+            ? a
+            : (a.image || `https://picsum.photos/seed/${a.seed}/300/300`));
 
     wrap.innerHTML = `
         <div class="side-block">
@@ -122,7 +140,7 @@ function renderSidebar() {
         <div class="side-block">
             <h3 class="side-title">Fotogaleri</h3>
             <div class="gallery-grid">
-                ${gallery.map(a => `<img src="${square(a)}" alt="${a.title}">`).join('')}
+                ${gallery.map(img => `<img src="${img}" alt="JetoBukur fotogaleri">`).join('')}
             </div>
         </div>
     `;
