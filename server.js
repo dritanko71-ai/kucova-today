@@ -58,7 +58,18 @@ function pushArticle(article) {
     article.order = ++liveIndex;
     articles.unshift(article);
     broadcast('news', article);
-    if (articles.length > 120) articles.length = 120;
+    if (articles.length > 120) {
+        const horos = articles.filter(a => a.cat === 'horoskopi');
+        const rest = articles.filter(a => a.cat !== 'horoskopi').slice(0, 120 - horos.length);
+        articles = rest.concat(horos);
+    }
+}
+
+function ensureHoroscope() {
+    const seedHoros = seedArticles.filter(a => a.cat === 'horoskopi');
+    const existingIds = new Set(articles.filter(a => a.cat === 'horoskopi').map(a => a.id));
+    const missing = seedHoros.filter(a => !existingIds.has(a.id));
+    if (missing.length) articles = articles.concat(missing);
 }
 
 // ===== Gjenerator i artikujve simulatore në kohë reale =====
@@ -76,6 +87,7 @@ setTimeout(() => pushArticle(generateLatestArticle(articles)), 500);
 
 // ===== Horoskopi: azhornohet çdo ditë =====
 function refreshHoroscope() {
+    ensureHoroscope();
     const updated = generateHoroscopeDaily(articles);
     updated.forEach(nu => {
         const idx = articles.findIndex(a => a.id === nu.id);

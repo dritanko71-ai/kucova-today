@@ -865,6 +865,7 @@ function generateLatestArticle(articles) {
 const ZODIAC = {
     dashi: {
         name: 'Dashi',
+        gen: 'Dashit',
         element: 'Zjarr',
         ruling: 'Marsi',
         luckNum: [3, 9],
@@ -872,6 +873,7 @@ const ZODIAC = {
     },
     demi: {
         name: 'Demi',
+        gen: 'Demit',
         element: 'Dhe',
         ruling: 'Venusi',
         luckNum: [2, 6],
@@ -879,6 +881,7 @@ const ZODIAC = {
     },
     binjaket: {
         name: 'Binjakët',
+        gen: 'Binjakëve',
         element: 'Ajër',
         ruling: 'Merkuri',
         luckNum: [5, 7],
@@ -886,6 +889,7 @@ const ZODIAC = {
     },
     gaforrja: {
         name: 'Gaforrja',
+        gen: 'Gaforres',
         element: 'Ujë',
         ruling: 'Hëna',
         luckNum: [2, 7],
@@ -893,6 +897,7 @@ const ZODIAC = {
     },
     luani: {
         name: 'Luani',
+        gen: 'Luanit',
         element: 'Zjarr',
         ruling: 'Dielli',
         luckNum: [1, 4],
@@ -900,6 +905,7 @@ const ZODIAC = {
     },
     virgjerresha: {
         name: 'Virgjëresha',
+        gen: 'Virgjëreshës',
         element: 'Dhe',
         ruling: 'Merkuri',
         luckNum: [5, 8],
@@ -907,6 +913,7 @@ const ZODIAC = {
     },
     peshorja: {
         name: 'Peshorja',
+        gen: 'Peshores',
         element: 'Ajër',
         ruling: 'Venusi',
         luckNum: [6, 9],
@@ -914,6 +921,7 @@ const ZODIAC = {
     },
     akrepi: {
         name: 'Akrepi',
+        gen: 'Akrepit',
         element: 'Ujë',
         ruling: 'Plutoni',
         luckNum: [8, 9],
@@ -921,6 +929,7 @@ const ZODIAC = {
     },
     shigjetari: {
         name: 'Shigjetari',
+        gen: 'Shigjetarit',
         element: 'Zjarr',
         ruling: 'Jupiteri',
         luckNum: [3, 9],
@@ -928,6 +937,7 @@ const ZODIAC = {
     },
     bricjapi: {
         name: 'Bricjapi',
+        gen: 'Bricjapit',
         element: 'Dhe',
         ruling: 'Saturni',
         luckNum: [4, 8],
@@ -935,6 +945,7 @@ const ZODIAC = {
     },
     ujori: {
         name: 'Ujori',
+        gen: 'Ujorit',
         element: 'Ajër',
         ruling: 'Urani',
         luckNum: [1, 7],
@@ -942,6 +953,7 @@ const ZODIAC = {
     },
     peshqit: {
         name: 'Peshqit',
+        gen: 'Peshqve',
         element: 'Ujë',
         ruling: 'Neptuni',
         luckNum: [3, 9],
@@ -991,7 +1003,7 @@ function dailyHoroscope(signKey, index, baseArticle) {
         date: 'Sot',
         time: '06:00',
         body: [
-            `Për shenjën e ${s.name}, dita e sotme vjen e mbushur me energji të veçantë. Elementi i ${s.element} dhe planeti ${s.ruling} ndikojnë në mënyrën si ia del mbanë në çdo fushë të jetës.`,
+            `Për shenjën e ${s.gen}, dita e sotme vjen e mbushur me energji të veçantë. Elementi i ${s.element} dhe planeti ${s.ruling} ndikojnë në mënyrën si ia del mbanë në çdo fushë të jetës.`,
             '### Dashuria',
             r(HORO_LOVE),
             '### Puna dhe karriera',
