@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const https = require('https');
-const { seedArticles, generateArticle, generateLatestArticle, generateHoroscopeDaily } = require('./data/news');
+const { seedArticles, generateArticle, generateLatestArticle, generateHoroscopeDaily, refreshArticlesDaily } = require('./data/news');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,6 +10,8 @@ const PUBLIC_URL = process.env.PUBLIC_URL || '';
 let articles = [...seedArticles];
 let liveIndex = 0;
 let nextId = articles.reduce((m, a) => Math.max(m, a.id), 0) + 1;
+
+const seedIds = new Set(seedArticles.map(a => a.id));
 
 const clients = new Set();
 
@@ -59,9 +61,9 @@ function pushArticle(article) {
     articles.unshift(article);
     broadcast('news', article);
     if (articles.length > 120) {
-        const horos = articles.filter(a => a.cat === 'horoskopi');
-        const rest = articles.filter(a => a.cat !== 'horoskopi').slice(0, 120 - horos.length);
-        articles = rest.concat(horos);
+        const seeds = articles.filter(a => seedIds.has(a.id));
+        const rest = articles.filter(a => !seedIds.has(a.id)).slice(0, 120 - seeds.length);
+        articles = rest.concat(seeds);
     }
 }
 
@@ -85,17 +87,18 @@ setInterval(() => {
 }, LATEST_INTERVAL_MS);
 setTimeout(() => pushArticle(generateLatestArticle(articles)), 500);
 
-// ===== Horoskopi: azhornohet çdo ditë =====
-function refreshHoroscope() {
-    ensureHoroscope();
+// ===== Horoskopi dhe artikujt: azhornohen çdo ditë =====
+function refreshDaily() {
+    articles = refreshArticlesDaily(articles);
     const updated = generateHoroscopeDaily(articles);
     updated.forEach(nu => {
         const idx = articles.findIndex(a => a.id === nu.id);
         if (idx !== -1) articles[idx] = nu;
     });
-    console.log(`Horoskopi u azhornua: ${updated.length} shenja, ${new Date().toLocaleDateString('sq-AL')}`);
+    ensureHoroscope();
+    console.log(`Artikujt dhe horoskopi u azhornuan: ${updated.length} shenja, ${new Date().toLocaleDateString('sq-AL')}`);
 }
-refreshHoroscope();
+refreshDaily();
 
 function msUntilMidnight() {
     const now = new Date();
@@ -105,8 +108,8 @@ function msUntilMidnight() {
 }
 
 setTimeout(() => {
-    refreshHoroscope();
-    setInterval(refreshHoroscope, 24 * 60 * 60 * 1000);
+    refreshDaily();
+    setInterval(refreshDaily, 24 * 60 * 60 * 1000);
 }, msUntilMidnight() + 5000);
 
 // ===== Self-ping: e mban zgjuar në Render falas =====

@@ -1023,4 +1023,34 @@ function generateHoroscopeDaily(articles) {
         .map((a, i) => dailyHoroscope(a.sign, i, a));
 }
 
-module.exports = { seedArticles, generateArticle, generateLatestArticle, generateHoroscopeDaily };
+// ===== Azhornim ditor i të gjithë artikujve statikë =====
+function refreshArticlesDaily(articles) {
+    const day = daySeed();
+    const groups = {};
+    seedArticles
+        .filter(a => a.cat !== 'horoskopi')
+        .sort((x, y) => x.id - y.id)
+        .forEach(a => (groups[a.cat] = groups[a.cat] || []).push(a));
+
+    const catIndex = {};
+    return articles.map(a => {
+        if (a.live || a.cat === 'horoskopi') return a;
+        const group = groups[a.cat] || [];
+        if (!group.length) return a;
+        catIndex[a.cat] = (catIndex[a.cat] || 0) + 1;
+        const src = group[(catIndex[a.cat] - 1 + day) % group.length];
+        return {
+            ...a,
+            title: src.title,
+            excerpt: src.excerpt,
+            body: src.body,
+            ingredients: src.ingredients,
+            steps: src.steps,
+            ...(src.image ? { image: src.image } : {}),
+            date: 'Sot',
+            time: src.time || a.time
+        };
+    });
+}
+
+module.exports = { seedArticles, generateArticle, generateLatestArticle, generateHoroscopeDaily, refreshArticlesDaily };
