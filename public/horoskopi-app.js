@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.horo-hero');
 
   const ICONS = {
-    intro: ['fa-solid fa-quote-left', 'Parashikimi i përgjithshëm'],
+    intro: ['', 'Parashikimi i përgjithshëm'],
     love: ['fa-solid fa-heart', 'Dashuria'],
     health: ['fa-solid fa-heart-pulse', 'Shëndeti'],
     work: ['fa-solid fa-briefcase', 'Puna dhe karriera'],
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="horo-blocks">
             ${blocks.map(b => `
               <div class="horo-block reveal" data-block="${b.k}">
-                <h3><i class="${ICONS[b.k][0]}"></i> ${ICONS[b.k][1]}</h3>
+                <h3>${b.k === 'intro' ? `<span class="horo-block-sym">${s.symbol}</span>` : `<i class="${ICONS[b.k][0]}"></i>`} ${ICONS[b.k][1]}</h3>
                 ${b.html}
               </div>
             `).join('')}
