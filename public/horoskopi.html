@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JetoBukur — Horoskopi i Ditës në shqip për të 12 shenjat: dashuri, shëndet, punë dhe intimitet." />
+  <title>Horoskopi i Ditës ☀️ | JetoBukur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="horoskopi.css" />
+</head>
+<body class="horo-page">
+
+  <!-- ===== Navigation ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-tile"><i class="fa-solid fa-sun"></i></span>
+        <span class="logo-text">Jeto<span>Bukur</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html"><i class="fa-solid fa-house"></i><span>Kryefaqja</span></a>
+        <a href="section.html?cat=receta"><i class="fa-solid fa-utensils"></i><span>Receta</span></a>
+        <a href="section.html?cat=ushqim"><i class="fa-solid fa-carrot"></i><span>Ushqim i Shëndetshëm</span></a>
+        <a href="section.html?cat=ushtrime"><i class="fa-solid fa-dumbbell"></i><span>Ushtrime</span></a>
+        <a href="horoskopi.html" class="active"><i class="fa-solid fa-star"></i><span>Horoskopi</span></a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fa-solid fa-bars-staggered"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="horo-hero">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="container horo-hero-inner">
+      <span class="badge"><i class="fa-solid fa-star"></i> Horoskopi i përditësuar çdo ditë</span>
+      <h1>Horoskopi <span class="grad">i Ditës</span></h1>
+      <p class="horo-date" id="horoDate"></p>
+      <p class="horo-sub">Parashikime ditore për të gjitha shenjat — dashuri, shëndet, punë dhe intimitet.</p>
+    </div>
+  </section>
+
+  <!-- ===== Sign menu (modern) ===== -->
+  <section class="horo-menu">
+    <div class="container">
+      <div class="sign-tabs" id="signTabs"></div>
+    </div>
+  </section>
+
+  <!-- ===== Sign content ===== -->
+  <section class="horo-content" id="horoContent"></section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><i class="fa-solid fa-sun"></i> Jeto<span>Bukur</span></a>
+        <p>Këshilla për humbje peshe, ushqim të shëndetshëm dhe receta të shijshme për një jetë më të mirë.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div><h5>Linke të dobishëm</h5><a href="#">Ekipi redaksional</a><a href="#">Kodi i etikës</a><a href="#">Kushtet e përdorimit</a><a href="#">Politika e privatësisë</a></div>
+      <div><h5>Seksionet</h5><a href="section.html?cat=receta">Receta</a><a href="section.html?cat=ushqim">Ushqim i Shëndetshëm</a><a href="section.html?cat=ushtrime">Ushtrime</a><a href="horoskopi.html">Horoskopi</a></div>
+      <div><h5>Kompania</h5><a href="#">Rreth nesh</a><a href="section.html?cat=latest">Artikuj</a><a href="#">Kontakt</a><a href="#">Na shkruani</a></div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 JetoBukur &middot; Të gjitha të drejtat e rezervuara &middot; Reg. Nr. 1234/2026</p>
+      <div class="footer-note"><i class="fa-solid fa-star"></i> Yjet ju udhëheqin çdo ditë</div>
+    </div>
+  </footer>
+
+  <script src="horoskopi.js"></script>
+  <script src="horoskopi-app.js"></script>
+</body>
+</html>
